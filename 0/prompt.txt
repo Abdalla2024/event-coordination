@@ -1,0 +1,30 @@
+<pasted_content id="db7b">
+Phase 1 is complete and pushed. Begin Phase 2 only.
+
+Implement the source-specific parsing and normalization layer for the event-planning coordination workflow.
+
+Requirements:
+1. Build the parsers/normalizers for all disclosed planning sources represented in references/sources.json.
+2. Preserve source evidence and provenance for every parsed claim or record. Do not invent missing values.
+3. Use the source schemas and stakeholder requirements already captured in references/requirements-evidence.json and references/decision-policy.md.
+4. Keep the implementation read-only. Do not add booking, payment, invitation, vendor commitment, or production-calendar write behavior.
+5. Handle partial, malformed, stale, conflicting, and unavailable source data explicitly using the existing status vocabulary.
+6. Preserve the distinction between:
+   - planning/held/available states and confirmed bookings
+   - source-native versions and stakeholder-requested retrieval timestamps
+   - evidence bytes versus normalized business records
+   - supported, unsupported, conflicting, and unresolved claims
+7. For the vendor data, produce normalized records that can support later comparison of cost, capacity, availability, accessibility, prerequisites, and other disclosed constraints.
+8. For the calendar, budget, attendee, event brief, venue, programme, and official TICC sources, normalize only fields that are actually supported by the captured evidence.
+9. Add focused unit tests for each parser and for malformed, missing, reordered, duplicated, conflicting, and otherwise invalid source data where applicable.
+10. Do not implement the final event-option ranking or final deliverables yet. Phase 2 should establish reliable normalized source data that later phases can consume.
+11. Run the full test suite after implementation and verify that the existing 49 tests still pass in addition to the new tests.
+12. Inspect the diff for accidental files, credentials, caches, virtual-environment files, scratchpad output, or unrelated changes.
+
+Work incrementally. Do not start Phase 3 or the final report generation. When Phase 2 is complete, stop and report:
+- what was implemented
+- files added/changed
+- test count and result
+- any unresolved implementation questions
+- whether anything requires my review before the next phase
+</pasted_content id="db7b">

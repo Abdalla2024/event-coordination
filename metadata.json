@@ -1,0 +1,44 @@
+{
+  "cli_version": "0.11.3",
+  "checkpoint_id": "01M4C08S95XDKWMQ5JQGR207ZW",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 2,
+  "files_touched": [
+    "event-planning-coordination-brief/SKILL.md",
+    "event-planning-coordination-brief/references/floorplan-observations.json",
+    "event-planning-coordination-brief/references/normalization.md",
+    "event-planning-coordination-brief/scripts/coordination/normalize/__init__.py",
+    "event-planning-coordination-brief/scripts/coordination/normalize/attendee.py",
+    "event-planning-coordination-brief/scripts/coordination/normalize/base.py",
+    "event-planning-coordination-brief/scripts/coordination/normalize/brief.py",
+    "event-planning-coordination-brief/scripts/coordination/normalize/budget.py",
+    "event-planning-coordination-brief/scripts/coordination/normalize/calendar.py",
+    "event-planning-coordination-brief/scripts/coordination/normalize/crosscheck.py",
+    "event-planning-coordination-brief/scripts/coordination/normalize/prerequisites.py",
+    "event-planning-coordination-brief/scripts/coordination/normalize/vendor.py",
+    "event-planning-coordination-brief/scripts/coordination/normalize/venue.py",
+    "event-planning-coordination-brief/scripts/run.py",
+    "tests/factories.py",
+    "tests/test_normalize_brief_venue.py",
+    "tests/test_normalize_invariants.py",
+    "tests/test_normalize_tables.py",
+    "tests/test_normalize_vendor.py"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 76,
+    "cache_creation_tokens": 129495,
+    "cache_read_tokens": 12908611,
+    "output_tokens": 99683,
+    "api_call_count": 38
+  }
+}
