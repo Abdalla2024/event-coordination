@@ -1,0 +1,560 @@
+<pasted_content id="db7b">
+Phase 3 and Phase 4 are complete, committed, pushed, and verified. Do not modify them yet.
+
+I want to begin Phase 5, which is the final deliverable/rendering layer for Project C. Do not write code yet. First inspect the assignment requirements, the existing implementation, the Phase 3 decision model, the Phase 4 recommendation model, and the current repository structure. Then propose the Phase 5 design for review.
+
+Phase 5 purpose
+
+Phase 5 should transform the validated Phase 3/4 results into the required stakeholder-facing deliverables:
+
+vendor-comparison.csv
+event-plan.md
+event-calendar.ics
+draft-communications.md
+
+It should also produce whatever final manifest, validation metadata, or output structure is required by the assignment and existing schema.
+
+Critical architecture rule
+
+Phase 5 is a rendering and packaging layer only.
+
+It must consume the existing validated decision/recommendation model and evidence chain. It must not independently:
+
+retrieve source data;
+re-read the live sources;
+normalize source data;
+reinterpret stakeholder requirements;
+recalculate feasibility;
+change option statuses;
+change costs;
+change approvals;
+invent missing facts;
+invent approvals or confirmations;
+create a recommendation different from Phase 4.
+
+If a value is not supported by the existing validated model, leave it unresolved or explicitly mark it as unavailable. Do not fill gaps with assumptions.
+
+Deliverable requirements to design for
+
+For each deliverable, determine exactly:
+
+What information it should contain.
+Which Phase 3/4 model fields provide that information.
+Which evidence references should be preserved.
+What should happen when information is conditional, unresolved, unavailable, conflicting, or infeasible.
+How the deliverable should make clear that the current run has no confirmed feasible option.
+
+In particular, the current live result is:
+
+Q-003 bundle: conditional, 494,000 TWD, 26,000 under ceiling.
+Q-004 bundle: conditional, 512,000 TWD, 8,000 under ceiling.
+Q-003 is better on cost/headroom.
+Q-004 is better on catering buffer, 55 versus 15.
+Recommendation: null.
+Outcome: deferred-to-operations.
+Run status: partial.
+
+The final deliverables must not imply that either option has been selected, booked, approved, or confirmed.
+
+Vendor comparison
+
+Design the CSV so that it compares the relevant vendor/package options using only validated facts.
+
+Preserve distinctions between:
+
+quote;
+planning availability/hold;
+confirmation;
+feasibility;
+approval;
+prerequisite readiness.
+
+Do not turn the vendor comparison into a hidden ranking.
+
+Infeasible options should remain visible where the assignment calls for comparison, with their infeasibility reason clearly represented rather than silently dropped.
+
+Event plan
+
+Design the Markdown event plan so that a stakeholder can understand:
+
+the event baseline;
+headcount;
+date/time constraints;
+venue information;
+budget;
+accessibility requirements;
+dietary requirements;
+candidate options;
+option status;
+costs;
+open conditions;
+dependencies;
+approvals still required;
+the Phase 4 recommendation/deferred decision;
+the shortfall against the brief's request for two feasible options.
+
+Clearly distinguish confirmed facts from conditional/planning information.
+
+The plan must not convert a venue hold into a booking or a vendor quote into a confirmed vendor.
+
+Preserve the distinction between the 155,000 TWD case planning venue amount and the official 170,000 TWD TICC tariff. Do not silently replace one with the other.
+
+Calendar
+
+Design the ICS output carefully because the current event plan is not fully confirmed.
+
+Determine which calendar entries are appropriate to emit based on the existing validated calendar claims and their status.
+
+Do not create calendar events that imply an unconfirmed booking, vendor commitment, or approved event plan.
+
+If the assignment requires tentative/planning events, use the appropriate ICS representation and make the planning status explicit where the format permits.
+
+Do not invent dates or times for unresolved dependencies.
+
+Draft communications
+
+Design draft-communications.md as drafts only.
+
+It should communicate the actual current state, including:
+
+what is known;
+what remains conditional;
+what Operations needs to decide;
+what confirmations/prerequisites remain open;
+what cannot currently be promised.
+
+Do not draft messages that falsely state that a vendor has been booked, an approval has been granted, or an event has been confirmed.
+
+Do not invent recipient names, email addresses, deadlines, or contact information.
+
+Evidence and traceability
+
+Every substantive factual statement in the final deliverables should be traceable to the validated model and ultimately to the existing evidence chain.
+
+Determine the cleanest way to preserve traceability in human-readable outputs without making them unreadable.
+
+Do not create a second independent evidence system.
+
+Validation
+
+Propose validation for:
+
+required files exist;
+schemas/formats are valid;
+CSV structure and required columns;
+Markdown contains required sections;
+ICS parses correctly;
+every referenced option exists in the decision model;
+every reported status/cost matches Phase 3;
+recommendation matches Phase 4;
+no deliverable claims an unconfirmed item is confirmed;
+no unsupported facts appear;
+evidence references resolve;
+deterministic output;
+no accidental secrets or local artifacts.
+
+Include tests that prove Phase 5 cannot silently alter the Phase 3/4 decision model.
+
+Important assignment constraint
+
+The assignment explicitly allows a result where no feasible options can be produced. Do not fabricate the two requested feasible options just to satisfy the deliverable format.
+
+The current evidence supports two conditional options and five infeasible options. Preserve that truth in the final deliverables and clearly identify the unresolved decision for Operations.
+
+Before implementation
+
+First inspect the repository and existing assignment materials, then report:
+
+Your proposed Phase 5 architecture.
+Proposed files/modules.
+How each of the four required deliverables will be generated.
+Exact source fields from Phase 3/4 that each deliverable consumes.
+How conditional, infeasible, unresolved, and unavailable information will be represented.
+How evidence traceability will work.
+How the ICS output will handle the current unconfirmed state.
+Proposed validation/tests.
+Any ambiguity in the assignment that needs my decision before implementation.
+
+Do not implement anything yet.
+
+Do not commit or push anything.
+
+Do not start Phase 6 or add unrelated functionality.
+
+Stop after the design review.
+</pasted_content id="db7b">
+
+---
+
+<pasted_content id="db7b">
+Phase 5 design is approved with the following decisions. Implement Phase 5 now, but do not start Phase 6 and do not commit or push yet.
+
+Decisions
+
+1. Run of show
+
+Build a separate deterministic scripts/coordination/programme.py planning step before rendering.
+
+The assignment requires a non-overlapping run of show. The existing sources provide the 12 demo blocks at 10 minutes + 3 minutes each, the 10:00–11:00 keynote, the 09:30–17:00 event window, setup/hold information, and teardown. They do not provide meal or break durations.
+
+Use explicit Programme planning decisions for the missing durations rather than presenting them as source facts or silently inventing them.
+
+Use:
+
+opening/welcome: 15 minutes
+lunch: 60 minutes
+two breaks: 15 minutes each
+closing: 15 minutes
+
+These are planner decisions owned by Programme and must be clearly labeled as such in the model and event plan.
+
+The programme must contain all 12 demos, the keynote, opening, lunch, two breaks, closing, setup/teardown as appropriate, and must have no overlaps.
+
+Do not invent additional programme content.
+
+Any remaining time inside the event window should be explicitly represented as unallocated Programme buffer rather than filled with invented activities.
+
+The exact ordering may be chosen deterministically by the programme planner, but the output must preserve the fact that ordering/grouping was a planning decision, not a source fact.
+
+programme.py is allowed to perform time arithmetic because it is a planning layer, not a renderer.
+
+2. CSV
+
+Use the 11 required columns first, in the required order, followed by the proposed additional columns:
+
+option_label
+feasibility_reason
+quote_details
+vendor_total_twd
+allowances_twd
+remaining_under_ceiling_twd
+recommendation_outcome
+
+cost_twd means the Phase 3 total_with_allowances_twd, the amount checked against the 520,000 ceiling.
+
+Do not rank or sort options by cost.
+
+3. Decision deadline
+
+Do not emit the 4 September 17:00 decision deadline as an ICS event. Keep it in the event plan and dependency/decision records.
+
+Do not emit the venue-hold expiry as an event either. Treat it as a planning dependency/risk unless the assignment explicitly requires deadline events.
+
+Keep actual scheduling blocks such as the event window, keynote, setup, teardown, walkthrough, rehearsal, and generated run-of-show blocks as tentative calendar entries where supported by evidence.
+
+4. Phase boundary
+
+Phase 5 ends with:
+
+vendor-comparison.csv
+event-plan.md
+event-calendar.ics
+draft-communications.md
+render-manifest.json
+rendering, programme-planning, and validation code/tests
+
+Do not implement the nine-snapshot chain, history/supersede handling, recovery, failure.json, or the final end-to-end deliverables command. Those belong to Phase 6.
+
+5. Communications
+
+Generate vendor confirmation-request drafts only for vendors associated with the conditional candidate options:
+
+Q-001, Q-003, Q-004, Q-005, Q-006, Q-009, and Q-010.
+
+Do not contact Q-007 or Q-008 because their options are infeasible.
+
+Generate one aggregate attendee accessibility/dietary acknowledgement. Do not include personal names, emails, phone numbers, invented recipients, or invented deadlines.
+
+6. ICS dependency
+
+Add pinned icalendar only for parse/validation tests. Generate the ICS with the standard library.
+
+Important constraints
+
+Keep Phase 5 read-only with respect to Phase 3/4.
+
+Renderers must not import capture, normalization, decide, recommend, or transport logic.
+
+view.py must not perform business arithmetic, feasibility checks, ranking, or classification.
+
+programme.py may perform schedule arithmetic because it is the explicit planning layer.
+
+Preserve the distinction between:
+
+source facts;
+Programme planning decisions;
+planning states;
+unverified/unavailable/conflicting information.
+
+Never turn a quote into a confirmation, a hold into a booking, or a pending approval into an approval.
+
+The current live result must remain:
+
+Q-003 bundle: conditional, 494,000 TWD.
+Q-004 bundle: conditional, 512,000 TWD.
+recommendation: null.
+outcome: deferred-to-operations.
+run status: partial.
+
+Do not fabricate two feasible options.
+
+Preserve the 155,000 TWD case venue amount separately from the official 170,000 TWD TICC tariff.
+
+Validation
+
+Implement the proposed validation suite, including:
+
+all four deliverables exist;
+manifest hashes match;
+CSV required columns and rows;
+amounts/statuses/options match Phase 3 exactly;
+recommendation matches Phase 4;
+ICS parses correctly;
+all ICS events have stable IDs, tentative status, transparent time, and explicit timezone;
+no attendee/organizer fields;
+every run-of-show block has no overlap;
+every programme time comes from an evidenced or explicitly labeled Programme planning decision;
+every evidence ID resolves;
+no unsupported facts or amounts appear;
+no affirmative claims of booking, confirmation, approval, selection, reservation, or commitment;
+no personal contact information leaks;
+rendering is deterministic;
+rendering does not mutate Phase 3/4 models;
+renderer imports remain isolated;
+blocked/no-viable/unavailable scenarios behave as designed.
+
+Run the full test suite and pyflakes.
+
+Do not commit or push.
+
+Do not start Phase 6.
+
+Work incrementally and stop after implementation and verification. Report the files changed, test count, pyflakes result, live deliverable results, programme schedule, validation results, and any remaining decisions.
+</pasted_content id="db7b">
+
+---
+
+<pasted_content id="db7b">
+Phase 6 is the FINAL phase for Project C. Do not create a Phase 7 or expand the architecture beyond the requirements below.
+
+Phase 5 is complete and validated on the live sources:
+- 191 tests pass
+- pyflakes is clean
+- four deliverables and render-manifest.json validate
+- live result is unchanged: 0 feasible, 2 conditional, recommendation null, deferred-to-Operations, run status partial
+- Phase 3 and Phase 4 logic is unchanged
+- no files are committed or pushed yet
+
+Your job now is to implement ONLY the final reliability, history, recovery, and end-to-end packaging layer.
+
+Before changing anything:
+1. Inspect the existing Project C implementation and current git status.
+2. Read the existing SKILL.md, run.py, snapshot/capture code, Phase 3/4 decision code, Phase 5 render/package code, and relevant tests.
+3. Do not redesign working Phase 1-5 behavior.
+4. Do not modify the interview transcripts, schema, README, or existing evidence IDs unless strictly required by an actual Phase 6 defect.
+5. Do not commit or push during implementation. I will review before the final commit.
+
+PHASE 6 REQUIREMENTS
+
+1. NINE-SNAPSHOT CHAIN
+
+Complete the snapshot/history layer so the project maintains the required nine-snapshot chain.
+
+Use the existing snapshot model, IDs, hashes, retrieval timestamps, source states, and evidence conventions wherever possible.
+
+The chain must:
+- preserve predecessor relationships
+- preserve snapshot integrity hashes
+- make the current/latest snapshot unambiguous
+- retain prior snapshots rather than overwriting them
+- distinguish a normal successor from a superseding/recovered snapshot where the existing model requires that distinction
+- validate that every predecessor reference resolves
+- validate that there are no broken links, duplicate snapshot identities, or impossible ordering
+- remain deterministic
+
+Do not invent source facts merely to populate snapshots.
+
+2. HISTORY AND SUPERSEDE
+
+Implement the minimum history mechanism needed to:
+- record successive runs
+- identify the active/current snapshot
+- retain superseded snapshots
+- record why a snapshot was superseded when applicable
+- preserve the predecessor hash/reference
+- prevent an older snapshot from silently replacing a newer one
+- make recovery auditable
+
+Do not introduce a database or unnecessary persistence layer. Use the project's existing file/history conventions.
+
+3. RECOVERY
+
+Implement recovery for interrupted or partially completed runs.
+
+Recovery must:
+- detect incomplete/invalid prior state
+- avoid treating partially written artifacts as a successful run
+- recover from the last valid snapshot/history state where appropriate
+- preserve the failed/interrupted attempt as history rather than silently deleting it
+- produce deterministic results
+- never claim a source was retrieved when it was not
+- never turn a conditional option into a feasible/confirmed option
+- never change the Phase 3/4 decision result merely because recovery occurred
+
+If recovery cannot safely continue, fail explicitly with an auditable failure state.
+
+4. failure.json
+
+Implement the required failure artifact.
+
+When the final command fails, `failure.json` must contain enough structured information to explain:
+- run identifier
+- failure stage
+- failure classification/type
+- timestamp
+- relevant snapshot/history identifiers
+- predecessor/current state where applicable
+- concise error information
+- whether recovery was attempted
+- recovery outcome
+- paths to any relevant artifacts if known
+
+Do not include secrets, credentials, private contact information, or arbitrary environment dumps.
+
+Failure handling must itself be deterministic and tested.
+
+5. FINAL END-TO-END COMMAND
+
+Complete the final end-to-end command in `run.py`.
+
+It should be possible to execute the complete workflow from the project's documented command/runtime setup and produce the final validated result.
+
+The command must:
+- retrieve/capture the disclosed live sources as required by the existing design
+- preserve actual retrieval timestamps separately from the business clock
+- build/validate the snapshot chain
+- normalize claims
+- run feasibility
+- run recommendation
+- generate the Phase 5 deliverables
+- validate all outputs
+- write the final manifest/history state
+- return a non-success status when the run is genuinely partial, blocked, failed, or otherwise unsuccessful according to the existing semantics
+- never silently downgrade an error into success
+
+Do not duplicate business logic in the end-to-end command. Reuse the existing phase entry points.
+
+6. SIDE-EFFECT SAFETY
+
+The final command must remain read-only with respect to the source systems.
+
+It must NOT:
+- book a venue
+- make a payment
+- send an email
+- send an invitation
+- contact a vendor
+- write to a production calendar
+- commit or push to git
+- make an external approval
+- imply that anything has been confirmed, booked, approved, selected, secured, or committed
+
+Generated communications remain UNSENT DRAFTs.
+
+7. FAILURE/RECOVERY SCENARIOS
+
+Add tests for at least:
+- successful complete run
+- partial run
+- blocked run
+- unavailable source
+- failed source retrieval
+- interrupted/incomplete prior run
+- corrupted or invalid snapshot
+- broken predecessor reference
+- superseding a prior snapshot
+- recovery from the latest valid state
+- failure.json creation
+- failure during capture
+- failure during normalization
+- failure during decision/render validation
+- rerunning the same inputs produces deterministic output
+- no mutation of Phase 3/4 model results
+- no private contact leakage
+- no credentials/secrets in failure artifacts
+- no false confirmation language
+
+Reuse the existing test factories and validation helpers instead of creating parallel testing infrastructure.
+
+8. FINAL VALIDATION
+
+After implementation, run:
+
+- the full test suite
+- pyflakes across the project
+- the live end-to-end command
+- all existing Phase 5 validations
+- snapshot/history validation
+- recovery/failure validation
+- repository cleanliness/secrets/cache checks
+
+Confirm specifically that the live result remains:
+
+- 0 feasible options
+- 2 conditional options
+- recommendation = null
+- recommendation outcome = deferred-to-operations
+- run status = partial
+- nothing booked
+- nothing approved
+- nothing committed
+- nothing confirmed
+
+Confirm that the two conditional options remain:
+- Q-003 bundle: 494,000 TWD
+- Q-004 bundle: 512,000 TWD
+
+Do not introduce a ranking or score.
+
+9. DOCUMENTATION
+
+Update SKILL.md only as needed to document the final end-to-end command, snapshot/history behavior, failure/recovery behavior, and final output locations.
+
+Keep the documentation concise and consistent with the existing style.
+
+Do not add a new architectural phase or speculative future work.
+
+10. FINAL REPORT
+
+When finished, do NOT commit or push.
+
+Report:
+- files added
+- files changed
+- exact end-to-end command
+- snapshot/history behavior implemented
+- recovery behavior implemented
+- failure.json behavior
+- test count
+- pyflakes result
+- live-run result
+- validation result
+- git status
+- any remaining issue that is genuinely blocking completion
+
+IMPORTANT CONSTRAINTS
+
+- This is the final phase.
+- Do not create another phase.
+- Do not redesign Phase 3, Phase 4, or Phase 5.
+- Do not change the decision result.
+- Do not add scoring, ranking, weights, or new business rules.
+- Do not invent missing facts.
+- Do not contact any external party.
+- Do not commit or push.
+- Work incrementally: implement a coherent piece, test it, then continue.
+- If an existing implementation already satisfies a requirement, leave it alone rather than rewriting it.
+- If you encounter a genuine ambiguity, inspect the existing project conventions first and choose the smallest implementation consistent with them.
+
+Begin by inspecting the repository and current Phase 1-5 implementation. Then implement Phase 6.
+</pasted_content id="db7b">
