@@ -5,6 +5,7 @@ It is test data only and is never read by the skill's run.
 """
 
 import json
+from pathlib import Path
 
 from conftest import FakeTransport, ok, xlsx_bytes
 from coordination.config import load_config, load_sources
@@ -82,7 +83,7 @@ BRIEF = [
     ("sub_header", "Exercise programme confirmation"),
     ("text", "Programme clarification: PROG-TEST-1; the simulated business clock remains 26 August 2026."),
     ("text", "Programme has scheduled three team demonstrations for 17 October 2026: DEMO-01, DEMO-02 and DEMO-03. Each demonstration needs 10 minutes of presentation plus a separate 3-minute changeover allowance. Include each demonstration once. These are team slots; they add no people to the declared attendance."),
-    ("text", "Keep the existing 10:00–11:00 keynote and 09:30–17:00 event window. Programme owns roster or duration changes."),
+    ("text", "Keep the existing 10:00–11:00 keynote and 09:30–17:00 event window. The planner chooses the demonstration order, grouping and compatible meal and break schedule. Programme owns roster or duration changes."),
 ]
 
 HALL_HTML = ("<html><head><title>Synthetic venue page</title></head><body><p>大會堂 固定座位共3,122席</p>"
@@ -154,6 +155,55 @@ def decided(tmp_path, bind_floorplan=True, mutate=None, **overrides):
     if mutate:
         mutate(n)
     return decide(n, cfg.business_clock), n
+
+
+TWELVE_DEMOS = ("Programme has scheduled twelve team demonstrations for 17 October 2026: DEMO-01, DEMO-02, DEMO-03, "
+                "DEMO-04, DEMO-05, DEMO-06, DEMO-07, DEMO-08, DEMO-09, DEMO-10, DEMO-11 and DEMO-12. Each demonstration "
+                "needs 10 minutes of presentation plus a separate 3-minute changeover allowance. Include each "
+                "demonstration once. These are team slots; they add no people to the declared attendance.")
+
+
+def brief_blocks(replace=None):
+    return notion([(t, (replace or {}).get(i, x)) for i, (t, x) in enumerate(BRIEF)])
+
+
+def twelve_demo_brief():
+    i = next(i for i, (_, x) in enumerate(BRIEF) if x.startswith("Programme has scheduled"))
+    return brief_blocks({i: TWELVE_DEMOS})
+
+
+def render_input(tmp_path, decisions_file=None, mutate=None, **overrides):
+    """Full synthetic pipeline up to the frozen RenderInput (fixed run id and timestamp for determinism)."""
+    from coordination.programme import plan as programme_plan
+    from coordination.recommend import recommend, run_status
+    from coordination.render import RenderInput
+    from coordination.util import dumps
+    m, n = decided(tmp_path, mutate=mutate, **overrides)
+    rec = recommend(m, n)
+    srcs = [c.record for c in capture(tmp_path / "srcs", **overrides).values()]
+    plain = lambda x: json.loads(dumps(x))  # noqa: E731
+    decision, claims = plain(m.as_dict()), plain(n.as_records())
+    return RenderInput(run_id="run-test", rendered_at="2026-10-07T12:00:00.000Z",
+                       business_clock="2026-08-26T12:00:00+08:00", sources=plain(srcs), claims=claims,
+                       decision=decision, recommendation=plain(rec.as_dict()),
+                       run_status=plain(run_status(srcs, m, rec)),
+                       programme=programme_plan(decision, claims, decisions_file))
+
+
+FIXED_TIME = "2026-10-07T12:00:00.000Z"
+
+
+def run_pipeline(root, run_id="run-test-1", bind_floorplan=True, transport=None, **overrides):
+    """End-to-end run on synthetic sources with a fixed clock and run id (deterministic)."""
+    from coordination.pipeline import execute
+    srcs = load_sources()
+    b = bodies(**{"SRC_BRIEF": twelve_demo_brief(), **overrides})
+    responses = {s["retrieval"]["request_url"]: [ok(b[s["id"]])] * 3 for s in srcs if b[s["id"]] is not None}
+    fp_dir = Path(root).parent / f"fp-{run_id}"
+    fp_dir.mkdir(parents=True, exist_ok=True)
+    fp = bound_floorplan(fp_dir) if bind_floorplan else None
+    return execute(root, transport=transport or FakeTransport(responses), clock=lambda: FIXED_TIME,
+                   run_id=run_id, floorplan_file=fp)
 
 
 def http_404():

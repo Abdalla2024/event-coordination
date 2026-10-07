@@ -9,11 +9,6 @@ Use this skill to produce or refresh the Fellowship Demo Day planning package. I
 different times; the skill re-reads every disclosed source on each run and re-derives every
 dependent draft, so the drafts stay consistent with each other and with the evidence.
 
-> **Build status: Phase 4 (recommendation layer).** Source capture, parsing, normalization into
-> evidence-linked claims, the planning baseline, option generation, feasibility checks and
-> classification, the dominance-based recommendation with run status, and the snapshot chain exist
-> and are tested. The nine-stage run and the four drafts are added in later phases.
-
 ## Setup
 
 Python 3.11 or newer (developed on 3.13).
@@ -25,7 +20,44 @@ python3 -m venv .venv
 
 No credentials are needed: every disclosed source is publicly readable. Do not add credentials to the repository.
 
-## Commands
+## Run
+
+```bash
+# End to end: capture -> normalize -> decide -> recommend -> run of show -> deliverables -> nine snapshots
+.venv/bin/python event-planning-coordination-brief/scripts/run.py run
+
+# Check the current run, its snapshot chain and history without changing anything
+.venv/bin/python event-planning-coordination-brief/scripts/run.py verify
+```
+
+Both default to `deliverables/` at the repository root (`--deliverables <dir>` overrides it).
+
+| Exit code | Run status | Meaning |
+|---|---|---|
+| 0 | `complete` | Validated outputs and a justified recommendation; approvals still pending |
+| 10 | `partial` | Validated outputs, but a business decision needs human judgment or a source was not retrieved |
+| 20 | `blocked` | No option could be built; nine snapshots, an explanatory plan, an empty calendar and clarification drafts |
+| 30 | `failed` | The workflow itself failed; see `deliverables/failure.json` |
+
+A non-zero exit for `partial` is expected when Operations must still decide.
+
+## Outputs and history
+
+```
+deliverables/
+├── current-run.json        pointer to the active run: status, snapshot and artifact hashes, supersede and recovery record
+├── snapshots/01-…09-….json  the nine linked snapshots; snapshots/evidence/ holds every captured byte stream
+├── vendor-comparison.csv, event-plan.md, event-calendar.ics, draft-communications.md, render-manifest.json
+├── failure.json            only when the active run failed
+└── history/index.json, history/<id>/   every earlier run or attempt, with archive.json
+```
+
+- **Staging and promotion.** A run is built in `deliverables/.staging/<run_id>/` and promoted only after the deliverables validate and the nine-snapshot chain verifies. `current-run.json` is written last.
+- **Supersede.** The previous run moves to `history/<run_id>/`. Snapshot 01 records `supersedes_run_id`, the changed source and decision ids, and the reason. Material change is judged on each source's interpreted observations and the decision outcome; raw download bytes can differ between identical exports. Promotion is refused if the active run changed during the run, so an older run never replaces a newer one.
+- **Recovery.** At start, the run checks the existing state. An interrupted attempt (`.in-progress.json` left behind) is preserved as `history/<run_id>-attempt/` and never promoted. Current outputs that fail verification (hash, chain or manifest) are preserved as history and marked `invalid`. The new run then supersedes the latest valid run. Recovery re-captures the sources; it never reuses partial outputs and never changes a decision.
+- **Failure.** Any stage error, deliverable validation failure or chain failure writes `failure.json`. It contains: run id, `observed_at`, affected stage, classification, sanitized error, available evidence (attempts with their real retrieval states), affected artifacts, recovery record, `next_owner` and recovery action. The failed attempt is preserved in history. Earlier outputs are moved to history, so they are not presented as the current result.
+
+## Inspection commands
 
 ```bash
 # Retrieve and parse every disclosed source, recording every attempt
@@ -39,6 +71,9 @@ No credentials are needed: every disclosed source is publicly readable. Do not a
 
 # Decide, then compare the non-infeasible options and report the run status (no deliverables)
 .venv/bin/python event-planning-coordination-brief/scripts/run.py recommend --out <dir>
+
+# Recommend, plan the run of show, render and validate the four deliverables + render-manifest.json
+.venv/bin/python event-planning-coordination-brief/scripts/run.py render --out <dir>
 
 # Tests
 .venv/bin/python -m pytest
@@ -54,6 +89,9 @@ classification, approvals, dependencies, unresolved items and comparison facts
 `recommend` also writes `recommendation-report.json`: the recommendation outcome, factor comparisons,
 the question for Operations when the choice is deferred, and the run status
 (`references/recommendation-policy.md`).
+`render` writes `vendor-comparison.csv`, `event-plan.md`, `event-calendar.ics`, `draft-communications.md`
+and `render-manifest.json` (artifact hashes and validation checks) to `<dir>`, and exits non-zero if any
+validation check fails (`references/deliverables.md`).
 
 ## Workflow (nine stages)
 
@@ -66,8 +104,8 @@ the question for Operations when the choice is deferred, and the run status
 | 05 | option-generation | Option bundles from the quotes; early rejections with reasons | deterministic |
 | 06 | feasibility-testing | Checks and classification (`references/decision-policy.md`) | deterministic |
 | 07 | decision-and-approval | Recommendation by dominance only, or deferral to Operations with the tradeoff stated; approvals `pending` | deterministic (no weights) |
-| 08 | draft-propagation | CSV, plan, calendar, communications from one model | deterministic rendering, agent prose |
-| 09 | publication-validation | Schema, hash chain, cross-file consistency, privacy and claim scans | deterministic |
+| 08 | draft-propagation | Run of show (Programme planner decisions labelled), then CSV, plan, calendar, communications from one model | deterministic |
+| 09 | publication-validation | Final artifact paths and hashes, deliverable validation checks, publication status | deterministic |
 
 ## Rules the skill must keep
 
@@ -88,12 +126,12 @@ Read `references/decision-policy.md` before changing any rule. In short:
 - **TLS:** certificate-chain and hostname verification stay on. Python 3.13's extra `VERIFY_X509_STRICT` flag is cleared because the TICC certificate chain lacks a Subject Key Identifier, which that flag rejects.
 - **Versions:** sources are identified by exact retrieval timestamp (stakeholder rule), with any native version beside it. A sha256 is recorded for every byte stream as an integrity check.
 
-## Agent reasoning steps
+## Judgment inputs
 
-These steps need judgment. Their output is recorded as evidence-cited records and validated by code:
+These inputs need judgment rather than code. Each is kept as a reference file, cited as evidence, and validated by code:
 
 1. **Floor-plan observations** (`references/floorplan-observations.json`). Read the captured 4F PDF and record spatial observations with page and region locators, bound to the PDF's sha256. Mark anything not clearly legible as `ambiguous`. If the captured PDF's hash no longer matches, every observation is held as unverified: render the new PDF, read it again, and update the file and its hash.
-2. **Prose** for the plan and the unsent draft messages. Prose may explain the recommendation outcome but never changes it: when the outcome is `deferred-to-operations`, the drafts present the tradeoff and ask Operations to decide.
+2. **Programme planner decisions** (`references/programme-decisions.json`). Durations the sources do not give (opening, lunch, breaks, closing), order and grouping are set by the planner, owned by Programme and pending its review. They are labelled as planner decisions everywhere they appear, never as source facts.
 
 ## Files
 
@@ -110,3 +148,10 @@ These steps need judgment. Their output is recorded as evidence-cited records an
 - `scripts/coordination/decide/`: baseline, options and costs, checks, decision model
 - `references/recommendation-policy.md`: candidates, factors, dominance, outcomes, run status
 - `scripts/coordination/recommend.py`: recommendation layer and run status
+- `references/programme-decisions.json`: Programme planner decisions for the run of show
+- `references/deliverables.md`: deliverable contents, field mapping, traceability, validation
+- `scripts/coordination/programme.py`: run-of-show planning (non-overlapping, buffers explicit)
+- `scripts/coordination/render/`: view model, CSV/plan/ICS/communications renderers, impact, validation
+- `scripts/coordination/stages.py`: the nine snapshots, packaged from the phase outputs
+- `scripts/coordination/history.py`: current-run pointer, history index, archive, promotion, verification
+- `scripts/coordination/pipeline.py`: the end-to-end run, recovery and `failure.json`

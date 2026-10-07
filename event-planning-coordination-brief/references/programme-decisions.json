@@ -1,0 +1,14 @@
+{
+  "note": "Programme planning decisions. They fill values the sources do not supply, under the brief's statement that the planner chooses the demonstration order, grouping and the compatible meal and break schedule (N-BRIEF-planner_schedule_choices). They are planner decisions owned by Programme, pending Programme review; they are not source facts. Set by the learner on 2026-10-07.",
+  "owner": "Programme",
+  "status": "planner decision, pending Programme review",
+  "decisions": [
+    {"id": "PD-opening-minutes", "summary": "Opening/welcome lasts 15 minutes, starting at the event window opening.", "value": 15},
+    {"id": "PD-lunch-minutes", "summary": "Lunch lasts 60 minutes.", "value": 60},
+    {"id": "PD-break-minutes", "summary": "Each of the two breaks lasts 15 minutes.", "value": 15},
+    {"id": "PD-break-count", "summary": "Two breaks, matching the quoted catering package (lunch and two breaks).", "value": 2},
+    {"id": "PD-closing-minutes", "summary": "Closing lasts 15 minutes and ends at the event window close.", "value": 15},
+    {"id": "PD-order", "summary": "Order: opening; keynote at its fixed time; break 1; first half of the demos (roster order); lunch; second half of the demos (roster order); break 2; closing at the end of the window. Any remaining time is unallocated Programme buffer, not invented content.", "value": ["opening", "keynote", "break", "demos-1", "lunch", "demos-2", "break", "closing"]},
+    {"id": "PD-demo-grouping", "summary": "Demos are split into two groups around lunch; the first group takes the larger half when the count is odd, and roster order is kept.", "value": "halves-in-roster-order"}
+  ]
+}

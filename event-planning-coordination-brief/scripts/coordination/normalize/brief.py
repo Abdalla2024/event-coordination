@@ -194,6 +194,8 @@ SPECS = {
         r"Keep the existing (\d{1,2}:\d{2})–(\d{1,2}:\d{2}) keynote and (\d{1,2}:\d{2})–(\d{1,2}:\d{2}) event window",
         lambda m: {"keynote": [m.group(1), m.group(2)], "event_window": [m.group(3), m.group(4)]}, None),
     "roster_change_owner": (r"(\w+) owns roster or duration changes", lambda m: m.group(1), None),
+    "planner_schedule_choices": (r"The planner chooses (the demonstration order, grouping and compatible meal and "
+                                 r"break schedule)", lambda m: m.group(1), None),
 }
 MULTI = {"service_assignments"}          # facts that legitimately occur more than once with different values
 CASE_RECORD_SECTIONS = ("Venue coordination record", "Exercise readiness", "Exercise programme")

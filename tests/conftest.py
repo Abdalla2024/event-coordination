@@ -1,4 +1,6 @@
 import io
+import re
+import zipfile
 import json
 import sys
 from pathlib import Path
@@ -30,7 +32,20 @@ def xlsx_bytes(rows, title="Sheet1", hidden_rows=(), hidden_cols=(), extra_sheet
         s.sheet_state = state
     buf = io.BytesIO()
     wb.save(buf)
-    return buf.getvalue()
+    return _stable_zip(buf.getvalue())
+
+
+def _stable_zip(data: bytes) -> bytes:
+    """Fix the save-time timestamps openpyxl writes, so identical sheets give identical bytes."""
+    src, out = zipfile.ZipFile(io.BytesIO(data)), io.BytesIO()
+    with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as dst:
+        for info in src.infolist():
+            body = src.read(info.filename)
+            if info.filename == "docProps/core.xml":
+                body = re.sub(rb"(<dcterms:(?:created|modified)[^>]*>)[^<]*", rb"\g<1>2026-01-01T00:00:00Z", body)
+            dst.writestr(zipfile.ZipInfo(info.filename, date_time=(2026, 1, 1, 0, 0, 0)), body,
+                         compress_type=zipfile.ZIP_DEFLATED)
+    return out.getvalue()
 
 
 class FakeTransport:

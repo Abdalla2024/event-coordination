@@ -1,0 +1,1318 @@
+{
+  "schema_version": "event-coordination-stage-snapshot/2",
+  "snapshot_id": "run-20261007T211812Z-c4f64e-s04",
+  "run_id": "run-20261007T211812Z-c4f64e",
+  "stage": "planning-baseline",
+  "sequence": 4,
+  "created_at": "2026-10-07T21:18:19.517Z",
+  "status": "complete",
+  "predecessor": {
+    "snapshot_id": "run-20261007T211812Z-c4f64e-s03",
+    "path": "snapshots/03-constraint-model.json",
+    "sha256": "sha256:950722445b72a3765e16749135a0bc925895dfad3b5a681e63558e1101a72eb1"
+  },
+  "consumed_record_ids": [
+    "N-ATT-group-fellows",
+    "N-ATT-group-partners",
+    "N-ATT-group-staff",
+    "N-ATT-group-speakers",
+    "N-ATT-group-walk_ins",
+    "X-headcount-brief-vs-signals",
+    "N-ATT-need-wheelchair_seating",
+    "N-ATT-need-mobility_companion",
+    "N-ATT-need-live_captions",
+    "N-ATT-need-hearing_loop",
+    "N-ATT-need-quiet_room",
+    "N-ATT-need-vegetarian_meal",
+    "N-ATT-need-halal_meal",
+    "N-ATT-need-severe_allergy_follow_up",
+    "N-CAL-CAL-001",
+    "N-CAL-CAL-002",
+    "N-CAL-CAL-004",
+    "N-BRIEF-programme_keynote_and_window",
+    "N-CAL-CAL-003",
+    "N-CAL-CAL-008",
+    "N-CAL-CAL-005",
+    "N-BRIEF-venue_coverage",
+    "N-BRIEF-readiness_base_bundles",
+    "N-BRIEF-readiness_date",
+    "N-BRIEF-readiness_setup_window",
+    "N-BRIEF-readiness_teardown_window",
+    "N-BRIEF-hard_requirements",
+    "N-BRIEF-planning_ceiling_twd",
+    "N-BUD-venue",
+    "N-BUD-catering",
+    "N-BUD-accessibility",
+    "N-BUD-production",
+    "N-BUD-communications",
+    "N-BUD-security",
+    "N-BUD-contingency",
+    "N-BRIEF-budget_allowance_categories",
+    "X-allowance-categories",
+    "N-BRIEF-demo_count",
+    "N-BRIEF-demo_roster",
+    "N-BRIEF-demo_presentation_minutes",
+    "N-BRIEF-demo_changeover_minutes",
+    "X-demo-roster"
+  ],
+  "produced_record_ids": [
+    "B-headcount",
+    "B-need-wheelchair_seating",
+    "B-need-mobility_companion",
+    "B-need-live_captions",
+    "B-need-hearing_loop",
+    "B-need-quiet_room",
+    "B-need-vegetarian_meal",
+    "B-need-halal_meal",
+    "B-need-severe_allergy_follow_up",
+    "B-event-window",
+    "B-fallback-window",
+    "B-keynote",
+    "B-venue-hold",
+    "B-teardown",
+    "B-decision-deadline",
+    "B-venue-coverage",
+    "B-readiness",
+    "B-time-requirements",
+    "B-ceiling",
+    "B-budget-venue",
+    "B-budget-catering",
+    "B-budget-accessibility",
+    "B-budget-production",
+    "B-budget-communications",
+    "B-budget-security",
+    "B-budget-contingency",
+    "B-allowances",
+    "B-accessibility-requirements",
+    "B-programme",
+    "PRG-01-setup",
+    "PRG-02-opening",
+    "PRG-03-buffer",
+    "PRG-04-keynote",
+    "PRG-05-break",
+    "PRG-06-demo",
+    "PRG-07-changeover",
+    "PRG-08-demo",
+    "PRG-09-changeover",
+    "PRG-10-demo",
+    "PRG-11-changeover",
+    "PRG-12-demo",
+    "PRG-13-changeover",
+    "PRG-14-demo",
+    "PRG-15-changeover",
+    "PRG-16-demo",
+    "PRG-17-changeover",
+    "PRG-18-lunch",
+    "PRG-19-demo",
+    "PRG-20-changeover",
+    "PRG-21-demo",
+    "PRG-22-changeover",
+    "PRG-23-demo",
+    "PRG-24-changeover",
+    "PRG-25-demo",
+    "PRG-26-changeover",
+    "PRG-27-demo",
+    "PRG-28-changeover",
+    "PRG-29-demo",
+    "PRG-30-changeover",
+    "PRG-31-break",
+    "PRG-32-buffer",
+    "PRG-33-closing",
+    "PRG-34-teardown"
+  ],
+  "state": {
+    "headcount_basis": [
+      {
+        "id": "B-headcount",
+        "summary": "Planning headcount: {'total': 245, 'groups': {'fellows': 148, 'partners': 32, 'staff': 18, 'speakers': 12, 'walk_ins': 35}, 'basis': 'sum of separate groups; overlapping needs not added'}",
+        "evidence_ids": [
+          "N-ATT-group-fellows",
+          "N-ATT-group-partners",
+          "N-ATT-group-staff",
+          "N-ATT-group-speakers",
+          "N-ATT-group-walk_ins",
+          "STK-I1-L41",
+          "STK-I1-L87",
+          "X-headcount-brief-vs-signals"
+        ],
+        "owner": null,
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": {
+          "total": 245,
+          "groups": {
+            "fellows": 148,
+            "partners": 32,
+            "staff": 18,
+            "speakers": 12,
+            "walk_ins": 35
+          },
+          "basis": "sum of separate groups; overlapping needs not added"
+        },
+        "blocked_by": []
+      },
+      {
+        "id": "B-need-wheelchair_seating",
+        "summary": "Need wheelchair_seating (overlapping): 6",
+        "evidence_ids": [
+          "N-ATT-need-wheelchair_seating"
+        ],
+        "owner": null,
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": 6,
+        "blocked_by": []
+      },
+      {
+        "id": "B-need-mobility_companion",
+        "summary": "Need mobility_companion (overlapping): 4",
+        "evidence_ids": [
+          "N-ATT-need-mobility_companion"
+        ],
+        "owner": null,
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": 4,
+        "blocked_by": []
+      },
+      {
+        "id": "B-need-live_captions",
+        "summary": "Need live_captions (overlapping): 23",
+        "evidence_ids": [
+          "N-ATT-need-live_captions"
+        ],
+        "owner": null,
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": 23,
+        "blocked_by": []
+      },
+      {
+        "id": "B-need-hearing_loop",
+        "summary": "Need hearing_loop (overlapping): 7",
+        "evidence_ids": [
+          "N-ATT-need-hearing_loop"
+        ],
+        "owner": null,
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": 7,
+        "blocked_by": []
+      },
+      {
+        "id": "B-need-quiet_room",
+        "summary": "Need quiet_room (overlapping): 9",
+        "evidence_ids": [
+          "N-ATT-need-quiet_room"
+        ],
+        "owner": null,
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": 9,
+        "blocked_by": []
+      },
+      {
+        "id": "B-need-vegetarian_meal",
+        "summary": "Need vegetarian_meal (overlapping): 28",
+        "evidence_ids": [
+          "N-ATT-need-vegetarian_meal"
+        ],
+        "owner": null,
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": 28,
+        "blocked_by": []
+      },
+      {
+        "id": "B-need-halal_meal",
+        "summary": "Need halal_meal (overlapping): 12",
+        "evidence_ids": [
+          "N-ATT-need-halal_meal"
+        ],
+        "owner": null,
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": 12,
+        "blocked_by": []
+      },
+      {
+        "id": "B-need-severe_allergy_follow_up",
+        "summary": "Need severe_allergy_follow_up (overlapping): 4",
+        "evidence_ids": [
+          "N-ATT-need-severe_allergy_follow_up"
+        ],
+        "owner": null,
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": 4,
+        "blocked_by": []
+      }
+    ],
+    "schedule_dependencies": [
+      {
+        "id": "B-event-window",
+        "summary": "Preferred event window: {'date': '2026-10-17', 'start': '2026-10-17T09:30:00+08:00', 'end': '2026-10-17T17:00:00+08:00', 'priority': 'hard'}",
+        "evidence_ids": [
+          "N-CAL-CAL-001"
+        ],
+        "owner": null,
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": {
+          "date": "2026-10-17",
+          "start": "2026-10-17T09:30:00+08:00",
+          "end": "2026-10-17T17:00:00+08:00",
+          "priority": "hard"
+        },
+        "blocked_by": []
+      },
+      {
+        "id": "B-fallback-window",
+        "summary": "Fallback event window: {'date': '2026-10-24', 'start': '2026-10-24T09:30:00+08:00', 'end': '2026-10-24T17:00:00+08:00', 'priority': 'soft'}",
+        "evidence_ids": [
+          "N-CAL-CAL-002"
+        ],
+        "owner": null,
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": {
+          "date": "2026-10-24",
+          "start": "2026-10-24T09:30:00+08:00",
+          "end": "2026-10-24T17:00:00+08:00",
+          "priority": "soft"
+        },
+        "blocked_by": []
+      },
+      {
+        "id": "B-keynote",
+        "summary": "Keynote availability: {'date': '2026-10-17', 'start': '2026-10-17T10:00:00+08:00', 'end': '2026-10-17T11:00:00+08:00', 'priority': 'hard', 'owner': 'Programme'}",
+        "evidence_ids": [
+          "N-CAL-CAL-004",
+          "N-BRIEF-programme_keynote_and_window"
+        ],
+        "owner": null,
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": {
+          "date": "2026-10-17",
+          "start": "2026-10-17T10:00:00+08:00",
+          "end": "2026-10-17T11:00:00+08:00",
+          "priority": "hard",
+          "owner": "Programme"
+        },
+        "blocked_by": []
+      },
+      {
+        "id": "B-venue-hold",
+        "summary": "Venue hold window (a hold is not a confirmation): {'date': '2026-10-17', 'start': '2026-10-17T07:30:00+08:00', 'end': '2026-10-17T18:30:00+08:00', 'priority': 'hard'}",
+        "evidence_ids": [
+          "N-CAL-CAL-003",
+          "STK-I2-L113"
+        ],
+        "owner": null,
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": {
+          "date": "2026-10-17",
+          "start": "2026-10-17T07:30:00+08:00",
+          "end": "2026-10-17T18:30:00+08:00",
+          "priority": "hard"
+        },
+        "blocked_by": []
+      },
+      {
+        "id": "B-teardown",
+        "summary": "Teardown window: {'start': '2026-10-17T17:00:00+08:00', 'end': '2026-10-17T18:30:00+08:00', 'priority': 'hard'}",
+        "evidence_ids": [
+          "N-CAL-CAL-008",
+          "STK-I1-L249"
+        ],
+        "owner": null,
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": {
+          "start": "2026-10-17T17:00:00+08:00",
+          "end": "2026-10-17T18:30:00+08:00",
+          "priority": "hard"
+        },
+        "blocked_by": []
+      },
+      {
+        "id": "B-decision-deadline",
+        "summary": "Plan and budget decision deadline: 2026-09-04T17:00:00+08:00",
+        "evidence_ids": [
+          "N-CAL-CAL-005"
+        ],
+        "owner": null,
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": "2026-09-04T17:00:00+08:00",
+        "blocked_by": []
+      },
+      {
+        "id": "B-venue-coverage",
+        "summary": "Venue coordination record coverage: {'dates': ['2026-10-17', '2026-10-24'], 'start': '07:30', 'end': '18:30', 'year_basis': 'the phrase states the year once for both dates'}",
+        "evidence_ids": [
+          "N-BRIEF-venue_coverage"
+        ],
+        "owner": null,
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": {
+          "dates": [
+            "2026-10-17",
+            "2026-10-24"
+          ],
+          "start": "07:30",
+          "end": "18:30",
+          "year_basis": "the phrase states the year once for both dates"
+        },
+        "blocked_by": []
+      },
+      {
+        "id": "B-readiness",
+        "summary": "Readiness confirmation (case record): {'date': '2026-10-17', 'catering_alternatives': ['Q-003', 'Q-004'], 'common': ['Q-005', 'Q-006', 'Q-009', 'Q-010'], 'setup': {'start': '07:30', 'end': '09:30'}, 'teardown': {'start': '17:00', 'end': '18:30'}}",
+        "evidence_ids": [
+          "N-BRIEF-readiness_base_bundles",
+          "N-BRIEF-readiness_date",
+          "N-BRIEF-readiness_setup_window",
+          "N-BRIEF-readiness_teardown_window"
+        ],
+        "owner": null,
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": {
+          "date": "2026-10-17",
+          "catering_alternatives": [
+            "Q-003",
+            "Q-004"
+          ],
+          "common": [
+            "Q-005",
+            "Q-006",
+            "Q-009",
+            "Q-010"
+          ],
+          "setup": {
+            "start": "07:30",
+            "end": "09:30"
+          },
+          "teardown": {
+            "start": "17:00",
+            "end": "18:30"
+          }
+        },
+        "blocked_by": []
+      },
+      {
+        "id": "B-time-requirements",
+        "summary": "Opening and completion times: {'opening_time': '09:30', 'completion_time': '17:00'}",
+        "evidence_ids": [
+          "N-BRIEF-hard_requirements"
+        ],
+        "owner": null,
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": {
+          "opening_time": "09:30",
+          "completion_time": "17:00"
+        },
+        "blocked_by": []
+      },
+      {
+        "id": "B-programme",
+        "summary": "Programme inputs: {'demo_count': 12, 'roster': ['DEMO-01', 'DEMO-02', 'DEMO-03', 'DEMO-04', 'DEMO-05', 'DEMO-06', 'DEMO-07', 'DEMO-08', 'DEMO-09', 'DEMO-10', 'DEMO-11', 'DEMO-12'], 'presentation_minutes': 10, 'changeover_minutes': 3, 'keynote': ['10:00', '11:00'], 'event_window': ['09:30', '17:00']}",
+        "evidence_ids": [
+          "N-BRIEF-demo_count",
+          "N-BRIEF-demo_roster",
+          "N-BRIEF-demo_presentation_minutes",
+          "N-BRIEF-demo_changeover_minutes",
+          "N-BRIEF-programme_keynote_and_window",
+          "X-demo-roster"
+        ],
+        "owner": null,
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": {
+          "demo_count": 12,
+          "roster": [
+            "DEMO-01",
+            "DEMO-02",
+            "DEMO-03",
+            "DEMO-04",
+            "DEMO-05",
+            "DEMO-06",
+            "DEMO-07",
+            "DEMO-08",
+            "DEMO-09",
+            "DEMO-10",
+            "DEMO-11",
+            "DEMO-12"
+          ],
+          "presentation_minutes": 10,
+          "changeover_minutes": 3,
+          "keynote": [
+            "10:00",
+            "11:00"
+          ],
+          "event_window": [
+            "09:30",
+            "17:00"
+          ]
+        },
+        "blocked_by": []
+      },
+      {
+        "id": "PRG-01-setup",
+        "kind": "setup",
+        "label": "Setup and pre-opening readiness checks",
+        "start": "2026-10-17T07:30:00+08:00",
+        "end": "2026-10-17T09:30:00+08:00",
+        "minutes": 120,
+        "basis": "source",
+        "evidence_ids": [
+          "B-readiness",
+          "B-venue-hold"
+        ],
+        "decision_ids": [],
+        "owner": "Programme",
+        "summary": "Setup and pre-opening readiness checks 2026-10-17T07:30:00+08:00 – 2026-10-17T09:30:00+08:00 (source)"
+      },
+      {
+        "id": "PRG-02-opening",
+        "kind": "opening",
+        "label": "Opening and welcome",
+        "start": "2026-10-17T09:30:00+08:00",
+        "end": "2026-10-17T09:45:00+08:00",
+        "minutes": 15,
+        "basis": "planner-decision",
+        "evidence_ids": [
+          "B-event-window"
+        ],
+        "decision_ids": [
+          "PD-opening-minutes",
+          "PD-order"
+        ],
+        "owner": "Programme",
+        "summary": "Opening and welcome 2026-10-17T09:30:00+08:00 – 2026-10-17T09:45:00+08:00 (planner-decision)"
+      },
+      {
+        "id": "PRG-03-buffer",
+        "kind": "buffer",
+        "label": "Unallocated Programme buffer",
+        "start": "2026-10-17T09:45:00+08:00",
+        "end": "2026-10-17T10:00:00+08:00",
+        "minutes": 15,
+        "basis": "unallocated",
+        "evidence_ids": [
+          "B-event-window"
+        ],
+        "decision_ids": [
+          "PD-order"
+        ],
+        "owner": "Programme",
+        "summary": "Unallocated Programme buffer 2026-10-17T09:45:00+08:00 – 2026-10-17T10:00:00+08:00 (unallocated)"
+      },
+      {
+        "id": "PRG-04-keynote",
+        "kind": "keynote",
+        "label": "Keynote",
+        "start": "2026-10-17T10:00:00+08:00",
+        "end": "2026-10-17T11:00:00+08:00",
+        "minutes": 60,
+        "basis": "source",
+        "evidence_ids": [
+          "B-keynote",
+          "B-programme"
+        ],
+        "decision_ids": [],
+        "owner": "Programme",
+        "summary": "Keynote 2026-10-17T10:00:00+08:00 – 2026-10-17T11:00:00+08:00 (source)"
+      },
+      {
+        "id": "PRG-05-break",
+        "kind": "break",
+        "label": "Break 1",
+        "start": "2026-10-17T11:00:00+08:00",
+        "end": "2026-10-17T11:15:00+08:00",
+        "minutes": 15,
+        "basis": "planner-decision",
+        "evidence_ids": [
+          "N-BRIEF-planner_schedule_choices"
+        ],
+        "decision_ids": [
+          "PD-break-minutes",
+          "PD-break-count",
+          "PD-order"
+        ],
+        "owner": "Programme",
+        "summary": "Break 1 2026-10-17T11:00:00+08:00 – 2026-10-17T11:15:00+08:00 (planner-decision)"
+      },
+      {
+        "id": "PRG-06-demo",
+        "kind": "demo",
+        "label": "DEMO-01 presentation",
+        "start": "2026-10-17T11:15:00+08:00",
+        "end": "2026-10-17T11:25:00+08:00",
+        "minutes": 10,
+        "basis": "source-duration, planner-placement",
+        "evidence_ids": [
+          "B-programme"
+        ],
+        "decision_ids": [
+          "PD-order",
+          "PD-demo-grouping"
+        ],
+        "owner": "Programme",
+        "summary": "DEMO-01 presentation 2026-10-17T11:15:00+08:00 – 2026-10-17T11:25:00+08:00 (source-duration, planner-placement)"
+      },
+      {
+        "id": "PRG-07-changeover",
+        "kind": "changeover",
+        "label": "DEMO-01 changeover",
+        "start": "2026-10-17T11:25:00+08:00",
+        "end": "2026-10-17T11:28:00+08:00",
+        "minutes": 3,
+        "basis": "source-duration, planner-placement",
+        "evidence_ids": [
+          "B-programme"
+        ],
+        "decision_ids": [
+          "PD-order",
+          "PD-demo-grouping"
+        ],
+        "owner": "Programme",
+        "summary": "DEMO-01 changeover 2026-10-17T11:25:00+08:00 – 2026-10-17T11:28:00+08:00 (source-duration, planner-placement)"
+      },
+      {
+        "id": "PRG-08-demo",
+        "kind": "demo",
+        "label": "DEMO-02 presentation",
+        "start": "2026-10-17T11:28:00+08:00",
+        "end": "2026-10-17T11:38:00+08:00",
+        "minutes": 10,
+        "basis": "source-duration, planner-placement",
+        "evidence_ids": [
+          "B-programme"
+        ],
+        "decision_ids": [
+          "PD-order",
+          "PD-demo-grouping"
+        ],
+        "owner": "Programme",
+        "summary": "DEMO-02 presentation 2026-10-17T11:28:00+08:00 – 2026-10-17T11:38:00+08:00 (source-duration, planner-placement)"
+      },
+      {
+        "id": "PRG-09-changeover",
+        "kind": "changeover",
+        "label": "DEMO-02 changeover",
+        "start": "2026-10-17T11:38:00+08:00",
+        "end": "2026-10-17T11:41:00+08:00",
+        "minutes": 3,
+        "basis": "source-duration, planner-placement",
+        "evidence_ids": [
+          "B-programme"
+        ],
+        "decision_ids": [
+          "PD-order",
+          "PD-demo-grouping"
+        ],
+        "owner": "Programme",
+        "summary": "DEMO-02 changeover 2026-10-17T11:38:00+08:00 – 2026-10-17T11:41:00+08:00 (source-duration, planner-placement)"
+      },
+      {
+        "id": "PRG-10-demo",
+        "kind": "demo",
+        "label": "DEMO-03 presentation",
+        "start": "2026-10-17T11:41:00+08:00",
+        "end": "2026-10-17T11:51:00+08:00",
+        "minutes": 10,
+        "basis": "source-duration, planner-placement",
+        "evidence_ids": [
+          "B-programme"
+        ],
+        "decision_ids": [
+          "PD-order",
+          "PD-demo-grouping"
+        ],
+        "owner": "Programme",
+        "summary": "DEMO-03 presentation 2026-10-17T11:41:00+08:00 – 2026-10-17T11:51:00+08:00 (source-duration, planner-placement)"
+      },
+      {
+        "id": "PRG-11-changeover",
+        "kind": "changeover",
+        "label": "DEMO-03 changeover",
+        "start": "2026-10-17T11:51:00+08:00",
+        "end": "2026-10-17T11:54:00+08:00",
+        "minutes": 3,
+        "basis": "source-duration, planner-placement",
+        "evidence_ids": [
+          "B-programme"
+        ],
+        "decision_ids": [
+          "PD-order",
+          "PD-demo-grouping"
+        ],
+        "owner": "Programme",
+        "summary": "DEMO-03 changeover 2026-10-17T11:51:00+08:00 – 2026-10-17T11:54:00+08:00 (source-duration, planner-placement)"
+      },
+      {
+        "id": "PRG-12-demo",
+        "kind": "demo",
+        "label": "DEMO-04 presentation",
+        "start": "2026-10-17T11:54:00+08:00",
+        "end": "2026-10-17T12:04:00+08:00",
+        "minutes": 10,
+        "basis": "source-duration, planner-placement",
+        "evidence_ids": [
+          "B-programme"
+        ],
+        "decision_ids": [
+          "PD-order",
+          "PD-demo-grouping"
+        ],
+        "owner": "Programme",
+        "summary": "DEMO-04 presentation 2026-10-17T11:54:00+08:00 – 2026-10-17T12:04:00+08:00 (source-duration, planner-placement)"
+      },
+      {
+        "id": "PRG-13-changeover",
+        "kind": "changeover",
+        "label": "DEMO-04 changeover",
+        "start": "2026-10-17T12:04:00+08:00",
+        "end": "2026-10-17T12:07:00+08:00",
+        "minutes": 3,
+        "basis": "source-duration, planner-placement",
+        "evidence_ids": [
+          "B-programme"
+        ],
+        "decision_ids": [
+          "PD-order",
+          "PD-demo-grouping"
+        ],
+        "owner": "Programme",
+        "summary": "DEMO-04 changeover 2026-10-17T12:04:00+08:00 – 2026-10-17T12:07:00+08:00 (source-duration, planner-placement)"
+      },
+      {
+        "id": "PRG-14-demo",
+        "kind": "demo",
+        "label": "DEMO-05 presentation",
+        "start": "2026-10-17T12:07:00+08:00",
+        "end": "2026-10-17T12:17:00+08:00",
+        "minutes": 10,
+        "basis": "source-duration, planner-placement",
+        "evidence_ids": [
+          "B-programme"
+        ],
+        "decision_ids": [
+          "PD-order",
+          "PD-demo-grouping"
+        ],
+        "owner": "Programme",
+        "summary": "DEMO-05 presentation 2026-10-17T12:07:00+08:00 – 2026-10-17T12:17:00+08:00 (source-duration, planner-placement)"
+      },
+      {
+        "id": "PRG-15-changeover",
+        "kind": "changeover",
+        "label": "DEMO-05 changeover",
+        "start": "2026-10-17T12:17:00+08:00",
+        "end": "2026-10-17T12:20:00+08:00",
+        "minutes": 3,
+        "basis": "source-duration, planner-placement",
+        "evidence_ids": [
+          "B-programme"
+        ],
+        "decision_ids": [
+          "PD-order",
+          "PD-demo-grouping"
+        ],
+        "owner": "Programme",
+        "summary": "DEMO-05 changeover 2026-10-17T12:17:00+08:00 – 2026-10-17T12:20:00+08:00 (source-duration, planner-placement)"
+      },
+      {
+        "id": "PRG-16-demo",
+        "kind": "demo",
+        "label": "DEMO-06 presentation",
+        "start": "2026-10-17T12:20:00+08:00",
+        "end": "2026-10-17T12:30:00+08:00",
+        "minutes": 10,
+        "basis": "source-duration, planner-placement",
+        "evidence_ids": [
+          "B-programme"
+        ],
+        "decision_ids": [
+          "PD-order",
+          "PD-demo-grouping"
+        ],
+        "owner": "Programme",
+        "summary": "DEMO-06 presentation 2026-10-17T12:20:00+08:00 – 2026-10-17T12:30:00+08:00 (source-duration, planner-placement)"
+      },
+      {
+        "id": "PRG-17-changeover",
+        "kind": "changeover",
+        "label": "DEMO-06 changeover",
+        "start": "2026-10-17T12:30:00+08:00",
+        "end": "2026-10-17T12:33:00+08:00",
+        "minutes": 3,
+        "basis": "source-duration, planner-placement",
+        "evidence_ids": [
+          "B-programme"
+        ],
+        "decision_ids": [
+          "PD-order",
+          "PD-demo-grouping"
+        ],
+        "owner": "Programme",
+        "summary": "DEMO-06 changeover 2026-10-17T12:30:00+08:00 – 2026-10-17T12:33:00+08:00 (source-duration, planner-placement)"
+      },
+      {
+        "id": "PRG-18-lunch",
+        "kind": "lunch",
+        "label": "Lunch",
+        "start": "2026-10-17T12:33:00+08:00",
+        "end": "2026-10-17T13:33:00+08:00",
+        "minutes": 60,
+        "basis": "planner-decision",
+        "evidence_ids": [
+          "N-BRIEF-planner_schedule_choices"
+        ],
+        "decision_ids": [
+          "PD-lunch-minutes",
+          "PD-order"
+        ],
+        "owner": "Programme",
+        "summary": "Lunch 2026-10-17T12:33:00+08:00 – 2026-10-17T13:33:00+08:00 (planner-decision)"
+      },
+      {
+        "id": "PRG-19-demo",
+        "kind": "demo",
+        "label": "DEMO-07 presentation",
+        "start": "2026-10-17T13:33:00+08:00",
+        "end": "2026-10-17T13:43:00+08:00",
+        "minutes": 10,
+        "basis": "source-duration, planner-placement",
+        "evidence_ids": [
+          "B-programme"
+        ],
+        "decision_ids": [
+          "PD-order",
+          "PD-demo-grouping"
+        ],
+        "owner": "Programme",
+        "summary": "DEMO-07 presentation 2026-10-17T13:33:00+08:00 – 2026-10-17T13:43:00+08:00 (source-duration, planner-placement)"
+      },
+      {
+        "id": "PRG-20-changeover",
+        "kind": "changeover",
+        "label": "DEMO-07 changeover",
+        "start": "2026-10-17T13:43:00+08:00",
+        "end": "2026-10-17T13:46:00+08:00",
+        "minutes": 3,
+        "basis": "source-duration, planner-placement",
+        "evidence_ids": [
+          "B-programme"
+        ],
+        "decision_ids": [
+          "PD-order",
+          "PD-demo-grouping"
+        ],
+        "owner": "Programme",
+        "summary": "DEMO-07 changeover 2026-10-17T13:43:00+08:00 – 2026-10-17T13:46:00+08:00 (source-duration, planner-placement)"
+      },
+      {
+        "id": "PRG-21-demo",
+        "kind": "demo",
+        "label": "DEMO-08 presentation",
+        "start": "2026-10-17T13:46:00+08:00",
+        "end": "2026-10-17T13:56:00+08:00",
+        "minutes": 10,
+        "basis": "source-duration, planner-placement",
+        "evidence_ids": [
+          "B-programme"
+        ],
+        "decision_ids": [
+          "PD-order",
+          "PD-demo-grouping"
+        ],
+        "owner": "Programme",
+        "summary": "DEMO-08 presentation 2026-10-17T13:46:00+08:00 – 2026-10-17T13:56:00+08:00 (source-duration, planner-placement)"
+      },
+      {
+        "id": "PRG-22-changeover",
+        "kind": "changeover",
+        "label": "DEMO-08 changeover",
+        "start": "2026-10-17T13:56:00+08:00",
+        "end": "2026-10-17T13:59:00+08:00",
+        "minutes": 3,
+        "basis": "source-duration, planner-placement",
+        "evidence_ids": [
+          "B-programme"
+        ],
+        "decision_ids": [
+          "PD-order",
+          "PD-demo-grouping"
+        ],
+        "owner": "Programme",
+        "summary": "DEMO-08 changeover 2026-10-17T13:56:00+08:00 – 2026-10-17T13:59:00+08:00 (source-duration, planner-placement)"
+      },
+      {
+        "id": "PRG-23-demo",
+        "kind": "demo",
+        "label": "DEMO-09 presentation",
+        "start": "2026-10-17T13:59:00+08:00",
+        "end": "2026-10-17T14:09:00+08:00",
+        "minutes": 10,
+        "basis": "source-duration, planner-placement",
+        "evidence_ids": [
+          "B-programme"
+        ],
+        "decision_ids": [
+          "PD-order",
+          "PD-demo-grouping"
+        ],
+        "owner": "Programme",
+        "summary": "DEMO-09 presentation 2026-10-17T13:59:00+08:00 – 2026-10-17T14:09:00+08:00 (source-duration, planner-placement)"
+      },
+      {
+        "id": "PRG-24-changeover",
+        "kind": "changeover",
+        "label": "DEMO-09 changeover",
+        "start": "2026-10-17T14:09:00+08:00",
+        "end": "2026-10-17T14:12:00+08:00",
+        "minutes": 3,
+        "basis": "source-duration, planner-placement",
+        "evidence_ids": [
+          "B-programme"
+        ],
+        "decision_ids": [
+          "PD-order",
+          "PD-demo-grouping"
+        ],
+        "owner": "Programme",
+        "summary": "DEMO-09 changeover 2026-10-17T14:09:00+08:00 – 2026-10-17T14:12:00+08:00 (source-duration, planner-placement)"
+      },
+      {
+        "id": "PRG-25-demo",
+        "kind": "demo",
+        "label": "DEMO-10 presentation",
+        "start": "2026-10-17T14:12:00+08:00",
+        "end": "2026-10-17T14:22:00+08:00",
+        "minutes": 10,
+        "basis": "source-duration, planner-placement",
+        "evidence_ids": [
+          "B-programme"
+        ],
+        "decision_ids": [
+          "PD-order",
+          "PD-demo-grouping"
+        ],
+        "owner": "Programme",
+        "summary": "DEMO-10 presentation 2026-10-17T14:12:00+08:00 – 2026-10-17T14:22:00+08:00 (source-duration, planner-placement)"
+      },
+      {
+        "id": "PRG-26-changeover",
+        "kind": "changeover",
+        "label": "DEMO-10 changeover",
+        "start": "2026-10-17T14:22:00+08:00",
+        "end": "2026-10-17T14:25:00+08:00",
+        "minutes": 3,
+        "basis": "source-duration, planner-placement",
+        "evidence_ids": [
+          "B-programme"
+        ],
+        "decision_ids": [
+          "PD-order",
+          "PD-demo-grouping"
+        ],
+        "owner": "Programme",
+        "summary": "DEMO-10 changeover 2026-10-17T14:22:00+08:00 – 2026-10-17T14:25:00+08:00 (source-duration, planner-placement)"
+      },
+      {
+        "id": "PRG-27-demo",
+        "kind": "demo",
+        "label": "DEMO-11 presentation",
+        "start": "2026-10-17T14:25:00+08:00",
+        "end": "2026-10-17T14:35:00+08:00",
+        "minutes": 10,
+        "basis": "source-duration, planner-placement",
+        "evidence_ids": [
+          "B-programme"
+        ],
+        "decision_ids": [
+          "PD-order",
+          "PD-demo-grouping"
+        ],
+        "owner": "Programme",
+        "summary": "DEMO-11 presentation 2026-10-17T14:25:00+08:00 – 2026-10-17T14:35:00+08:00 (source-duration, planner-placement)"
+      },
+      {
+        "id": "PRG-28-changeover",
+        "kind": "changeover",
+        "label": "DEMO-11 changeover",
+        "start": "2026-10-17T14:35:00+08:00",
+        "end": "2026-10-17T14:38:00+08:00",
+        "minutes": 3,
+        "basis": "source-duration, planner-placement",
+        "evidence_ids": [
+          "B-programme"
+        ],
+        "decision_ids": [
+          "PD-order",
+          "PD-demo-grouping"
+        ],
+        "owner": "Programme",
+        "summary": "DEMO-11 changeover 2026-10-17T14:35:00+08:00 – 2026-10-17T14:38:00+08:00 (source-duration, planner-placement)"
+      },
+      {
+        "id": "PRG-29-demo",
+        "kind": "demo",
+        "label": "DEMO-12 presentation",
+        "start": "2026-10-17T14:38:00+08:00",
+        "end": "2026-10-17T14:48:00+08:00",
+        "minutes": 10,
+        "basis": "source-duration, planner-placement",
+        "evidence_ids": [
+          "B-programme"
+        ],
+        "decision_ids": [
+          "PD-order",
+          "PD-demo-grouping"
+        ],
+        "owner": "Programme",
+        "summary": "DEMO-12 presentation 2026-10-17T14:38:00+08:00 – 2026-10-17T14:48:00+08:00 (source-duration, planner-placement)"
+      },
+      {
+        "id": "PRG-30-changeover",
+        "kind": "changeover",
+        "label": "DEMO-12 changeover",
+        "start": "2026-10-17T14:48:00+08:00",
+        "end": "2026-10-17T14:51:00+08:00",
+        "minutes": 3,
+        "basis": "source-duration, planner-placement",
+        "evidence_ids": [
+          "B-programme"
+        ],
+        "decision_ids": [
+          "PD-order",
+          "PD-demo-grouping"
+        ],
+        "owner": "Programme",
+        "summary": "DEMO-12 changeover 2026-10-17T14:48:00+08:00 – 2026-10-17T14:51:00+08:00 (source-duration, planner-placement)"
+      },
+      {
+        "id": "PRG-31-break",
+        "kind": "break",
+        "label": "Break 2",
+        "start": "2026-10-17T14:51:00+08:00",
+        "end": "2026-10-17T15:06:00+08:00",
+        "minutes": 15,
+        "basis": "planner-decision",
+        "evidence_ids": [
+          "N-BRIEF-planner_schedule_choices"
+        ],
+        "decision_ids": [
+          "PD-break-minutes",
+          "PD-break-count",
+          "PD-order"
+        ],
+        "owner": "Programme",
+        "summary": "Break 2 2026-10-17T14:51:00+08:00 – 2026-10-17T15:06:00+08:00 (planner-decision)"
+      },
+      {
+        "id": "PRG-32-buffer",
+        "kind": "buffer",
+        "label": "Unallocated Programme buffer",
+        "start": "2026-10-17T15:06:00+08:00",
+        "end": "2026-10-17T16:45:00+08:00",
+        "minutes": 99,
+        "basis": "unallocated",
+        "evidence_ids": [
+          "B-event-window"
+        ],
+        "decision_ids": [
+          "PD-order"
+        ],
+        "owner": "Programme",
+        "summary": "Unallocated Programme buffer 2026-10-17T15:06:00+08:00 – 2026-10-17T16:45:00+08:00 (unallocated)"
+      },
+      {
+        "id": "PRG-33-closing",
+        "kind": "closing",
+        "label": "Closing",
+        "start": "2026-10-17T16:45:00+08:00",
+        "end": "2026-10-17T17:00:00+08:00",
+        "minutes": 15,
+        "basis": "planner-decision",
+        "evidence_ids": [
+          "B-event-window"
+        ],
+        "decision_ids": [
+          "PD-closing-minutes",
+          "PD-order"
+        ],
+        "owner": "Programme",
+        "summary": "Closing 2026-10-17T16:45:00+08:00 – 2026-10-17T17:00:00+08:00 (planner-decision)"
+      },
+      {
+        "id": "PRG-34-teardown",
+        "kind": "teardown",
+        "label": "Teardown; all vendors clear",
+        "start": "2026-10-17T17:00:00+08:00",
+        "end": "2026-10-17T18:30:00+08:00",
+        "minutes": 90,
+        "basis": "source",
+        "evidence_ids": [
+          "B-teardown",
+          "B-readiness"
+        ],
+        "decision_ids": [],
+        "owner": "Programme",
+        "summary": "Teardown; all vendors clear 2026-10-17T17:00:00+08:00 – 2026-10-17T18:30:00+08:00 (source)"
+      }
+    ],
+    "budget_baseline": [
+      {
+        "id": "B-ceiling",
+        "summary": "Planning ceiling TWD: 520000",
+        "evidence_ids": [
+          "N-BRIEF-planning_ceiling_twd"
+        ],
+        "owner": "Operations",
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": 520000,
+        "blocked_by": []
+      },
+      {
+        "id": "B-budget-venue",
+        "summary": "Budget venue: {'category': 'venue', 'planned_amount_twd': 155000, 'approval_limit_twd': 180000, 'committed_amount_twd': 0, 'owner': 'Operations'}",
+        "evidence_ids": [
+          "N-BUD-venue"
+        ],
+        "owner": "Operations",
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": {
+          "category": "venue",
+          "planned_amount_twd": 155000,
+          "approval_limit_twd": 180000,
+          "committed_amount_twd": 0,
+          "owner": "Operations"
+        },
+        "blocked_by": []
+      },
+      {
+        "id": "B-budget-catering",
+        "summary": "Budget catering: {'category': 'catering', 'planned_amount_twd': 115000, 'approval_limit_twd': 135000, 'committed_amount_twd': 0, 'owner': 'Operations'}",
+        "evidence_ids": [
+          "N-BUD-catering"
+        ],
+        "owner": "Operations",
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": {
+          "category": "catering",
+          "planned_amount_twd": 115000,
+          "approval_limit_twd": 135000,
+          "committed_amount_twd": 0,
+          "owner": "Operations"
+        },
+        "blocked_by": []
+      },
+      {
+        "id": "B-budget-accessibility",
+        "summary": "Budget accessibility: {'category': 'accessibility', 'planned_amount_twd': 65000, 'approval_limit_twd': 80000, 'committed_amount_twd': 0, 'owner': 'Learner Experience'}",
+        "evidence_ids": [
+          "N-BUD-accessibility"
+        ],
+        "owner": "Learner Experience",
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": {
+          "category": "accessibility",
+          "planned_amount_twd": 65000,
+          "approval_limit_twd": 80000,
+          "committed_amount_twd": 0,
+          "owner": "Learner Experience"
+        },
+        "blocked_by": []
+      },
+      {
+        "id": "B-budget-production",
+        "summary": "Budget production: {'category': 'production', 'planned_amount_twd': 85000, 'approval_limit_twd': 100000, 'committed_amount_twd': 0, 'owner': 'Programme'}",
+        "evidence_ids": [
+          "N-BUD-production"
+        ],
+        "owner": "Programme",
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": {
+          "category": "production",
+          "planned_amount_twd": 85000,
+          "approval_limit_twd": 100000,
+          "committed_amount_twd": 0,
+          "owner": "Programme"
+        },
+        "blocked_by": []
+      },
+      {
+        "id": "B-budget-communications",
+        "summary": "Budget communications: {'category': 'communications', 'planned_amount_twd': 25000, 'approval_limit_twd': 30000, 'committed_amount_twd': 0, 'owner': 'Communications'}",
+        "evidence_ids": [
+          "N-BUD-communications"
+        ],
+        "owner": "Communications",
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": {
+          "category": "communications",
+          "planned_amount_twd": 25000,
+          "approval_limit_twd": 30000,
+          "committed_amount_twd": 0,
+          "owner": "Communications"
+        },
+        "blocked_by": []
+      },
+      {
+        "id": "B-budget-security",
+        "summary": "Budget security: {'category': 'security', 'planned_amount_twd': 25000, 'approval_limit_twd': 35000, 'committed_amount_twd': 0, 'owner': 'Operations'}",
+        "evidence_ids": [
+          "N-BUD-security"
+        ],
+        "owner": "Operations",
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": {
+          "category": "security",
+          "planned_amount_twd": 25000,
+          "approval_limit_twd": 35000,
+          "committed_amount_twd": 0,
+          "owner": "Operations"
+        },
+        "blocked_by": []
+      },
+      {
+        "id": "B-budget-contingency",
+        "summary": "Budget contingency: {'category': 'contingency', 'planned_amount_twd': 40000, 'approval_limit_twd': 50000, 'committed_amount_twd': 0, 'owner': 'Operations'}",
+        "evidence_ids": [
+          "N-BUD-contingency"
+        ],
+        "owner": "Operations",
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": {
+          "category": "contingency",
+          "planned_amount_twd": 40000,
+          "approval_limit_twd": 50000,
+          "committed_amount_twd": 0,
+          "owner": "Operations"
+        },
+        "blocked_by": []
+      },
+      {
+        "id": "B-allowances",
+        "summary": "Budget allowances counted in the ceiling: {'communications': 25000, 'contingency': 40000}",
+        "evidence_ids": [
+          "N-BRIEF-budget_allowance_categories",
+          "X-allowance-categories",
+          "STK-I2-L53"
+        ],
+        "owner": null,
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": {
+          "communications": 25000,
+          "contingency": 40000
+        },
+        "blocked_by": []
+      }
+    ],
+    "accessibility_baseline": [
+      {
+        "id": "B-accessibility-requirements",
+        "summary": "Hard accessibility provisions (cannot be traded away): [{'key': 'hearing_loop', 'basis': ['STK-I2-L77']}, {'key': 'step_free_access', 'basis': ['N-BRIEF-hard_requirements', 'STK-I2-L77']}, {'key': 'wheelchair_seating', 'basis': ['N-BRIEF-hard_requirements', 'STK-I2-L77']}, {'key': 'live_captions', 'basis': ['N-BRIEF-hard_requirements', 'STK-I2-L77']}, {'key': 'staffed_quiet_room', 'basis': ['N-BRIEF-hard_requirements', 'STK-I2-L77']}]",
+        "evidence_ids": [
+          "N-BRIEF-hard_requirements",
+          "STK-I2-L77"
+        ],
+        "owner": null,
+        "rationale": null,
+        "kind": "baseline",
+        "support": "supported",
+        "value": [
+          {
+            "key": "hearing_loop",
+            "basis": [
+              "STK-I2-L77"
+            ]
+          },
+          {
+            "key": "step_free_access",
+            "basis": [
+              "N-BRIEF-hard_requirements",
+              "STK-I2-L77"
+            ]
+          },
+          {
+            "key": "wheelchair_seating",
+            "basis": [
+              "N-BRIEF-hard_requirements",
+              "STK-I2-L77"
+            ]
+          },
+          {
+            "key": "live_captions",
+            "basis": [
+              "N-BRIEF-hard_requirements",
+              "STK-I2-L77"
+            ]
+          },
+          {
+            "key": "staffed_quiet_room",
+            "basis": [
+              "N-BRIEF-hard_requirements",
+              "STK-I2-L77"
+            ]
+          }
+        ],
+        "blocked_by": []
+      }
+    ],
+    "programme": {
+      "status": "planned",
+      "reason": null,
+      "date": "2026-10-17",
+      "unallocated_minutes": 114,
+      "demo_count": 12
+    }
+  },
+  "unresolved": [],
+  "decisions": []
+}

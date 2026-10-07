@@ -1,0 +1,229 @@
+{
+  "schema_version": "event-coordination-stage-snapshot/2",
+  "snapshot_id": "run-20261007T212022Z-a4b5ed-s09",
+  "run_id": "run-20261007T212022Z-a4b5ed",
+  "stage": "publication-validation",
+  "sequence": 9,
+  "created_at": "2026-10-07T21:20:30.141Z",
+  "status": "partial",
+  "predecessor": {
+    "snapshot_id": "run-20261007T212022Z-a4b5ed-s08",
+    "path": "snapshots/08-draft-propagation.json",
+    "sha256": "sha256:b5af54bba629c449303783e103b9923e155b4530ccddda047df1d978ee4818ac"
+  },
+  "consumed_record_ids": [
+    "ART-vendor-comparison",
+    "ART-event-plan",
+    "ART-event-calendar",
+    "ART-draft-communications"
+  ],
+  "produced_record_ids": [
+    "PUB-vendor-comparison.csv",
+    "PUB-event-plan.md",
+    "PUB-event-calendar.ics",
+    "PUB-draft-communications.md",
+    "V-csv-columns",
+    "V-csv-rows",
+    "V-plan-sections",
+    "V-plan-banner",
+    "V-recommendation-match",
+    "V-ics",
+    "V-programme",
+    "V-evidence",
+    "V-amounts",
+    "V-wording",
+    "V-privacy",
+    "V-comms-drafts",
+    "V-no-mutation",
+    "V-file-vendor-comparison.csv",
+    "V-file-event-plan.md",
+    "V-file-event-calendar.ics",
+    "V-file-draft-communications.md",
+    "V-snapshots-01-08"
+  ],
+  "state": {
+    "artifacts": [
+      {
+        "id": "PUB-vendor-comparison.csv",
+        "path": "vendor-comparison.csv",
+        "sha256": "sha256:bc73b5780467180de95b7512b20b945db35bf34344dd4261ffb669a3a117e6b5",
+        "validation_status": "valid"
+      },
+      {
+        "id": "PUB-event-plan.md",
+        "path": "event-plan.md",
+        "sha256": "sha256:484c3125ae165c025cab450ab09bf38589083c9664c8c930071ff844437dfbf3",
+        "validation_status": "valid"
+      },
+      {
+        "id": "PUB-event-calendar.ics",
+        "path": "event-calendar.ics",
+        "sha256": "sha256:702e860a0f3f99ac6270d8c8f2d861d4858284962581c6f17bec97632bddc8e1",
+        "validation_status": "valid"
+      },
+      {
+        "id": "PUB-draft-communications.md",
+        "path": "draft-communications.md",
+        "sha256": "sha256:c400484cc6eeabab45d21508234c0b19ed37fb0567060b374e1720fdd0d07003",
+        "validation_status": "valid"
+      }
+    ],
+    "validation_checks": [
+      {
+        "id": "V-csv-columns",
+        "summary": "CSV has the 11 required columns in order, then the documented extra columns",
+        "evidence_ids": [
+          "DEC-recommendation"
+        ],
+        "outcome": "pass"
+      },
+      {
+        "id": "V-csv-rows",
+        "summary": "Every CSV row matches its Phase 3 option (status, cost, approvals) and the Phase 4 outcome",
+        "evidence_ids": [
+          "DEC-recommendation"
+        ],
+        "outcome": "pass"
+      },
+      {
+        "id": "V-plan-sections",
+        "summary": "Event plan contains every required section in order",
+        "evidence_ids": [
+          "DEC-recommendation"
+        ],
+        "outcome": "pass"
+      },
+      {
+        "id": "V-plan-banner",
+        "summary": "Plan banner states the run status and recommendation outcome",
+        "evidence_ids": [
+          "DEC-recommendation"
+        ],
+        "outcome": "pass"
+      },
+      {
+        "id": "V-recommendation-match",
+        "summary": "Deliverables state exactly the Phase 4 recommendation",
+        "evidence_ids": [
+          "DEC-recommendation"
+        ],
+        "outcome": "pass"
+      },
+      {
+        "id": "V-ics",
+        "summary": "Calendar is a draft (PUBLISH), events tentative and transparent with stable UIDs, explicit timezone, no attendees, times equal to the model",
+        "evidence_ids": [
+          "DEC-recommendation"
+        ],
+        "outcome": "pass"
+      },
+      {
+        "id": "V-programme",
+        "summary": "Run of show has no overlaps; every time is a source fact or a recorded Programme planner decision",
+        "evidence_ids": [
+          "DEC-recommendation"
+        ],
+        "outcome": "pass"
+      },
+      {
+        "id": "V-evidence",
+        "summary": "Every cited evidence id resolves",
+        "evidence_ids": [
+          "DEC-recommendation"
+        ],
+        "outcome": "pass"
+      },
+      {
+        "id": "V-amounts",
+        "summary": "Every amount shown exists in the model",
+        "evidence_ids": [
+          "DEC-recommendation"
+        ],
+        "outcome": "pass"
+      },
+      {
+        "id": "V-wording",
+        "summary": "No affirmative claim of booking, confirmation, approval, selection, reservation or commitment",
+        "evidence_ids": [
+          "DEC-recommendation"
+        ],
+        "outcome": "pass"
+      },
+      {
+        "id": "V-privacy",
+        "summary": "No email addresses or phone numbers",
+        "evidence_ids": [
+          "DEC-recommendation"
+        ],
+        "outcome": "pass"
+      },
+      {
+        "id": "V-comms-drafts",
+        "summary": "Every message is labelled UNSENT DRAFT",
+        "evidence_ids": [
+          "DEC-recommendation"
+        ],
+        "outcome": "pass"
+      },
+      {
+        "id": "V-no-mutation",
+        "summary": "Rendering did not change the Phase 3/4 model, claims, recommendation, run status or programme",
+        "evidence_ids": [
+          "DEC-recommendation"
+        ],
+        "outcome": "pass"
+      },
+      {
+        "id": "V-file-vendor-comparison.csv",
+        "summary": "vendor-comparison.csv written and identical to the rendered text",
+        "evidence_ids": [
+          "DEC-recommendation"
+        ],
+        "outcome": "pass"
+      },
+      {
+        "id": "V-file-event-plan.md",
+        "summary": "event-plan.md written and identical to the rendered text",
+        "evidence_ids": [
+          "DEC-recommendation"
+        ],
+        "outcome": "pass"
+      },
+      {
+        "id": "V-file-event-calendar.ics",
+        "summary": "event-calendar.ics written and identical to the rendered text",
+        "evidence_ids": [
+          "DEC-recommendation"
+        ],
+        "outcome": "pass"
+      },
+      {
+        "id": "V-file-draft-communications.md",
+        "summary": "draft-communications.md written and identical to the rendered text",
+        "evidence_ids": [
+          "DEC-recommendation"
+        ],
+        "outcome": "pass"
+      },
+      {
+        "id": "V-snapshots-01-08",
+        "summary": "Snapshots 01–08 were written with schema validation, predecessor hashes, consumed/produced bookkeeping and evidence resolution enforced.",
+        "evidence_ids": [
+          "DEC-recommendation"
+        ],
+        "outcome": "pass"
+      }
+    ],
+    "publication_status": "validated",
+    "run_status": {
+      "status": "partial",
+      "reasons": [
+        "recommendation outcome 'deferred-to-operations' requires Operations judgment"
+      ],
+      "decision_status": "deferred-to-operations"
+    },
+    "recommendation_status": "deferred-to-operations"
+  },
+  "unresolved": [],
+  "decisions": []
+}

@@ -1,0 +1,316 @@
+{
+  "schema_version": "event-coordination-stage-snapshot/2",
+  "snapshot_id": "run-20261007T211753Z-f66ab1-s08",
+  "run_id": "run-20261007T211753Z-f66ab1",
+  "stage": "draft-propagation",
+  "sequence": 8,
+  "created_at": "2026-10-07T21:18:04.026Z",
+  "status": "complete",
+  "predecessor": {
+    "snapshot_id": "run-20261007T211753Z-f66ab1-s07",
+    "path": "snapshots/07-decision-and-approval.json",
+    "sha256": "sha256:0bc720da6b13f47686191a9825f40789ca0c88a5b3568f5bdb1be8ee266dc057"
+  },
+  "consumed_record_ids": [
+    "DEC-recommendation",
+    "APR-OPT-2026-10-17-Q-003-operations-plan",
+    "APR-OPT-2026-10-17-Q-003-budget-accessibility",
+    "APR-OPT-2026-10-17-Q-003-budget-catering",
+    "APR-OPT-2026-10-17-Q-003-budget-communications",
+    "APR-OPT-2026-10-17-Q-003-budget-contingency",
+    "APR-OPT-2026-10-17-Q-003-budget-production",
+    "APR-OPT-2026-10-17-Q-003-budget-security",
+    "APR-OPT-2026-10-17-Q-003-budget-venue",
+    "APR-OPT-2026-10-17-Q-004-operations-plan",
+    "APR-OPT-2026-10-17-Q-004-budget-accessibility",
+    "APR-OPT-2026-10-17-Q-004-budget-catering",
+    "APR-OPT-2026-10-17-Q-004-budget-communications",
+    "APR-OPT-2026-10-17-Q-004-budget-contingency",
+    "APR-OPT-2026-10-17-Q-004-budget-production",
+    "APR-OPT-2026-10-17-Q-004-budget-security",
+    "APR-OPT-2026-10-17-Q-004-budget-venue",
+    "APR-OPT-2026-10-17-Q-003-sub-Q-007-operations-plan",
+    "APR-OPT-2026-10-17-Q-003-sub-Q-007-budget-accessibility",
+    "APR-OPT-2026-10-17-Q-003-sub-Q-007-budget-catering",
+    "APR-OPT-2026-10-17-Q-003-sub-Q-007-budget-communications",
+    "APR-OPT-2026-10-17-Q-003-sub-Q-007-budget-contingency",
+    "APR-OPT-2026-10-17-Q-003-sub-Q-007-budget-production",
+    "APR-OPT-2026-10-17-Q-003-sub-Q-007-budget-security",
+    "APR-OPT-2026-10-17-Q-003-sub-Q-007-budget-venue",
+    "APR-OPT-2026-10-17-Q-003-add-Q-008-operations-plan",
+    "APR-OPT-2026-10-17-Q-003-add-Q-008-budget-accessibility",
+    "APR-OPT-2026-10-17-Q-003-add-Q-008-budget-catering",
+    "APR-OPT-2026-10-17-Q-003-add-Q-008-budget-communications",
+    "APR-OPT-2026-10-17-Q-003-add-Q-008-budget-contingency",
+    "APR-OPT-2026-10-17-Q-003-add-Q-008-budget-production",
+    "APR-OPT-2026-10-17-Q-003-add-Q-008-budget-security",
+    "APR-OPT-2026-10-17-Q-003-add-Q-008-budget-venue",
+    "APR-OPT-2026-10-17-Q-004-sub-Q-007-operations-plan",
+    "APR-OPT-2026-10-17-Q-004-sub-Q-007-budget-accessibility",
+    "APR-OPT-2026-10-17-Q-004-sub-Q-007-budget-catering",
+    "APR-OPT-2026-10-17-Q-004-sub-Q-007-budget-communications",
+    "APR-OPT-2026-10-17-Q-004-sub-Q-007-budget-contingency",
+    "APR-OPT-2026-10-17-Q-004-sub-Q-007-budget-production",
+    "APR-OPT-2026-10-17-Q-004-sub-Q-007-budget-security",
+    "APR-OPT-2026-10-17-Q-004-sub-Q-007-budget-venue",
+    "APR-OPT-2026-10-17-Q-004-add-Q-008-operations-plan",
+    "APR-OPT-2026-10-17-Q-004-add-Q-008-budget-accessibility",
+    "APR-OPT-2026-10-17-Q-004-add-Q-008-budget-catering",
+    "APR-OPT-2026-10-17-Q-004-add-Q-008-budget-communications",
+    "APR-OPT-2026-10-17-Q-004-add-Q-008-budget-contingency",
+    "APR-OPT-2026-10-17-Q-004-add-Q-008-budget-production",
+    "APR-OPT-2026-10-17-Q-004-add-Q-008-budget-security",
+    "APR-OPT-2026-10-17-Q-004-add-Q-008-budget-venue",
+    "APR-OPT-2026-10-24-fallback-operations-plan",
+    "APR-OPT-2026-10-24-fallback-budget-communications",
+    "APR-OPT-2026-10-24-fallback-budget-contingency",
+    "APR-OPT-2026-10-24-fallback-budget-venue"
+  ],
+  "produced_record_ids": [
+    "ART-vendor-comparison",
+    "ART-event-plan",
+    "ART-event-calendar",
+    "ART-draft-communications",
+    "IMP-SRC-BRIEF",
+    "IMP-SRC-CALENDAR",
+    "IMP-SRC-BUDGET",
+    "IMP-SRC-ATTENDEE",
+    "IMP-SRC-VENDOR",
+    "IMP-SRC-TICC-HALL",
+    "IMP-SRC-TICC-ACCESS",
+    "IMP-SRC-TICC-4F"
+  ],
+  "state": {
+    "artifact_drafts": [
+      {
+        "id": "ART-vendor-comparison",
+        "path": "vendor-comparison.csv",
+        "sha256": "sha256:bc73b5780467180de95b7512b20b945db35bf34344dd4261ffb669a3a117e6b5",
+        "validation_status": "valid"
+      },
+      {
+        "id": "ART-event-plan",
+        "path": "event-plan.md",
+        "sha256": "sha256:cfb2692f5cf8618223930bc571663856e44d6ebb9e72fe0c9f309bd417e4ee65",
+        "validation_status": "valid"
+      },
+      {
+        "id": "ART-event-calendar",
+        "path": "event-calendar.ics",
+        "sha256": "sha256:790c826c72d4aeb4cffe3066938c38db006af8dc105cf2d67803817229914d00",
+        "validation_status": "valid"
+      },
+      {
+        "id": "ART-draft-communications",
+        "path": "draft-communications.md",
+        "sha256": "sha256:c400484cc6eeabab45d21508234c0b19ed37fb0567060b374e1720fdd0d07003",
+        "validation_status": "valid"
+      }
+    ],
+    "affected_dependencies": [
+      {
+        "id": "IMP-SRC-BRIEF",
+        "summary": "A change to SRC-BRIEF affects 7 option(s) and event-plan §3 headcount, event-plan §4 timing and run of show, event-calendar.ics, event-plan §5 budget, event-plan §7 accessibility, vendor-comparison.csv, event-plan §6 options, draft-communications.md, event-plan §8 recommendation, event-plan §13 approvals.",
+        "evidence_ids": [
+          "SRC-BRIEF"
+        ],
+        "claims": 89,
+        "options": [
+          "OPT-2026-10-17-Q-003",
+          "OPT-2026-10-17-Q-003-add-Q-008",
+          "OPT-2026-10-17-Q-003-sub-Q-007",
+          "OPT-2026-10-17-Q-004",
+          "OPT-2026-10-17-Q-004-add-Q-008",
+          "OPT-2026-10-17-Q-004-sub-Q-007",
+          "OPT-2026-10-24-fallback"
+        ],
+        "sections": [
+          "event-plan §3 headcount",
+          "event-plan §4 timing and run of show",
+          "event-calendar.ics",
+          "event-plan §5 budget",
+          "event-plan §7 accessibility",
+          "vendor-comparison.csv",
+          "event-plan §6 options",
+          "draft-communications.md",
+          "event-plan §8 recommendation",
+          "event-plan §13 approvals"
+        ]
+      },
+      {
+        "id": "IMP-SRC-CALENDAR",
+        "summary": "A change to SRC-CALENDAR affects 7 option(s) and event-plan §4 timing and run of show, event-calendar.ics, vendor-comparison.csv, event-plan §6 options, draft-communications.md, event-plan §8 recommendation.",
+        "evidence_ids": [
+          "SRC-CALENDAR"
+        ],
+        "claims": 37,
+        "options": [
+          "OPT-2026-10-17-Q-003",
+          "OPT-2026-10-17-Q-003-add-Q-008",
+          "OPT-2026-10-17-Q-003-sub-Q-007",
+          "OPT-2026-10-17-Q-004",
+          "OPT-2026-10-17-Q-004-add-Q-008",
+          "OPT-2026-10-17-Q-004-sub-Q-007",
+          "OPT-2026-10-24-fallback"
+        ],
+        "sections": [
+          "event-plan §4 timing and run of show",
+          "event-calendar.ics",
+          "vendor-comparison.csv",
+          "event-plan §6 options",
+          "draft-communications.md",
+          "event-plan §8 recommendation"
+        ]
+      },
+      {
+        "id": "IMP-SRC-BUDGET",
+        "summary": "A change to SRC-BUDGET affects 7 option(s) and event-plan §5 budget, vendor-comparison.csv, event-plan §6 options, draft-communications.md, event-plan §8 recommendation, event-plan §13 approvals.",
+        "evidence_ids": [
+          "SRC-BUDGET"
+        ],
+        "claims": 8,
+        "options": [
+          "OPT-2026-10-17-Q-003",
+          "OPT-2026-10-17-Q-003-add-Q-008",
+          "OPT-2026-10-17-Q-003-sub-Q-007",
+          "OPT-2026-10-17-Q-004",
+          "OPT-2026-10-17-Q-004-add-Q-008",
+          "OPT-2026-10-17-Q-004-sub-Q-007",
+          "OPT-2026-10-24-fallback"
+        ],
+        "sections": [
+          "event-plan §5 budget",
+          "vendor-comparison.csv",
+          "event-plan §6 options",
+          "draft-communications.md",
+          "event-plan §8 recommendation",
+          "event-plan §13 approvals"
+        ]
+      },
+      {
+        "id": "IMP-SRC-ATTENDEE",
+        "summary": "A change to SRC-ATTENDEE affects 7 option(s) and event-plan §3 headcount, vendor-comparison.csv, event-plan §6 options, draft-communications.md, event-plan §8 recommendation.",
+        "evidence_ids": [
+          "SRC-ATTENDEE"
+        ],
+        "claims": 16,
+        "options": [
+          "OPT-2026-10-17-Q-003",
+          "OPT-2026-10-17-Q-003-add-Q-008",
+          "OPT-2026-10-17-Q-003-sub-Q-007",
+          "OPT-2026-10-17-Q-004",
+          "OPT-2026-10-17-Q-004-add-Q-008",
+          "OPT-2026-10-17-Q-004-sub-Q-007",
+          "OPT-2026-10-24-fallback"
+        ],
+        "sections": [
+          "event-plan §3 headcount",
+          "vendor-comparison.csv",
+          "event-plan §6 options",
+          "draft-communications.md",
+          "event-plan §8 recommendation"
+        ]
+      },
+      {
+        "id": "IMP-SRC-VENDOR",
+        "summary": "A change to SRC-VENDOR affects 7 option(s) and vendor-comparison.csv, event-plan §6 options, draft-communications.md, event-plan §8 recommendation, event-plan §13 approvals, event-plan §5 budget, event-plan §7 accessibility.",
+        "evidence_ids": [
+          "SRC-VENDOR"
+        ],
+        "claims": 34,
+        "options": [
+          "OPT-2026-10-17-Q-003",
+          "OPT-2026-10-17-Q-003-add-Q-008",
+          "OPT-2026-10-17-Q-003-sub-Q-007",
+          "OPT-2026-10-17-Q-004",
+          "OPT-2026-10-17-Q-004-add-Q-008",
+          "OPT-2026-10-17-Q-004-sub-Q-007",
+          "OPT-2026-10-24-fallback"
+        ],
+        "sections": [
+          "vendor-comparison.csv",
+          "event-plan §6 options",
+          "draft-communications.md",
+          "event-plan §8 recommendation",
+          "event-plan §13 approvals",
+          "event-plan §5 budget",
+          "event-plan §7 accessibility"
+        ]
+      },
+      {
+        "id": "IMP-SRC-TICC-HALL",
+        "summary": "A change to SRC-TICC-HALL affects 7 option(s) and vendor-comparison.csv, event-plan §6 options, draft-communications.md, event-plan §8 recommendation.",
+        "evidence_ids": [
+          "SRC-TICC-HALL"
+        ],
+        "claims": 9,
+        "options": [
+          "OPT-2026-10-17-Q-003",
+          "OPT-2026-10-17-Q-003-add-Q-008",
+          "OPT-2026-10-17-Q-003-sub-Q-007",
+          "OPT-2026-10-17-Q-004",
+          "OPT-2026-10-17-Q-004-add-Q-008",
+          "OPT-2026-10-17-Q-004-sub-Q-007",
+          "OPT-2026-10-24-fallback"
+        ],
+        "sections": [
+          "vendor-comparison.csv",
+          "event-plan §6 options",
+          "draft-communications.md",
+          "event-plan §8 recommendation"
+        ]
+      },
+      {
+        "id": "IMP-SRC-TICC-ACCESS",
+        "summary": "A change to SRC-TICC-ACCESS affects 0 option(s) and no deliverable section.",
+        "evidence_ids": [
+          "SRC-TICC-ACCESS"
+        ],
+        "claims": 1,
+        "options": [],
+        "sections": []
+      },
+      {
+        "id": "IMP-SRC-TICC-4F",
+        "summary": "A change to SRC-TICC-4F affects 7 option(s) and event-plan §7 accessibility, vendor-comparison.csv, event-plan §6 options, draft-communications.md.",
+        "evidence_ids": [
+          "SRC-TICC-4F"
+        ],
+        "claims": 11,
+        "options": [
+          "OPT-2026-10-17-Q-003",
+          "OPT-2026-10-17-Q-003-add-Q-008",
+          "OPT-2026-10-17-Q-003-sub-Q-007",
+          "OPT-2026-10-17-Q-004",
+          "OPT-2026-10-17-Q-004-add-Q-008",
+          "OPT-2026-10-17-Q-004-sub-Q-007",
+          "OPT-2026-10-24-fallback"
+        ],
+        "sections": [
+          "event-plan §7 accessibility",
+          "vendor-comparison.csv",
+          "event-plan §6 options",
+          "draft-communications.md"
+        ]
+      }
+    ],
+    "unresolved_items": [
+      {
+        "id": "UNR-feasible-option-shortfall",
+        "summary": "The brief asks for 2 feasible options; 0 are feasible on current evidence. No option is upgraded and none is fabricated.",
+        "evidence_ids": [
+          "N-BRIEF-requested_feasible_options",
+          "N-BRIEF-no_fabricated_second_option",
+          "N-BRIEF-conditional_not_feasible_rule",
+          "ASG-NO-INVENT"
+        ],
+        "owner": "Operations",
+        "rationale": null,
+        "feasible_options": []
+      }
+    ],
+    "programme_status": "planned"
+  },
+  "unresolved": [],
+  "decisions": []
+}

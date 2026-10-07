@@ -1,0 +1,1349 @@
+{
+  "schema_version": "event-coordination-stage-snapshot/2",
+  "snapshot_id": "run-20261007T212022Z-a4b5ed-s07",
+  "run_id": "run-20261007T212022Z-a4b5ed",
+  "stage": "decision-and-approval",
+  "sequence": 7,
+  "created_at": "2026-10-07T21:20:30.135Z",
+  "status": "partial",
+  "predecessor": {
+    "snapshot_id": "run-20261007T212022Z-a4b5ed-s06",
+    "path": "snapshots/06-feasibility-testing.json",
+    "sha256": "sha256:deafb18ae7cb831215efb4e2bd3472b3d71f4348ad81b3ea365bf479c8dcffcb"
+  },
+  "consumed_record_ids": [
+    "CMP-OPT-2026-10-17-Q-003",
+    "CMP-OPT-2026-10-17-Q-004",
+    "OPT-2026-10-17-Q-003",
+    "OPT-2026-10-17-Q-004",
+    "OPT-2026-10-17-Q-003-sub-Q-007",
+    "OPT-2026-10-17-Q-003-add-Q-008",
+    "OPT-2026-10-17-Q-004-sub-Q-007",
+    "OPT-2026-10-17-Q-004-add-Q-008",
+    "OPT-2026-10-24-fallback"
+  ],
+  "produced_record_ids": [
+    "TO-cost",
+    "TO-catering_buffer",
+    "TO-open_conditions",
+    "TO-unverified_checks",
+    "TO-quote_validity",
+    "DEC-recommendation",
+    "APR-OPT-2026-10-17-Q-003-operations-plan",
+    "APR-OPT-2026-10-17-Q-003-budget-accessibility",
+    "APR-OPT-2026-10-17-Q-003-budget-catering",
+    "APR-OPT-2026-10-17-Q-003-budget-communications",
+    "APR-OPT-2026-10-17-Q-003-budget-contingency",
+    "APR-OPT-2026-10-17-Q-003-budget-production",
+    "APR-OPT-2026-10-17-Q-003-budget-security",
+    "APR-OPT-2026-10-17-Q-003-budget-venue",
+    "APR-OPT-2026-10-17-Q-004-operations-plan",
+    "APR-OPT-2026-10-17-Q-004-budget-accessibility",
+    "APR-OPT-2026-10-17-Q-004-budget-catering",
+    "APR-OPT-2026-10-17-Q-004-budget-communications",
+    "APR-OPT-2026-10-17-Q-004-budget-contingency",
+    "APR-OPT-2026-10-17-Q-004-budget-production",
+    "APR-OPT-2026-10-17-Q-004-budget-security",
+    "APR-OPT-2026-10-17-Q-004-budget-venue",
+    "APR-OPT-2026-10-17-Q-003-sub-Q-007-operations-plan",
+    "APR-OPT-2026-10-17-Q-003-sub-Q-007-budget-accessibility",
+    "APR-OPT-2026-10-17-Q-003-sub-Q-007-budget-catering",
+    "APR-OPT-2026-10-17-Q-003-sub-Q-007-budget-communications",
+    "APR-OPT-2026-10-17-Q-003-sub-Q-007-budget-contingency",
+    "APR-OPT-2026-10-17-Q-003-sub-Q-007-budget-production",
+    "APR-OPT-2026-10-17-Q-003-sub-Q-007-budget-security",
+    "APR-OPT-2026-10-17-Q-003-sub-Q-007-budget-venue",
+    "APR-OPT-2026-10-17-Q-003-add-Q-008-operations-plan",
+    "APR-OPT-2026-10-17-Q-003-add-Q-008-budget-accessibility",
+    "APR-OPT-2026-10-17-Q-003-add-Q-008-budget-catering",
+    "APR-OPT-2026-10-17-Q-003-add-Q-008-budget-communications",
+    "APR-OPT-2026-10-17-Q-003-add-Q-008-budget-contingency",
+    "APR-OPT-2026-10-17-Q-003-add-Q-008-budget-production",
+    "APR-OPT-2026-10-17-Q-003-add-Q-008-budget-security",
+    "APR-OPT-2026-10-17-Q-003-add-Q-008-budget-venue",
+    "APR-OPT-2026-10-17-Q-004-sub-Q-007-operations-plan",
+    "APR-OPT-2026-10-17-Q-004-sub-Q-007-budget-accessibility",
+    "APR-OPT-2026-10-17-Q-004-sub-Q-007-budget-catering",
+    "APR-OPT-2026-10-17-Q-004-sub-Q-007-budget-communications",
+    "APR-OPT-2026-10-17-Q-004-sub-Q-007-budget-contingency",
+    "APR-OPT-2026-10-17-Q-004-sub-Q-007-budget-production",
+    "APR-OPT-2026-10-17-Q-004-sub-Q-007-budget-security",
+    "APR-OPT-2026-10-17-Q-004-sub-Q-007-budget-venue",
+    "APR-OPT-2026-10-17-Q-004-add-Q-008-operations-plan",
+    "APR-OPT-2026-10-17-Q-004-add-Q-008-budget-accessibility",
+    "APR-OPT-2026-10-17-Q-004-add-Q-008-budget-catering",
+    "APR-OPT-2026-10-17-Q-004-add-Q-008-budget-communications",
+    "APR-OPT-2026-10-17-Q-004-add-Q-008-budget-contingency",
+    "APR-OPT-2026-10-17-Q-004-add-Q-008-budget-production",
+    "APR-OPT-2026-10-17-Q-004-add-Q-008-budget-security",
+    "APR-OPT-2026-10-17-Q-004-add-Q-008-budget-venue",
+    "APR-OPT-2026-10-24-fallback-operations-plan",
+    "APR-OPT-2026-10-24-fallback-budget-communications",
+    "APR-OPT-2026-10-24-fallback-budget-contingency",
+    "APR-OPT-2026-10-24-fallback-budget-venue",
+    "EXC-OPT-2026-10-17-Q-003-sub-Q-007",
+    "EXC-OPT-2026-10-17-Q-003-add-Q-008",
+    "EXC-OPT-2026-10-17-Q-004-sub-Q-007",
+    "EXC-OPT-2026-10-17-Q-004-add-Q-008",
+    "EXC-OPT-2026-10-24-fallback",
+    "CTX-STK-I2-L65",
+    "CTX-STK-I1-L111",
+    "CTX-STK-I3-L85",
+    "CTX-STK-I3-L97",
+    "CTX-STK-I3-L121",
+    "CTX-walk-in-forecast",
+    "NOTE-vendor-experience",
+    "NOTE-venue-tariff",
+    "UNR-feasible-option-shortfall"
+  ],
+  "state": {
+    "recommendation": null,
+    "tradeoffs": [
+      {
+        "id": "TO-cost",
+        "factor": "cost",
+        "label": "lower cost and greater budget headroom",
+        "direction": "lower total is better",
+        "summary": "lower cost and greater budget headroom: OPT-2026-10-17-Q-003 = 494000, OPT-2026-10-17-Q-004 = 512000",
+        "values": {
+          "OPT-2026-10-17-Q-003": 494000,
+          "OPT-2026-10-17-Q-004": 512000
+        },
+        "details": {
+          "OPT-2026-10-17-Q-003": {
+            "total_with_allowances_twd": 494000,
+            "remaining_under_ceiling_twd": 26000
+          },
+          "OPT-2026-10-17-Q-004": {
+            "total_with_allowances_twd": 512000,
+            "remaining_under_ceiling_twd": 8000
+          }
+        },
+        "pairwise": {
+          "OPT-2026-10-17-Q-003": {
+            "OPT-2026-10-17-Q-004": "better"
+          },
+          "OPT-2026-10-17-Q-004": {
+            "OPT-2026-10-17-Q-003": "worse"
+          }
+        },
+        "evidence_ids": [
+          "CHK-OPT-2026-10-17-Q-003-budget-ceiling",
+          "CHK-OPT-2026-10-17-Q-004-budget-ceiling"
+        ],
+        "owner": null,
+        "rationale": null
+      },
+      {
+        "id": "TO-catering_buffer",
+        "factor": "catering_buffer",
+        "label": "the larger catering capacity buffer",
+        "direction": "larger buffer is better",
+        "summary": "the larger catering capacity buffer: OPT-2026-10-17-Q-003 = 15, OPT-2026-10-17-Q-004 = 55",
+        "values": {
+          "OPT-2026-10-17-Q-003": 15,
+          "OPT-2026-10-17-Q-004": 55
+        },
+        "details": {
+          "OPT-2026-10-17-Q-003": {
+            "limitation": "the register does not define who the quoted capacity covers (STK-I3-L133)"
+          },
+          "OPT-2026-10-17-Q-004": {
+            "limitation": "the register does not define who the quoted capacity covers (STK-I3-L133)"
+          }
+        },
+        "pairwise": {
+          "OPT-2026-10-17-Q-003": {
+            "OPT-2026-10-17-Q-004": "worse"
+          },
+          "OPT-2026-10-17-Q-004": {
+            "OPT-2026-10-17-Q-003": "better"
+          }
+        },
+        "evidence_ids": [
+          "CHK-OPT-2026-10-17-Q-003-capacity-catering-Q-003",
+          "CHK-OPT-2026-10-17-Q-004-capacity-catering-Q-004",
+          "STK-I3-L133"
+        ],
+        "owner": null,
+        "rationale": null
+      },
+      {
+        "id": "TO-open_conditions",
+        "factor": "open_conditions",
+        "label": "fewer open condition types",
+        "direction": "fewer normalized condition types is better",
+        "summary": "fewer open condition types: OPT-2026-10-17-Q-003 = 8, OPT-2026-10-17-Q-004 = 8",
+        "values": {
+          "OPT-2026-10-17-Q-003": 8,
+          "OPT-2026-10-17-Q-004": 8
+        },
+        "details": {
+          "OPT-2026-10-17-Q-003": {
+            "types": [
+              "P-accessibility-walkthrough",
+              "P-severe-allergy-contacts",
+              "P-ticc-technical-safety-briefing",
+              "P-venue-confirmation",
+              "confirmation:accessibility",
+              "confirmation:catering",
+              "confirmation:production",
+              "confirmation:security"
+            ]
+          },
+          "OPT-2026-10-17-Q-004": {
+            "types": [
+              "P-accessibility-walkthrough",
+              "P-severe-allergy-contacts",
+              "P-ticc-technical-safety-briefing",
+              "P-venue-confirmation",
+              "confirmation:accessibility",
+              "confirmation:catering",
+              "confirmation:production",
+              "confirmation:security"
+            ]
+          }
+        },
+        "pairwise": {
+          "OPT-2026-10-17-Q-003": {
+            "OPT-2026-10-17-Q-004": "tie"
+          },
+          "OPT-2026-10-17-Q-004": {
+            "OPT-2026-10-17-Q-003": "tie"
+          }
+        },
+        "evidence_ids": [
+          "CHK-OPT-2026-10-17-Q-003-P-accessibility-walkthrough",
+          "CHK-OPT-2026-10-17-Q-003-P-severe-allergy-contacts",
+          "CHK-OPT-2026-10-17-Q-003-P-ticc-technical-safety-briefing",
+          "CHK-OPT-2026-10-17-Q-003-P-venue-confirmation",
+          "CHK-OPT-2026-10-17-Q-003-Q-003-confirmation",
+          "CHK-OPT-2026-10-17-Q-003-Q-005-confirmation",
+          "CHK-OPT-2026-10-17-Q-003-Q-006-confirmation",
+          "CHK-OPT-2026-10-17-Q-003-Q-009-confirmation",
+          "CHK-OPT-2026-10-17-Q-003-Q-010-confirmation",
+          "CHK-OPT-2026-10-17-Q-004-P-accessibility-walkthrough",
+          "CHK-OPT-2026-10-17-Q-004-P-severe-allergy-contacts",
+          "CHK-OPT-2026-10-17-Q-004-P-ticc-technical-safety-briefing",
+          "CHK-OPT-2026-10-17-Q-004-P-venue-confirmation",
+          "CHK-OPT-2026-10-17-Q-004-Q-004-confirmation",
+          "CHK-OPT-2026-10-17-Q-004-Q-005-confirmation",
+          "CHK-OPT-2026-10-17-Q-004-Q-006-confirmation",
+          "CHK-OPT-2026-10-17-Q-004-Q-009-confirmation",
+          "CHK-OPT-2026-10-17-Q-004-Q-010-confirmation"
+        ],
+        "owner": null,
+        "rationale": null
+      },
+      {
+        "id": "TO-unverified_checks",
+        "factor": "unverified_checks",
+        "label": "fewer unverified checks",
+        "direction": "fewer is better",
+        "summary": "fewer unverified checks: OPT-2026-10-17-Q-003 = 0, OPT-2026-10-17-Q-004 = 0",
+        "values": {
+          "OPT-2026-10-17-Q-003": 0,
+          "OPT-2026-10-17-Q-004": 0
+        },
+        "details": {
+          "OPT-2026-10-17-Q-003": {},
+          "OPT-2026-10-17-Q-004": {}
+        },
+        "pairwise": {
+          "OPT-2026-10-17-Q-003": {
+            "OPT-2026-10-17-Q-004": "tie"
+          },
+          "OPT-2026-10-17-Q-004": {
+            "OPT-2026-10-17-Q-003": "tie"
+          }
+        },
+        "evidence_ids": [
+          "CMP-OPT-2026-10-17-Q-003",
+          "CMP-OPT-2026-10-17-Q-004"
+        ],
+        "owner": null,
+        "rationale": null
+      },
+      {
+        "id": "TO-quote_validity",
+        "factor": "quote_validity",
+        "label": "all quotes valid through the decision deadline",
+        "direction": "all valid is better than not all valid",
+        "summary": "all quotes valid through the decision deadline: OPT-2026-10-17-Q-003 = True, OPT-2026-10-17-Q-004 = True",
+        "values": {
+          "OPT-2026-10-17-Q-003": true,
+          "OPT-2026-10-17-Q-004": true
+        },
+        "details": {
+          "OPT-2026-10-17-Q-003": {
+            "per_quote": {
+              "Q-001": true,
+              "Q-003": true,
+              "Q-005": true,
+              "Q-006": true,
+              "Q-009": true,
+              "Q-010": true
+            }
+          },
+          "OPT-2026-10-17-Q-004": {
+            "per_quote": {
+              "Q-001": true,
+              "Q-004": true,
+              "Q-005": true,
+              "Q-006": true,
+              "Q-009": true,
+              "Q-010": true
+            }
+          }
+        },
+        "pairwise": {
+          "OPT-2026-10-17-Q-003": {
+            "OPT-2026-10-17-Q-004": "tie"
+          },
+          "OPT-2026-10-17-Q-004": {
+            "OPT-2026-10-17-Q-003": "tie"
+          }
+        },
+        "evidence_ids": [
+          "X-quote-validity-Q-001",
+          "X-quote-validity-Q-003",
+          "X-quote-validity-Q-004",
+          "X-quote-validity-Q-005",
+          "X-quote-validity-Q-006",
+          "X-quote-validity-Q-009",
+          "X-quote-validity-Q-010"
+        ],
+        "owner": null,
+        "rationale": null
+      }
+    ],
+    "learner_decisions": [
+      {
+        "id": "DEC-recommendation",
+        "summary": "Recommendation outcome: deferred-to-operations",
+        "evidence_ids": [
+          "TO-cost",
+          "TO-catering_buffer",
+          "TO-open_conditions",
+          "TO-unverified_checks",
+          "TO-quote_validity",
+          "STK-I2-L65",
+          "STK-I1-L111",
+          "STK-I3-L85",
+          "STK-I3-L97",
+          "STK-I3-L121"
+        ],
+        "owner": "Operations",
+        "rationale": "No candidate dominates on the evidenced factors, and the stakeholder gave no fixed ordering of these tradeoffs; the choice is left to Operations.",
+        "tradeoffs": [
+          "lower cost and greater budget headroom favours OPT-2026-10-17-Q-003: lower cost and greater budget headroom: OPT-2026-10-17-Q-003 = 494000, OPT-2026-10-17-Q-004 = 512000",
+          "the larger catering capacity buffer favours OPT-2026-10-17-Q-004: the larger catering capacity buffer: OPT-2026-10-17-Q-003 = 15, OPT-2026-10-17-Q-004 = 55"
+        ],
+        "status": "deferred-to-operations",
+        "recommendation": null,
+        "approval_status": "pending"
+      }
+    ],
+    "approval_requirements": [
+      {
+        "id": "APR-OPT-2026-10-17-Q-003-operations-plan",
+        "summary": "Operations approval of plan, date 2026-10-17 and venue",
+        "evidence_ids": [
+          "N-BRIEF-plan_approver",
+          "STK-I1-L73"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-003-budget-accessibility",
+        "summary": "Ordinary approval of accessibility spending TWD 60000 by Learner Experience",
+        "evidence_ids": [
+          "B-budget-accessibility",
+          "CHK-OPT-2026-10-17-Q-003-budget-accessibility",
+          "STK-I2-L41"
+        ],
+        "owner": "Learner Experience",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "accessibility",
+        "amount_twd": 60000,
+        "explicit_required": false,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-003-budget-catering",
+        "summary": "Ordinary approval of catering spending TWD 108000 by Operations",
+        "evidence_ids": [
+          "B-budget-catering",
+          "CHK-OPT-2026-10-17-Q-003-budget-catering",
+          "STK-I2-L41"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "catering",
+        "amount_twd": 108000,
+        "explicit_required": false,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-003-budget-communications",
+        "summary": "Ordinary approval of communications spending TWD 25000 by Communications",
+        "evidence_ids": [
+          "B-budget-communications",
+          "STK-I2-L41"
+        ],
+        "owner": "Communications",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "communications",
+        "amount_twd": 25000,
+        "explicit_required": false,
+        "allowance": true
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-003-budget-contingency",
+        "summary": "Ordinary approval of contingency spending TWD 40000 by Operations",
+        "evidence_ids": [
+          "B-budget-contingency",
+          "STK-I2-L41"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "contingency",
+        "amount_twd": 40000,
+        "explicit_required": false,
+        "allowance": true
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-003-budget-production",
+        "summary": "Ordinary approval of production spending TWD 78000 by Programme",
+        "evidence_ids": [
+          "B-budget-production",
+          "CHK-OPT-2026-10-17-Q-003-budget-production",
+          "STK-I2-L41"
+        ],
+        "owner": "Programme",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "production",
+        "amount_twd": 78000,
+        "explicit_required": false,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-003-budget-security",
+        "summary": "Ordinary approval of security spending TWD 28000 by Operations",
+        "evidence_ids": [
+          "B-budget-security",
+          "CHK-OPT-2026-10-17-Q-003-budget-security",
+          "STK-I2-L41"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "security",
+        "amount_twd": 28000,
+        "explicit_required": false,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-003-budget-venue",
+        "summary": "Ordinary approval of venue spending TWD 155000 by Operations",
+        "evidence_ids": [
+          "B-budget-venue",
+          "CHK-OPT-2026-10-17-Q-003-budget-venue",
+          "STK-I2-L41"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "venue",
+        "amount_twd": 155000,
+        "explicit_required": false,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-004-operations-plan",
+        "summary": "Operations approval of plan, date 2026-10-17 and venue",
+        "evidence_ids": [
+          "N-BRIEF-plan_approver",
+          "STK-I1-L73"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-004-budget-accessibility",
+        "summary": "Ordinary approval of accessibility spending TWD 60000 by Learner Experience",
+        "evidence_ids": [
+          "B-budget-accessibility",
+          "CHK-OPT-2026-10-17-Q-004-budget-accessibility",
+          "STK-I2-L41"
+        ],
+        "owner": "Learner Experience",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "accessibility",
+        "amount_twd": 60000,
+        "explicit_required": false,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-004-budget-catering",
+        "summary": "Ordinary approval of catering spending TWD 126000 by Operations",
+        "evidence_ids": [
+          "B-budget-catering",
+          "CHK-OPT-2026-10-17-Q-004-budget-catering",
+          "STK-I2-L41"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "catering",
+        "amount_twd": 126000,
+        "explicit_required": false,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-004-budget-communications",
+        "summary": "Ordinary approval of communications spending TWD 25000 by Communications",
+        "evidence_ids": [
+          "B-budget-communications",
+          "STK-I2-L41"
+        ],
+        "owner": "Communications",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "communications",
+        "amount_twd": 25000,
+        "explicit_required": false,
+        "allowance": true
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-004-budget-contingency",
+        "summary": "Ordinary approval of contingency spending TWD 40000 by Operations",
+        "evidence_ids": [
+          "B-budget-contingency",
+          "STK-I2-L41"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "contingency",
+        "amount_twd": 40000,
+        "explicit_required": false,
+        "allowance": true
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-004-budget-production",
+        "summary": "Ordinary approval of production spending TWD 78000 by Programme",
+        "evidence_ids": [
+          "B-budget-production",
+          "CHK-OPT-2026-10-17-Q-004-budget-production",
+          "STK-I2-L41"
+        ],
+        "owner": "Programme",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "production",
+        "amount_twd": 78000,
+        "explicit_required": false,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-004-budget-security",
+        "summary": "Ordinary approval of security spending TWD 28000 by Operations",
+        "evidence_ids": [
+          "B-budget-security",
+          "CHK-OPT-2026-10-17-Q-004-budget-security",
+          "STK-I2-L41"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "security",
+        "amount_twd": 28000,
+        "explicit_required": false,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-004-budget-venue",
+        "summary": "Ordinary approval of venue spending TWD 155000 by Operations",
+        "evidence_ids": [
+          "B-budget-venue",
+          "CHK-OPT-2026-10-17-Q-004-budget-venue",
+          "STK-I2-L41"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "venue",
+        "amount_twd": 155000,
+        "explicit_required": false,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-003-sub-Q-007-operations-plan",
+        "summary": "Operations approval of plan, date 2026-10-17 and venue",
+        "evidence_ids": [
+          "N-BRIEF-plan_approver",
+          "STK-I1-L73"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-003-sub-Q-007-budget-accessibility",
+        "summary": "Ordinary approval of accessibility spending TWD 60000 by Learner Experience",
+        "evidence_ids": [
+          "B-budget-accessibility",
+          "CHK-OPT-2026-10-17-Q-003-sub-Q-007-budget-accessibility",
+          "STK-I2-L41"
+        ],
+        "owner": "Learner Experience",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "accessibility",
+        "amount_twd": 60000,
+        "explicit_required": false,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-003-sub-Q-007-budget-catering",
+        "summary": "Ordinary approval of catering spending TWD 108000 by Operations",
+        "evidence_ids": [
+          "B-budget-catering",
+          "CHK-OPT-2026-10-17-Q-003-sub-Q-007-budget-catering",
+          "STK-I2-L41"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "catering",
+        "amount_twd": 108000,
+        "explicit_required": false,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-003-sub-Q-007-budget-communications",
+        "summary": "Ordinary approval of communications spending TWD 25000 by Communications",
+        "evidence_ids": [
+          "B-budget-communications",
+          "STK-I2-L41"
+        ],
+        "owner": "Communications",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "communications",
+        "amount_twd": 25000,
+        "explicit_required": false,
+        "allowance": true
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-003-sub-Q-007-budget-contingency",
+        "summary": "Ordinary approval of contingency spending TWD 40000 by Operations",
+        "evidence_ids": [
+          "B-budget-contingency",
+          "STK-I2-L41"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "contingency",
+        "amount_twd": 40000,
+        "explicit_required": false,
+        "allowance": true
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-003-sub-Q-007-budget-production",
+        "summary": "Ordinary approval of production spending TWD 52000 by Programme",
+        "evidence_ids": [
+          "B-budget-production",
+          "CHK-OPT-2026-10-17-Q-003-sub-Q-007-budget-production",
+          "STK-I2-L41"
+        ],
+        "owner": "Programme",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "production",
+        "amount_twd": 52000,
+        "explicit_required": false,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-003-sub-Q-007-budget-security",
+        "summary": "Ordinary approval of security spending TWD 28000 by Operations",
+        "evidence_ids": [
+          "B-budget-security",
+          "CHK-OPT-2026-10-17-Q-003-sub-Q-007-budget-security",
+          "STK-I2-L41"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "security",
+        "amount_twd": 28000,
+        "explicit_required": false,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-003-sub-Q-007-budget-venue",
+        "summary": "Ordinary approval of venue spending TWD 155000 by Operations",
+        "evidence_ids": [
+          "B-budget-venue",
+          "CHK-OPT-2026-10-17-Q-003-sub-Q-007-budget-venue",
+          "STK-I2-L41"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "venue",
+        "amount_twd": 155000,
+        "explicit_required": false,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-003-add-Q-008-operations-plan",
+        "summary": "Operations approval of plan, date 2026-10-17 and venue",
+        "evidence_ids": [
+          "N-BRIEF-plan_approver",
+          "STK-I1-L73"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-003-add-Q-008-budget-accessibility",
+        "summary": "Ordinary approval of accessibility spending TWD 60000 by Learner Experience",
+        "evidence_ids": [
+          "B-budget-accessibility",
+          "CHK-OPT-2026-10-17-Q-003-add-Q-008-budget-accessibility",
+          "STK-I2-L41"
+        ],
+        "owner": "Learner Experience",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "accessibility",
+        "amount_twd": 60000,
+        "explicit_required": false,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-003-add-Q-008-budget-catering",
+        "summary": "Ordinary approval of catering spending TWD 108000 by Operations",
+        "evidence_ids": [
+          "B-budget-catering",
+          "CHK-OPT-2026-10-17-Q-003-add-Q-008-budget-catering",
+          "STK-I2-L41"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "catering",
+        "amount_twd": 108000,
+        "explicit_required": false,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-003-add-Q-008-budget-communications",
+        "summary": "Ordinary approval of communications spending TWD 25000 by Communications",
+        "evidence_ids": [
+          "B-budget-communications",
+          "STK-I2-L41"
+        ],
+        "owner": "Communications",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "communications",
+        "amount_twd": 25000,
+        "explicit_required": false,
+        "allowance": true
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-003-add-Q-008-budget-contingency",
+        "summary": "Ordinary approval of contingency spending TWD 40000 by Operations",
+        "evidence_ids": [
+          "B-budget-contingency",
+          "STK-I2-L41"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "contingency",
+        "amount_twd": 40000,
+        "explicit_required": false,
+        "allowance": true
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-003-add-Q-008-budget-production",
+        "summary": "Explicit approval of production spending TWD 133000 by Programme",
+        "evidence_ids": [
+          "B-budget-production",
+          "CHK-OPT-2026-10-17-Q-003-add-Q-008-budget-production",
+          "STK-I3-L73"
+        ],
+        "owner": "Programme",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "production",
+        "amount_twd": 133000,
+        "explicit_required": true,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-003-add-Q-008-budget-security",
+        "summary": "Ordinary approval of security spending TWD 28000 by Operations",
+        "evidence_ids": [
+          "B-budget-security",
+          "CHK-OPT-2026-10-17-Q-003-add-Q-008-budget-security",
+          "STK-I2-L41"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "security",
+        "amount_twd": 28000,
+        "explicit_required": false,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-003-add-Q-008-budget-venue",
+        "summary": "Ordinary approval of venue spending TWD 155000 by Operations",
+        "evidence_ids": [
+          "B-budget-venue",
+          "CHK-OPT-2026-10-17-Q-003-add-Q-008-budget-venue",
+          "STK-I2-L41"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "venue",
+        "amount_twd": 155000,
+        "explicit_required": false,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-004-sub-Q-007-operations-plan",
+        "summary": "Operations approval of plan, date 2026-10-17 and venue",
+        "evidence_ids": [
+          "N-BRIEF-plan_approver",
+          "STK-I1-L73"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-004-sub-Q-007-budget-accessibility",
+        "summary": "Ordinary approval of accessibility spending TWD 60000 by Learner Experience",
+        "evidence_ids": [
+          "B-budget-accessibility",
+          "CHK-OPT-2026-10-17-Q-004-sub-Q-007-budget-accessibility",
+          "STK-I2-L41"
+        ],
+        "owner": "Learner Experience",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "accessibility",
+        "amount_twd": 60000,
+        "explicit_required": false,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-004-sub-Q-007-budget-catering",
+        "summary": "Ordinary approval of catering spending TWD 126000 by Operations",
+        "evidence_ids": [
+          "B-budget-catering",
+          "CHK-OPT-2026-10-17-Q-004-sub-Q-007-budget-catering",
+          "STK-I2-L41"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "catering",
+        "amount_twd": 126000,
+        "explicit_required": false,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-004-sub-Q-007-budget-communications",
+        "summary": "Ordinary approval of communications spending TWD 25000 by Communications",
+        "evidence_ids": [
+          "B-budget-communications",
+          "STK-I2-L41"
+        ],
+        "owner": "Communications",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "communications",
+        "amount_twd": 25000,
+        "explicit_required": false,
+        "allowance": true
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-004-sub-Q-007-budget-contingency",
+        "summary": "Ordinary approval of contingency spending TWD 40000 by Operations",
+        "evidence_ids": [
+          "B-budget-contingency",
+          "STK-I2-L41"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "contingency",
+        "amount_twd": 40000,
+        "explicit_required": false,
+        "allowance": true
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-004-sub-Q-007-budget-production",
+        "summary": "Ordinary approval of production spending TWD 52000 by Programme",
+        "evidence_ids": [
+          "B-budget-production",
+          "CHK-OPT-2026-10-17-Q-004-sub-Q-007-budget-production",
+          "STK-I2-L41"
+        ],
+        "owner": "Programme",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "production",
+        "amount_twd": 52000,
+        "explicit_required": false,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-004-sub-Q-007-budget-security",
+        "summary": "Ordinary approval of security spending TWD 28000 by Operations",
+        "evidence_ids": [
+          "B-budget-security",
+          "CHK-OPT-2026-10-17-Q-004-sub-Q-007-budget-security",
+          "STK-I2-L41"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "security",
+        "amount_twd": 28000,
+        "explicit_required": false,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-004-sub-Q-007-budget-venue",
+        "summary": "Ordinary approval of venue spending TWD 155000 by Operations",
+        "evidence_ids": [
+          "B-budget-venue",
+          "CHK-OPT-2026-10-17-Q-004-sub-Q-007-budget-venue",
+          "STK-I2-L41"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "venue",
+        "amount_twd": 155000,
+        "explicit_required": false,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-004-add-Q-008-operations-plan",
+        "summary": "Operations approval of plan, date 2026-10-17 and venue",
+        "evidence_ids": [
+          "N-BRIEF-plan_approver",
+          "STK-I1-L73"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-004-add-Q-008-budget-accessibility",
+        "summary": "Ordinary approval of accessibility spending TWD 60000 by Learner Experience",
+        "evidence_ids": [
+          "B-budget-accessibility",
+          "CHK-OPT-2026-10-17-Q-004-add-Q-008-budget-accessibility",
+          "STK-I2-L41"
+        ],
+        "owner": "Learner Experience",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "accessibility",
+        "amount_twd": 60000,
+        "explicit_required": false,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-004-add-Q-008-budget-catering",
+        "summary": "Ordinary approval of catering spending TWD 126000 by Operations",
+        "evidence_ids": [
+          "B-budget-catering",
+          "CHK-OPT-2026-10-17-Q-004-add-Q-008-budget-catering",
+          "STK-I2-L41"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "catering",
+        "amount_twd": 126000,
+        "explicit_required": false,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-004-add-Q-008-budget-communications",
+        "summary": "Ordinary approval of communications spending TWD 25000 by Communications",
+        "evidence_ids": [
+          "B-budget-communications",
+          "STK-I2-L41"
+        ],
+        "owner": "Communications",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "communications",
+        "amount_twd": 25000,
+        "explicit_required": false,
+        "allowance": true
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-004-add-Q-008-budget-contingency",
+        "summary": "Ordinary approval of contingency spending TWD 40000 by Operations",
+        "evidence_ids": [
+          "B-budget-contingency",
+          "STK-I2-L41"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "contingency",
+        "amount_twd": 40000,
+        "explicit_required": false,
+        "allowance": true
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-004-add-Q-008-budget-production",
+        "summary": "Explicit approval of production spending TWD 133000 by Programme",
+        "evidence_ids": [
+          "B-budget-production",
+          "CHK-OPT-2026-10-17-Q-004-add-Q-008-budget-production",
+          "STK-I3-L73"
+        ],
+        "owner": "Programme",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "production",
+        "amount_twd": 133000,
+        "explicit_required": true,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-004-add-Q-008-budget-security",
+        "summary": "Ordinary approval of security spending TWD 28000 by Operations",
+        "evidence_ids": [
+          "B-budget-security",
+          "CHK-OPT-2026-10-17-Q-004-add-Q-008-budget-security",
+          "STK-I2-L41"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "security",
+        "amount_twd": 28000,
+        "explicit_required": false,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-17-Q-004-add-Q-008-budget-venue",
+        "summary": "Ordinary approval of venue spending TWD 155000 by Operations",
+        "evidence_ids": [
+          "B-budget-venue",
+          "CHK-OPT-2026-10-17-Q-004-add-Q-008-budget-venue",
+          "STK-I2-L41"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "venue",
+        "amount_twd": 155000,
+        "explicit_required": false,
+        "allowance": false
+      },
+      {
+        "id": "APR-OPT-2026-10-24-fallback-operations-plan",
+        "summary": "Operations approval of plan, date 2026-10-24 and venue",
+        "evidence_ids": [
+          "N-BRIEF-plan_approver",
+          "STK-I1-L73"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null
+      },
+      {
+        "id": "APR-OPT-2026-10-24-fallback-budget-communications",
+        "summary": "Ordinary approval of communications spending TWD 25000 by Communications",
+        "evidence_ids": [
+          "B-budget-communications",
+          "STK-I2-L41"
+        ],
+        "owner": "Communications",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "communications",
+        "amount_twd": 25000,
+        "explicit_required": false,
+        "allowance": true
+      },
+      {
+        "id": "APR-OPT-2026-10-24-fallback-budget-contingency",
+        "summary": "Ordinary approval of contingency spending TWD 40000 by Operations",
+        "evidence_ids": [
+          "B-budget-contingency",
+          "STK-I2-L41"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "contingency",
+        "amount_twd": 40000,
+        "explicit_required": false,
+        "allowance": true
+      },
+      {
+        "id": "APR-OPT-2026-10-24-fallback-budget-venue",
+        "summary": "Ordinary approval of venue spending TWD 155000 by Operations",
+        "evidence_ids": [
+          "B-budget-venue",
+          "CHK-OPT-2026-10-24-fallback-budget-venue",
+          "STK-I2-L41"
+        ],
+        "owner": "Operations",
+        "rationale": "No human response recorded; the package is a review draft.",
+        "status": "pending",
+        "response": null,
+        "category": "venue",
+        "amount_twd": 155000,
+        "explicit_required": false,
+        "allowance": false
+      }
+    ],
+    "recommendation_status": "deferred-to-operations",
+    "question_for_operations": "Operations judgment required: choose between lower cost and greater budget headroom (OPT-2026-10-17-Q-003) and the larger catering capacity buffer (OPT-2026-10-17-Q-004).",
+    "operations_judgment_required": true,
+    "excluded": [
+      {
+        "id": "EXC-OPT-2026-10-17-Q-003-sub-Q-007",
+        "summary": "Not recommendable (infeasible): infeasible: Hearing loop is a hard requirement and ['Q-007'] explicitly excludes it; no other quote in this option provides it. Accessibility cannot be traded away.",
+        "evidence_ids": [
+          "OPT-2026-10-17-Q-003-sub-Q-007"
+        ]
+      },
+      {
+        "id": "EXC-OPT-2026-10-17-Q-003-add-Q-008",
+        "summary": "Not recommendable (infeasible): infeasible: Total 549000 including allowances exceeds the ceiling 520000 by 29000.",
+        "evidence_ids": [
+          "OPT-2026-10-17-Q-003-add-Q-008"
+        ]
+      },
+      {
+        "id": "EXC-OPT-2026-10-17-Q-004-sub-Q-007",
+        "summary": "Not recommendable (infeasible): infeasible: Hearing loop is a hard requirement and ['Q-007'] explicitly excludes it; no other quote in this option provides it. Accessibility cannot be traded away.",
+        "evidence_ids": [
+          "OPT-2026-10-17-Q-004-sub-Q-007"
+        ]
+      },
+      {
+        "id": "EXC-OPT-2026-10-17-Q-004-add-Q-008",
+        "summary": "Not recommendable (infeasible): infeasible: Total 567000 including allowances exceeds the ceiling 520000 by 47000.",
+        "evidence_ids": [
+          "OPT-2026-10-17-Q-004-add-Q-008"
+        ]
+      },
+      {
+        "id": "EXC-OPT-2026-10-24-fallback",
+        "summary": "Not recommendable (infeasible): infeasible: The hard keynote constraint is only available on 2026-10-17; on 2026-10-24 the keynote is unavailable.",
+        "evidence_ids": [
+          "OPT-2026-10-24-fallback"
+        ]
+      }
+    ],
+    "stakeholder_context": [
+      {
+        "id": "CTX-STK-I2-L65",
+        "summary": "Stakeholder context STK-I2-L65; informs the tradeoff statement, not a weight.",
+        "evidence_ids": [
+          "STK-I2-L65"
+        ],
+        "owner": null,
+        "rationale": null
+      },
+      {
+        "id": "CTX-STK-I1-L111",
+        "summary": "Stakeholder context STK-I1-L111; informs the tradeoff statement, not a weight.",
+        "evidence_ids": [
+          "STK-I1-L111"
+        ],
+        "owner": null,
+        "rationale": null
+      },
+      {
+        "id": "CTX-STK-I3-L85",
+        "summary": "Stakeholder context STK-I3-L85; informs the tradeoff statement, not a weight.",
+        "evidence_ids": [
+          "STK-I3-L85"
+        ],
+        "owner": null,
+        "rationale": null
+      },
+      {
+        "id": "CTX-STK-I3-L97",
+        "summary": "Stakeholder context STK-I3-L97; informs the tradeoff statement, not a weight.",
+        "evidence_ids": [
+          "STK-I3-L97"
+        ],
+        "owner": null,
+        "rationale": null
+      },
+      {
+        "id": "CTX-STK-I3-L121",
+        "summary": "Stakeholder context STK-I3-L121; informs the tradeoff statement, not a weight.",
+        "evidence_ids": [
+          "STK-I3-L121"
+        ],
+        "owner": null,
+        "rationale": null
+      },
+      {
+        "id": "CTX-walk-in-forecast",
+        "summary": "Walk-in forecast 35 people at medium confidence; relevant to the catering buffer tradeoff (STK-I2-L65).",
+        "evidence_ids": [
+          "N-ATT-group-walk_ins",
+          "STK-I2-L65"
+        ],
+        "owner": null,
+        "rationale": null
+      }
+    ],
+    "notes": [
+      {
+        "id": "NOTE-vendor-experience",
+        "summary": "Vendor experience / familiar-supplier status is not evidenced by any disclosed source; it is noted qualitatively and not scored.",
+        "evidence_ids": [
+          "STK-I3-L109",
+          "STK-I3-L121",
+          "STK-I2-L89"
+        ],
+        "owner": null,
+        "rationale": null,
+        "support": "unresolved"
+      },
+      {
+        "id": "NOTE-venue-tariff",
+        "summary": "Planning uses the negotiated case amount TWD 155000 (Q-001, full-day package). The official published weekend rate is TWD 170000 per time slot. The amounts are not comparable one-for-one and the case amount is not replaced.",
+        "evidence_ids": [
+          "X-venue-tariff-difference"
+        ],
+        "owner": "Operations",
+        "rationale": "Stakeholder: continue using the budgeted negotiated figure and note the difference.",
+        "support": "supported",
+        "planning_value_replaced": false
+      }
+    ]
+  },
+  "unresolved": [
+    {
+      "id": "UNR-feasible-option-shortfall",
+      "summary": "The brief asks for 2 feasible options; 0 are feasible on current evidence. No option is upgraded and none is fabricated.",
+      "evidence_ids": [
+        "N-BRIEF-requested_feasible_options",
+        "N-BRIEF-no_fabricated_second_option",
+        "N-BRIEF-conditional_not_feasible_rule",
+        "ASG-NO-INVENT"
+      ],
+      "owner": "Operations",
+      "rationale": null,
+      "feasible_options": []
+    }
+  ],
+  "decisions": [
+    {
+      "id": "DEC-recommendation",
+      "summary": "Recommendation outcome: deferred-to-operations",
+      "evidence_ids": [
+        "TO-cost",
+        "TO-catering_buffer",
+        "TO-open_conditions",
+        "TO-unverified_checks",
+        "TO-quote_validity",
+        "STK-I2-L65",
+        "STK-I1-L111",
+        "STK-I3-L85",
+        "STK-I3-L97",
+        "STK-I3-L121"
+      ],
+      "owner": "Operations",
+      "rationale": "No candidate dominates on the evidenced factors, and the stakeholder gave no fixed ordering of these tradeoffs; the choice is left to Operations.",
+      "tradeoffs": [
+        "lower cost and greater budget headroom favours OPT-2026-10-17-Q-003: lower cost and greater budget headroom: OPT-2026-10-17-Q-003 = 494000, OPT-2026-10-17-Q-004 = 512000",
+        "the larger catering capacity buffer favours OPT-2026-10-17-Q-004: the larger catering capacity buffer: OPT-2026-10-17-Q-003 = 15, OPT-2026-10-17-Q-004 = 55"
+      ],
+      "status": "deferred-to-operations",
+      "recommendation": null,
+      "approval_status": "pending"
+    }
+  ]
+}

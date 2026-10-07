@@ -1,0 +1,112 @@
+[
+  {
+    "id": "run-20261007T211753Z-f66ab1",
+    "run_id": "run-20261007T211753Z-f66ab1",
+    "outcome": "superseded",
+    "archived_at": "2026-10-07T21:18:19.560Z",
+    "reason": "supersedes run-20261007T211753Z-f66ab1: no material change; re-captured and re-verified",
+    "status": "partial",
+    "superseded_by": "run-20261007T211812Z-c4f64e",
+    "pointer": {
+      "status": "partial",
+      "source_hashes": {
+        "SRC-BRIEF": "sha256:299b49d1e40aed95b23b293565a8592ea7e028c656b5c9ae69dc9bceba937ec4",
+        "SRC-CALENDAR": "sha256:ee239e2bc0cc882a314978e4ae8a15ccd548f29ddeeb398e83f434f459dad009",
+        "SRC-BUDGET": "sha256:f94647d7e90405ed3e9bdaa5f9c4ae2d91fcc23649d748f899e62613f37dfdcc",
+        "SRC-ATTENDEE": "sha256:45e86be6cbc41e8a2a1837c5bb191e995065da215cfc0f5579cb15ae110cef02",
+        "SRC-VENDOR": "sha256:a8b37bf2c00cfcba2d00076c2998923343b7bdeeb480f612718307b538732476",
+        "SRC-TICC-HALL": "sha256:8343741af5bd34fbd968fa2e9594e9177cc4d003b214774447bfc9857113a845",
+        "SRC-TICC-ACCESS": "sha256:37d93c3b96b786dde67f68e674b744781c1a4fd12fee4d56ead25d32b0a82777",
+        "SRC-TICC-4F": "sha256:8805ab527b7bb202a70534120ed4037dbde633301f1935e80bd04f12a7c70367"
+      },
+      "source_fingerprints": {
+        "SRC-BRIEF": "sha256:6d33aa98f8219e80e332bed15c4889f3a62a2df96d0fd5d9dc773726b10811d2",
+        "SRC-CALENDAR": "sha256:d6e86594fd6f12d81fddc15568ea6656aac9039043a0b842e71b33bc2ff2ee38",
+        "SRC-BUDGET": "sha256:58ac27becbb3816b94f90d7d9065c4eef377844ab398358ae64480adfb52bc3e",
+        "SRC-ATTENDEE": "sha256:326921d3c294378978b8561c57526b2352ca4dec878d585dfdfe0cb3de377d0f",
+        "SRC-VENDOR": "sha256:af102d54cba08c2f65b57780fb301754d4fb370ebe00354722e5a6107270ce27",
+        "SRC-TICC-HALL": "sha256:6d7300b13b3ba7408fd3c752ec8d538aa08426a3fd8402d0194062b2683508df",
+        "SRC-TICC-ACCESS": "sha256:d9e4638a6e63cc19615e2e2853cfc6f6d1a9810948ce3945c07bb3c6c41a768b",
+        "SRC-TICC-4F": "sha256:17a90948353fc61ccde8374f89e75fc7cf3eff4e17265d073dd812c15ec96687"
+      },
+      "decision_summary": {
+        "options": {
+          "OPT-2026-10-17-Q-003": "conditional",
+          "OPT-2026-10-17-Q-004": "conditional",
+          "OPT-2026-10-17-Q-003-sub-Q-007": "infeasible",
+          "OPT-2026-10-17-Q-003-add-Q-008": "infeasible",
+          "OPT-2026-10-17-Q-004-sub-Q-007": "infeasible",
+          "OPT-2026-10-17-Q-004-add-Q-008": "infeasible",
+          "OPT-2026-10-24-fallback": "infeasible"
+        },
+        "recommendation_status": "deferred-to-operations",
+        "recommendation": null
+      }
+    },
+    "path": "history/run-20261007T211753Z-f66ab1",
+    "files": [
+      "snapshots",
+      "vendor-comparison.csv",
+      "event-plan.md",
+      "event-calendar.ics",
+      "draft-communications.md",
+      "render-manifest.json",
+      "current-run.json"
+    ]
+  },
+  {
+    "id": "run-20261007T211812Z-c4f64e",
+    "run_id": "run-20261007T211812Z-c4f64e",
+    "outcome": "superseded",
+    "archived_at": "2026-10-07T21:20:30.167Z",
+    "reason": "supersedes run-20261007T211812Z-c4f64e: no material change; re-captured and re-verified",
+    "status": "partial",
+    "superseded_by": "run-20261007T212022Z-a4b5ed",
+    "pointer": {
+      "status": "partial",
+      "source_hashes": {
+        "SRC-BRIEF": "sha256:299b49d1e40aed95b23b293565a8592ea7e028c656b5c9ae69dc9bceba937ec4",
+        "SRC-CALENDAR": "sha256:f85e5518435f9d5f0142a3e6ad03489c417a37385e8bd2a0b79050bf502c141e",
+        "SRC-BUDGET": "sha256:0eab01ff925e4db0e9f89b2c5bae679dc368c55c35eb696e71cd1bea35036ad9",
+        "SRC-ATTENDEE": "sha256:e1a7870f0bc15db887ca1384a8c8d045ac1b7f0b4ad5cde0074dbb70efc0aea9",
+        "SRC-VENDOR": "sha256:cf15cc1b2d9e9fc3da264640363d38e3cee8a953ee391910344e6ae78e2b8d6b",
+        "SRC-TICC-HALL": "sha256:a49b991214d3e37cbb61bcf7fe30c20cc812ebd1d170e4284ce7bf88926d8f97",
+        "SRC-TICC-ACCESS": "sha256:5800c7fdfcf388c3b4ebaf8f8d9cafbfc0e88c235ff8fb78b612527ebcc39c0a",
+        "SRC-TICC-4F": "sha256:8805ab527b7bb202a70534120ed4037dbde633301f1935e80bd04f12a7c70367"
+      },
+      "source_fingerprints": {
+        "SRC-BRIEF": "sha256:6d33aa98f8219e80e332bed15c4889f3a62a2df96d0fd5d9dc773726b10811d2",
+        "SRC-CALENDAR": "sha256:d6e86594fd6f12d81fddc15568ea6656aac9039043a0b842e71b33bc2ff2ee38",
+        "SRC-BUDGET": "sha256:58ac27becbb3816b94f90d7d9065c4eef377844ab398358ae64480adfb52bc3e",
+        "SRC-ATTENDEE": "sha256:326921d3c294378978b8561c57526b2352ca4dec878d585dfdfe0cb3de377d0f",
+        "SRC-VENDOR": "sha256:af102d54cba08c2f65b57780fb301754d4fb370ebe00354722e5a6107270ce27",
+        "SRC-TICC-HALL": "sha256:6d7300b13b3ba7408fd3c752ec8d538aa08426a3fd8402d0194062b2683508df",
+        "SRC-TICC-ACCESS": "sha256:d9e4638a6e63cc19615e2e2853cfc6f6d1a9810948ce3945c07bb3c6c41a768b",
+        "SRC-TICC-4F": "sha256:17a90948353fc61ccde8374f89e75fc7cf3eff4e17265d073dd812c15ec96687"
+      },
+      "decision_summary": {
+        "options": {
+          "OPT-2026-10-17-Q-003": "conditional",
+          "OPT-2026-10-17-Q-004": "conditional",
+          "OPT-2026-10-17-Q-003-sub-Q-007": "infeasible",
+          "OPT-2026-10-17-Q-003-add-Q-008": "infeasible",
+          "OPT-2026-10-17-Q-004-sub-Q-007": "infeasible",
+          "OPT-2026-10-17-Q-004-add-Q-008": "infeasible",
+          "OPT-2026-10-24-fallback": "infeasible"
+        },
+        "recommendation_status": "deferred-to-operations",
+        "recommendation": null
+      }
+    },
+    "path": "history/run-20261007T211812Z-c4f64e",
+    "files": [
+      "snapshots",
+      "vendor-comparison.csv",
+      "event-plan.md",
+      "event-calendar.ics",
+      "draft-communications.md",
+      "render-manifest.json",
+      "current-run.json"
+    ]
+  }
+]

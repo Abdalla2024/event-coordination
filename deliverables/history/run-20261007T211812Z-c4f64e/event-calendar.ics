@@ -1,0 +1,670 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Quillhaven Academy//event-planning-coordination-brief//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Demo Day planning draft (tentative)
+BEGIN:VTIMEZONE
+TZID:Asia/Taipei
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0800
+TZOFFSETTO:+0800
+TZNAME:CST
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:B-event-window-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T093000
+DTEND;TZID=Asia/Taipei:20261017T170000
+SUMMARY:[Tentative draft] Demo Day programme window
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source (calendar preferred event window). Open c
+ onditions: P-accessibility-walkthrough (Learner Experience)\; P-severe-all
+ ergy-contacts (Operations)\; P-ticc-technical-safety-briefing (Operations)
+ \; P-venue-confirmation (Operations)\; confirmation:accessibility (Learner
+  Experience)\; confirmation:catering (Operations)\; confirmation:productio
+ n (Programme)\; confirmation:security (Operations). Evidence: B-event-wind
+ ow.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-01-setup-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T073000
+DTEND;TZID=Asia/Taipei:20261017T093000
+SUMMARY:[Tentative draft] Setup and pre-opening readiness checks
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source. Open conditions: P-accessibility-walkthr
+ ough (Learner Experience)\; P-severe-allergy-contacts (Operations)\; P-tic
+ c-technical-safety-briefing (Operations)\; P-venue-confirmation (Operation
+ s)\; confirmation:accessibility (Learner Experience)\; confirmation:cateri
+ ng (Operations)\; confirmation:production (Programme)\; confirmation:secur
+ ity (Operations). Evidence: B-readiness\, B-venue-hold.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-02-opening-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T093000
+DTEND;TZID=Asia/Taipei:20261017T094500
+SUMMARY:[Tentative draft] Opening and welcome
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: Programme planner decision (pending Programme re
+ view). Open conditions: P-accessibility-walkthrough (Learner Experience)\;
+  P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-briefing
+  (Operations)\; P-venue-confirmation (Operations)\; confirmation:accessibi
+ lity (Learner Experience)\; confirmation:catering (Operations)\; confirmat
+ ion:production (Programme)\; confirmation:security (Operations). Evidence:
+  B-event-window\, PD-opening-minutes\, PD-order.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-04-keynote-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T100000
+DTEND;TZID=Asia/Taipei:20261017T110000
+SUMMARY:[Tentative draft] Keynote
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source. Open conditions: P-accessibility-walkthr
+ ough (Learner Experience)\; P-severe-allergy-contacts (Operations)\; P-tic
+ c-technical-safety-briefing (Operations)\; P-venue-confirmation (Operation
+ s)\; confirmation:accessibility (Learner Experience)\; confirmation:cateri
+ ng (Operations)\; confirmation:production (Programme)\; confirmation:secur
+ ity (Operations). Evidence: B-keynote\, B-programme.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-05-break-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T110000
+DTEND;TZID=Asia/Taipei:20261017T111500
+SUMMARY:[Tentative draft] Break 1
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: Programme planner decision (pending Programme re
+ view). Open conditions: P-accessibility-walkthrough (Learner Experience)\;
+  P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-briefing
+  (Operations)\; P-venue-confirmation (Operations)\; confirmation:accessibi
+ lity (Learner Experience)\; confirmation:catering (Operations)\; confirmat
+ ion:production (Programme)\; confirmation:security (Operations). Evidence:
+  N-BRIEF-planner_schedule_choices\, PD-break-minutes\, PD-break-count\, PD
+ -order.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-06-demo-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T111500
+DTEND;TZID=Asia/Taipei:20261017T112500
+SUMMARY:[Tentative draft] DEMO-01 presentation
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source duration\; placement is a Programme plann
+ er decision. Open conditions: P-accessibility-walkthrough (Learner Experie
+ nce)\; P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-br
+ iefing (Operations)\; P-venue-confirmation (Operations)\; confirmation:acc
+ essibility (Learner Experience)\; confirmation:catering (Operations)\; con
+ firmation:production (Programme)\; confirmation:security (Operations). Evi
+ dence: B-programme\, PD-order\, PD-demo-grouping.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-07-changeover-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T112500
+DTEND;TZID=Asia/Taipei:20261017T112800
+SUMMARY:[Tentative draft] DEMO-01 changeover
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source duration\; placement is a Programme plann
+ er decision. Open conditions: P-accessibility-walkthrough (Learner Experie
+ nce)\; P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-br
+ iefing (Operations)\; P-venue-confirmation (Operations)\; confirmation:acc
+ essibility (Learner Experience)\; confirmation:catering (Operations)\; con
+ firmation:production (Programme)\; confirmation:security (Operations). Evi
+ dence: B-programme\, PD-order\, PD-demo-grouping.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-08-demo-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T112800
+DTEND;TZID=Asia/Taipei:20261017T113800
+SUMMARY:[Tentative draft] DEMO-02 presentation
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source duration\; placement is a Programme plann
+ er decision. Open conditions: P-accessibility-walkthrough (Learner Experie
+ nce)\; P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-br
+ iefing (Operations)\; P-venue-confirmation (Operations)\; confirmation:acc
+ essibility (Learner Experience)\; confirmation:catering (Operations)\; con
+ firmation:production (Programme)\; confirmation:security (Operations). Evi
+ dence: B-programme\, PD-order\, PD-demo-grouping.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-09-changeover-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T113800
+DTEND;TZID=Asia/Taipei:20261017T114100
+SUMMARY:[Tentative draft] DEMO-02 changeover
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source duration\; placement is a Programme plann
+ er decision. Open conditions: P-accessibility-walkthrough (Learner Experie
+ nce)\; P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-br
+ iefing (Operations)\; P-venue-confirmation (Operations)\; confirmation:acc
+ essibility (Learner Experience)\; confirmation:catering (Operations)\; con
+ firmation:production (Programme)\; confirmation:security (Operations). Evi
+ dence: B-programme\, PD-order\, PD-demo-grouping.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-10-demo-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T114100
+DTEND;TZID=Asia/Taipei:20261017T115100
+SUMMARY:[Tentative draft] DEMO-03 presentation
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source duration\; placement is a Programme plann
+ er decision. Open conditions: P-accessibility-walkthrough (Learner Experie
+ nce)\; P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-br
+ iefing (Operations)\; P-venue-confirmation (Operations)\; confirmation:acc
+ essibility (Learner Experience)\; confirmation:catering (Operations)\; con
+ firmation:production (Programme)\; confirmation:security (Operations). Evi
+ dence: B-programme\, PD-order\, PD-demo-grouping.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-11-changeover-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T115100
+DTEND;TZID=Asia/Taipei:20261017T115400
+SUMMARY:[Tentative draft] DEMO-03 changeover
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source duration\; placement is a Programme plann
+ er decision. Open conditions: P-accessibility-walkthrough (Learner Experie
+ nce)\; P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-br
+ iefing (Operations)\; P-venue-confirmation (Operations)\; confirmation:acc
+ essibility (Learner Experience)\; confirmation:catering (Operations)\; con
+ firmation:production (Programme)\; confirmation:security (Operations). Evi
+ dence: B-programme\, PD-order\, PD-demo-grouping.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-12-demo-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T115400
+DTEND;TZID=Asia/Taipei:20261017T120400
+SUMMARY:[Tentative draft] DEMO-04 presentation
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source duration\; placement is a Programme plann
+ er decision. Open conditions: P-accessibility-walkthrough (Learner Experie
+ nce)\; P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-br
+ iefing (Operations)\; P-venue-confirmation (Operations)\; confirmation:acc
+ essibility (Learner Experience)\; confirmation:catering (Operations)\; con
+ firmation:production (Programme)\; confirmation:security (Operations). Evi
+ dence: B-programme\, PD-order\, PD-demo-grouping.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-13-changeover-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T120400
+DTEND;TZID=Asia/Taipei:20261017T120700
+SUMMARY:[Tentative draft] DEMO-04 changeover
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source duration\; placement is a Programme plann
+ er decision. Open conditions: P-accessibility-walkthrough (Learner Experie
+ nce)\; P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-br
+ iefing (Operations)\; P-venue-confirmation (Operations)\; confirmation:acc
+ essibility (Learner Experience)\; confirmation:catering (Operations)\; con
+ firmation:production (Programme)\; confirmation:security (Operations). Evi
+ dence: B-programme\, PD-order\, PD-demo-grouping.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-14-demo-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T120700
+DTEND;TZID=Asia/Taipei:20261017T121700
+SUMMARY:[Tentative draft] DEMO-05 presentation
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source duration\; placement is a Programme plann
+ er decision. Open conditions: P-accessibility-walkthrough (Learner Experie
+ nce)\; P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-br
+ iefing (Operations)\; P-venue-confirmation (Operations)\; confirmation:acc
+ essibility (Learner Experience)\; confirmation:catering (Operations)\; con
+ firmation:production (Programme)\; confirmation:security (Operations). Evi
+ dence: B-programme\, PD-order\, PD-demo-grouping.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-15-changeover-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T121700
+DTEND;TZID=Asia/Taipei:20261017T122000
+SUMMARY:[Tentative draft] DEMO-05 changeover
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source duration\; placement is a Programme plann
+ er decision. Open conditions: P-accessibility-walkthrough (Learner Experie
+ nce)\; P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-br
+ iefing (Operations)\; P-venue-confirmation (Operations)\; confirmation:acc
+ essibility (Learner Experience)\; confirmation:catering (Operations)\; con
+ firmation:production (Programme)\; confirmation:security (Operations). Evi
+ dence: B-programme\, PD-order\, PD-demo-grouping.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-16-demo-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T122000
+DTEND;TZID=Asia/Taipei:20261017T123000
+SUMMARY:[Tentative draft] DEMO-06 presentation
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source duration\; placement is a Programme plann
+ er decision. Open conditions: P-accessibility-walkthrough (Learner Experie
+ nce)\; P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-br
+ iefing (Operations)\; P-venue-confirmation (Operations)\; confirmation:acc
+ essibility (Learner Experience)\; confirmation:catering (Operations)\; con
+ firmation:production (Programme)\; confirmation:security (Operations). Evi
+ dence: B-programme\, PD-order\, PD-demo-grouping.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-17-changeover-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T123000
+DTEND;TZID=Asia/Taipei:20261017T123300
+SUMMARY:[Tentative draft] DEMO-06 changeover
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source duration\; placement is a Programme plann
+ er decision. Open conditions: P-accessibility-walkthrough (Learner Experie
+ nce)\; P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-br
+ iefing (Operations)\; P-venue-confirmation (Operations)\; confirmation:acc
+ essibility (Learner Experience)\; confirmation:catering (Operations)\; con
+ firmation:production (Programme)\; confirmation:security (Operations). Evi
+ dence: B-programme\, PD-order\, PD-demo-grouping.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-18-lunch-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T123300
+DTEND;TZID=Asia/Taipei:20261017T133300
+SUMMARY:[Tentative draft] Lunch
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: Programme planner decision (pending Programme re
+ view). Open conditions: P-accessibility-walkthrough (Learner Experience)\;
+  P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-briefing
+  (Operations)\; P-venue-confirmation (Operations)\; confirmation:accessibi
+ lity (Learner Experience)\; confirmation:catering (Operations)\; confirmat
+ ion:production (Programme)\; confirmation:security (Operations). Evidence:
+  N-BRIEF-planner_schedule_choices\, PD-lunch-minutes\, PD-order.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-19-demo-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T133300
+DTEND;TZID=Asia/Taipei:20261017T134300
+SUMMARY:[Tentative draft] DEMO-07 presentation
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source duration\; placement is a Programme plann
+ er decision. Open conditions: P-accessibility-walkthrough (Learner Experie
+ nce)\; P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-br
+ iefing (Operations)\; P-venue-confirmation (Operations)\; confirmation:acc
+ essibility (Learner Experience)\; confirmation:catering (Operations)\; con
+ firmation:production (Programme)\; confirmation:security (Operations). Evi
+ dence: B-programme\, PD-order\, PD-demo-grouping.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-20-changeover-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T134300
+DTEND;TZID=Asia/Taipei:20261017T134600
+SUMMARY:[Tentative draft] DEMO-07 changeover
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source duration\; placement is a Programme plann
+ er decision. Open conditions: P-accessibility-walkthrough (Learner Experie
+ nce)\; P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-br
+ iefing (Operations)\; P-venue-confirmation (Operations)\; confirmation:acc
+ essibility (Learner Experience)\; confirmation:catering (Operations)\; con
+ firmation:production (Programme)\; confirmation:security (Operations). Evi
+ dence: B-programme\, PD-order\, PD-demo-grouping.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-21-demo-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T134600
+DTEND;TZID=Asia/Taipei:20261017T135600
+SUMMARY:[Tentative draft] DEMO-08 presentation
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source duration\; placement is a Programme plann
+ er decision. Open conditions: P-accessibility-walkthrough (Learner Experie
+ nce)\; P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-br
+ iefing (Operations)\; P-venue-confirmation (Operations)\; confirmation:acc
+ essibility (Learner Experience)\; confirmation:catering (Operations)\; con
+ firmation:production (Programme)\; confirmation:security (Operations). Evi
+ dence: B-programme\, PD-order\, PD-demo-grouping.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-22-changeover-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T135600
+DTEND;TZID=Asia/Taipei:20261017T135900
+SUMMARY:[Tentative draft] DEMO-08 changeover
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source duration\; placement is a Programme plann
+ er decision. Open conditions: P-accessibility-walkthrough (Learner Experie
+ nce)\; P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-br
+ iefing (Operations)\; P-venue-confirmation (Operations)\; confirmation:acc
+ essibility (Learner Experience)\; confirmation:catering (Operations)\; con
+ firmation:production (Programme)\; confirmation:security (Operations). Evi
+ dence: B-programme\, PD-order\, PD-demo-grouping.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-23-demo-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T135900
+DTEND;TZID=Asia/Taipei:20261017T140900
+SUMMARY:[Tentative draft] DEMO-09 presentation
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source duration\; placement is a Programme plann
+ er decision. Open conditions: P-accessibility-walkthrough (Learner Experie
+ nce)\; P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-br
+ iefing (Operations)\; P-venue-confirmation (Operations)\; confirmation:acc
+ essibility (Learner Experience)\; confirmation:catering (Operations)\; con
+ firmation:production (Programme)\; confirmation:security (Operations). Evi
+ dence: B-programme\, PD-order\, PD-demo-grouping.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-24-changeover-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T140900
+DTEND;TZID=Asia/Taipei:20261017T141200
+SUMMARY:[Tentative draft] DEMO-09 changeover
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source duration\; placement is a Programme plann
+ er decision. Open conditions: P-accessibility-walkthrough (Learner Experie
+ nce)\; P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-br
+ iefing (Operations)\; P-venue-confirmation (Operations)\; confirmation:acc
+ essibility (Learner Experience)\; confirmation:catering (Operations)\; con
+ firmation:production (Programme)\; confirmation:security (Operations). Evi
+ dence: B-programme\, PD-order\, PD-demo-grouping.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-25-demo-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T141200
+DTEND;TZID=Asia/Taipei:20261017T142200
+SUMMARY:[Tentative draft] DEMO-10 presentation
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source duration\; placement is a Programme plann
+ er decision. Open conditions: P-accessibility-walkthrough (Learner Experie
+ nce)\; P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-br
+ iefing (Operations)\; P-venue-confirmation (Operations)\; confirmation:acc
+ essibility (Learner Experience)\; confirmation:catering (Operations)\; con
+ firmation:production (Programme)\; confirmation:security (Operations). Evi
+ dence: B-programme\, PD-order\, PD-demo-grouping.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-26-changeover-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T142200
+DTEND;TZID=Asia/Taipei:20261017T142500
+SUMMARY:[Tentative draft] DEMO-10 changeover
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source duration\; placement is a Programme plann
+ er decision. Open conditions: P-accessibility-walkthrough (Learner Experie
+ nce)\; P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-br
+ iefing (Operations)\; P-venue-confirmation (Operations)\; confirmation:acc
+ essibility (Learner Experience)\; confirmation:catering (Operations)\; con
+ firmation:production (Programme)\; confirmation:security (Operations). Evi
+ dence: B-programme\, PD-order\, PD-demo-grouping.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-27-demo-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T142500
+DTEND;TZID=Asia/Taipei:20261017T143500
+SUMMARY:[Tentative draft] DEMO-11 presentation
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source duration\; placement is a Programme plann
+ er decision. Open conditions: P-accessibility-walkthrough (Learner Experie
+ nce)\; P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-br
+ iefing (Operations)\; P-venue-confirmation (Operations)\; confirmation:acc
+ essibility (Learner Experience)\; confirmation:catering (Operations)\; con
+ firmation:production (Programme)\; confirmation:security (Operations). Evi
+ dence: B-programme\, PD-order\, PD-demo-grouping.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-28-changeover-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T143500
+DTEND;TZID=Asia/Taipei:20261017T143800
+SUMMARY:[Tentative draft] DEMO-11 changeover
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source duration\; placement is a Programme plann
+ er decision. Open conditions: P-accessibility-walkthrough (Learner Experie
+ nce)\; P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-br
+ iefing (Operations)\; P-venue-confirmation (Operations)\; confirmation:acc
+ essibility (Learner Experience)\; confirmation:catering (Operations)\; con
+ firmation:production (Programme)\; confirmation:security (Operations). Evi
+ dence: B-programme\, PD-order\, PD-demo-grouping.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-29-demo-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T143800
+DTEND;TZID=Asia/Taipei:20261017T144800
+SUMMARY:[Tentative draft] DEMO-12 presentation
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source duration\; placement is a Programme plann
+ er decision. Open conditions: P-accessibility-walkthrough (Learner Experie
+ nce)\; P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-br
+ iefing (Operations)\; P-venue-confirmation (Operations)\; confirmation:acc
+ essibility (Learner Experience)\; confirmation:catering (Operations)\; con
+ firmation:production (Programme)\; confirmation:security (Operations). Evi
+ dence: B-programme\, PD-order\, PD-demo-grouping.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-30-changeover-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T144800
+DTEND;TZID=Asia/Taipei:20261017T145100
+SUMMARY:[Tentative draft] DEMO-12 changeover
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source duration\; placement is a Programme plann
+ er decision. Open conditions: P-accessibility-walkthrough (Learner Experie
+ nce)\; P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-br
+ iefing (Operations)\; P-venue-confirmation (Operations)\; confirmation:acc
+ essibility (Learner Experience)\; confirmation:catering (Operations)\; con
+ firmation:production (Programme)\; confirmation:security (Operations). Evi
+ dence: B-programme\, PD-order\, PD-demo-grouping.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-31-break-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T145100
+DTEND;TZID=Asia/Taipei:20261017T150600
+SUMMARY:[Tentative draft] Break 2
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: Programme planner decision (pending Programme re
+ view). Open conditions: P-accessibility-walkthrough (Learner Experience)\;
+  P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-briefing
+  (Operations)\; P-venue-confirmation (Operations)\; confirmation:accessibi
+ lity (Learner Experience)\; confirmation:catering (Operations)\; confirmat
+ ion:production (Programme)\; confirmation:security (Operations). Evidence:
+  N-BRIEF-planner_schedule_choices\, PD-break-minutes\, PD-break-count\, PD
+ -order.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-33-closing-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T164500
+DTEND;TZID=Asia/Taipei:20261017T170000
+SUMMARY:[Tentative draft] Closing
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: Programme planner decision (pending Programme re
+ view). Open conditions: P-accessibility-walkthrough (Learner Experience)\;
+  P-severe-allergy-contacts (Operations)\; P-ticc-technical-safety-briefing
+  (Operations)\; P-venue-confirmation (Operations)\; confirmation:accessibi
+ lity (Learner Experience)\; confirmation:catering (Operations)\; confirmat
+ ion:production (Programme)\; confirmation:security (Operations). Evidence:
+  B-event-window\, PD-closing-minutes\, PD-order.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:PRG-34-teardown-20261017@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261017T170000
+DTEND;TZID=Asia/Taipei:20261017T183000
+SUMMARY:[Tentative draft] Teardown\; all vendors clear
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source. Open conditions: P-accessibility-walkthr
+ ough (Learner Experience)\; P-severe-allergy-contacts (Operations)\; P-tic
+ c-technical-safety-briefing (Operations)\; P-venue-confirmation (Operation
+ s)\; confirmation:accessibility (Learner Experience)\; confirmation:cateri
+ ng (Operations)\; confirmation:production (Programme)\; confirmation:secur
+ ity (Operations). Evidence: B-teardown\, B-readiness.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:CAL-006-20260925@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20260925T140000
+DTEND;TZID=Asia/Taipei:20260925T160000
+SUMMARY:[Tentative draft] Accessibility walkthrough
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source (calendar CAL-006\, owner Learner Experie
+ nce). Venue confirmation is required first. Evidence: N-CAL-CAL-006.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+BEGIN:VEVENT
+UID:CAL-007-20261016@event-planning-coordination-brief
+DTSTAMP:20261007T211819Z
+DTSTART;TZID=Asia/Taipei:20261016T150000
+DTEND;TZID=Asia/Taipei:20261016T180000
+SUMMARY:[Tentative draft] Rehearsal window
+DESCRIPTION:PROPOSED - NOT BOOKED OR CONFIRMED. Draft planning block from r
+ un run-20261007T211812Z-c4f64e (run status partial\; recommendation deferr
+ ed-to-operations). Basis: source (calendar CAL-007\, owner Programme). Rem
+ ote backup acceptable. Soft constraint. Evidence: N-CAL-CAL-007.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+CATEGORIES:PLANNING-DRAFT
+END:VEVENT
+END:VCALENDAR

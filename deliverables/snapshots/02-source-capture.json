@@ -1,0 +1,1732 @@
+{
+  "schema_version": "event-coordination-stage-snapshot/2",
+  "snapshot_id": "run-20261007T212022Z-a4b5ed-s02",
+  "run_id": "run-20261007T212022Z-a4b5ed",
+  "stage": "source-capture",
+  "sequence": 2,
+  "created_at": "2026-10-07T21:20:30.112Z",
+  "status": "complete",
+  "predecessor": {
+    "snapshot_id": "run-20261007T212022Z-a4b5ed-s01",
+    "path": "snapshots/01-scope-and-approval-gates.json",
+    "sha256": "sha256:fee53d2d83144ff43128105a96982fcc010171158b2b0b4c7317a63eb00ab6cb"
+  },
+  "consumed_record_ids": [
+    "S01-objective"
+  ],
+  "produced_record_ids": [
+    "SRC-BRIEF",
+    "SRC-CALENDAR",
+    "SRC-BUDGET",
+    "SRC-ATTENDEE",
+    "SRC-VENDOR",
+    "SRC-TICC-HALL",
+    "SRC-TICC-ACCESS",
+    "SRC-TICC-4F"
+  ],
+  "state": {
+    "sources": [
+      {
+        "id": "SRC-BRIEF",
+        "summary": "Project C event brief (Notion page)",
+        "evidence_ids": [
+          "ATT-SRC-BRIEF-1",
+          "STK-I1-L199"
+        ],
+        "owner": null,
+        "rationale": "Objectives, hard requirements, approval boundaries, fictional venue and service coordination, base-bundle readiness and the demo roster.",
+        "source_role": "event-brief",
+        "locator": "https://app.notion.com/p/3ba0b700541e81d0af55dc1a8f49f5af",
+        "retrieved_at": "2026-10-07T21:20:22.451Z",
+        "retrieval_status": "retrieved",
+        "content_type": "application/json",
+        "version_metadata": {
+          "version_basis": "retrieval_timestamp",
+          "version_basis_evidence": "STK-I3-L181",
+          "retrieved_at": "2026-10-07T21:20:22.451Z",
+          "native_version": {
+            "brief_version": "EVENT-BRIEF-2026-08-26",
+            "venue_record": "VEN-2026-08-26",
+            "venue_clarification": "VEN-2026-08-26-R2",
+            "programme_clarification": "PROG-2026-08-26-R3",
+            "notion_last_edited": "2026-09-13T19:18:39.915000Z",
+            "notion_page_version": 44
+          },
+          "http_last_modified": null
+        },
+        "content_hash": "sha256:299b49d1e40aed95b23b293565a8592ea7e028c656b5c9ae69dc9bceba937ec4",
+        "local_reference": "snapshots/evidence/SRC-BRIEF/ATT-SRC-BRIEF-1.json",
+        "observations": [
+          {
+            "id": "OBS-SRC-BRIEF-B01",
+            "summary": "Event brief",
+            "locator": {
+              "kind": "section",
+              "value": "Event brief (heading) [block fe0e1946-b3c9-4a62-8a82-938eecfc8854]"
+            },
+            "block_id": "fe0e1946-b3c9-4a62-8a82-938eecfc8854",
+            "text": "Event brief"
+          },
+          {
+            "id": "OBS-SRC-BRIEF-B02",
+            "summary": "Brief version: EVENT-BRIEF-2026-08-26",
+            "locator": {
+              "kind": "section",
+              "value": "Event brief ¶1 [block 792e90b1-947b-45db-8397-24e8ecf8a3f8]"
+            },
+            "block_id": "792e90b1-947b-45db-8397-24e8ecf8a3f8",
+            "text": "Brief version: EVENT-BRIEF-2026-08-26"
+          },
+          {
+            "id": "OBS-SRC-BRIEF-B03",
+            "summary": "Plan the Quillhaven AI Fellowship Demo Day at Taipei International Convention Center. The preferred date is Saturday 17 October 2026, with Saturday 24 October as a fallback. Plan for 245 people including attendees, speakers, and staff.",
+            "locator": {
+              "kind": "section",
+              "value": "Event brief ¶2 [block 298c39a7-ff6a-49a9-a259-bfbc100124b1]"
+            },
+            "block_id": "298c39a7-ff6a-49a9-a259-bfbc100124b1",
+            "text": "Plan the Quillhaven AI Fellowship Demo Day at Taipei International Convention Center. The preferred date is Saturday 17 October 2026, with Saturday 24 October as a fallback. Plan for 245 people including attendees, speakers, and staff."
+          },
+          {
+            "id": "OBS-SRC-BRIEF-B04",
+            "summary": "The event should let fellows present work, give partners a useful programme overview, and support accessible participation. The draft must include two feasible options, a recommended option with trade-offs, a cost and risk view, floor-pl...",
+            "locator": {
+              "kind": "section",
+              "value": "Event brief ¶3 [block 4aa2f6dc-3460-435b-8649-99a67d325798]"
+            },
+            "block_id": "4aa2f6dc-3460-435b-8649-99a67d325798",
+            "text": "The event should let fellows present work, give partners a useful programme overview, and support accessible participation. The draft must include two feasible options, a recommended option with trade-offs, a cost and risk view, floor-plan observations with page or region references, a run of show, calendar drafts, and unsent attendee and vendor messages."
+          },
+          {
+            "id": "OBS-SRC-BRIEF-B05",
+            "summary": "Hard requirements are step-free access to the main programme and restrooms, wheelchair seating, live captions, a staffed quiet room, a 09:30 opening, and completion by 17:00. The total approved planning ceiling is TWD 520000. The recomme...",
+            "locator": {
+              "kind": "section",
+              "value": "Event brief ¶4 [block 14165ffe-1d73-4931-a197-998aff3efd91]"
+            },
+            "block_id": "14165ffe-1d73-4931-a197-998aff3efd91",
+            "text": "Hard requirements are step-free access to the main programme and restrooms, wheelchair seating, live captions, a staffed quiet room, a 09:30 opening, and completion by 17:00. The total approved planning ceiling is TWD 520000. The recommendation must not assume an expired quote or unconfirmed availability."
+          },
+          {
+            "id": "OBS-SRC-BRIEF-B06",
+            "summary": "Success means at least 80 percent of registered attendees check in, all scheduled fellow demos run, and accessibility requests receive a documented response before the event.",
+            "locator": {
+              "kind": "section",
+              "value": "Event brief ¶5 [block e6940ea5-d391-47cb-b64c-196387d979fc]"
+            },
+            "block_id": "e6940ea5-d391-47cb-b64c-196387d979fc",
+            "text": "Success means at least 80 percent of registered attendees check in, all scheduled fellow demos run, and accessibility requests receive a documented response before the event."
+          },
+          {
+            "id": "OBS-SRC-BRIEF-B07",
+            "summary": "Operations approves the plan. Budget owners approve spending. Do not send invitations, book a venue, commit to a vendor, make payment, or write to a production calendar automatically.",
+            "locator": {
+              "kind": "section",
+              "value": "Event brief ¶6 [block 2fe3fca1-8583-47f9-bc95-bf1805acb28c]"
+            },
+            "block_id": "2fe3fca1-8583-47f9-bc95-bf1805acb28c",
+            "text": "Operations approves the plan. Budget owners approve spending. Do not send invitations, book a venue, commit to a vendor, make payment, or write to a production calendar automatically."
+          },
+          {
+            "id": "OBS-SRC-BRIEF-B08",
+            "summary": "Exercise source clarification — authored 12 September 2026",
+            "locator": {
+              "kind": "section",
+              "value": "Exercise source clarification — authored 12 September 2026 (heading) [block 7b00ee3a-16fa-4538-a6ce-890593513cc9]"
+            },
+            "block_id": "7b00ee3a-16fa-4538-a6ce-890593513cc9",
+            "text": "Exercise source clarification — authored 12 September 2026"
+          },
+          {
+            "id": "OBS-SRC-BRIEF-B09",
+            "summary": "Use the simulated business clock 26 August 2026 when evaluating the supplied dated quotes and hold; record actual source retrieval separately. The venue coordination record supplies the fictional room allocation and service basis. Recomm...",
+            "locator": {
+              "kind": "section",
+              "value": "Exercise source clarification — authored 12 September 2026 ¶1 [block 5eb74389-3826-4942-83bb-41e6bad56dd6]"
+            },
+            "block_id": "5eb74389-3826-4942-83bb-41e6bad56dd6",
+            "text": "Use the simulated business clock 26 August 2026 when evaluating the supplied dated quotes and hold; record actual source retrieval separately. The venue coordination record supplies the fictional room allocation and service basis. Recommend within supported evidence; an option with a remaining hard-constraint dependency is conditional, not feasible. Retain two materially different alternatives when supported; do not fabricate a second feasible option if source failure or a material update makes one unavailable. All original hard requirements and the TWD 520,000 ceiling remain."
+          },
+          {
+            "id": "OBS-SRC-BRIEF-B10",
+            "summary": "Venue coordination record",
+            "locator": {
+              "kind": "section",
+              "value": "Venue coordination record (heading) [block 333afcd6-4e59-4fde-a1c0-6a470363a4d9]"
+            },
+            "block_id": "333afcd6-4e59-4fde-a1c0-6a470363a4d9",
+            "text": "Venue coordination record"
+          },
+          {
+            "id": "OBS-SRC-BRIEF-B11",
+            "summary": "Record: VEN-2026-08-26; case clock: 26 August 2026, Asia/Taipei.",
+            "locator": {
+              "kind": "section",
+              "value": "Venue coordination record ¶1 [block 99d8d3b3-2fd2-496c-a8ee-1dddd5d49507]"
+            },
+            "block_id": "99d8d3b3-2fd2-496c-a8ee-1dddd5d49507",
+            "text": "Record: VEN-2026-08-26; case clock: 26 August 2026, Asia/Taipei."
+          },
+          {
+            "id": "OBS-SRC-BRIEF-B12",
+            "summary": "This is a newly authored fictional business document for the Quillhaven exercise. It is not a statement from TICC, a real quote, accessibility certification, reservation or permission to use an outside supplier. Public venue rules contin...",
+            "locator": {
+              "kind": "section",
+              "value": "Venue coordination record ¶2 [block 1d25bdcc-ce4a-40e0-8a3d-e2e38ec16dcc]"
+            },
+            "block_id": "1d25bdcc-ce4a-40e0-8a3d-e2e38ec16dcc",
+            "text": "This is a newly authored fictional business document for the Quillhaven exercise. It is not a statement from TICC, a real quote, accessibility certification, reservation or permission to use an outside supplier. Public venue rules continue to govern claims about the real venue."
+          },
+          {
+            "id": "OBS-SRC-BRIEF-B13",
+            "summary": "Operations' exercise record covers 17 October and 24 October 2026, 07:30–18:30. The quoted TWD 155,000 package is a synthetic negotiated all-inclusive venue amount, not an official published tariff. It allocates 500 usable audience place...",
+            "locator": {
+              "kind": "section",
+              "value": "Venue coordination record ¶3 [block 071b80d1-36cd-4615-906d-da9cf47e860f]"
+            },
+            "block_id": "071b80d1-36cd-4615-906d-da9cf47e860f",
+            "text": "Operations' exercise record covers 17 October and 24 October 2026, 07:30–18:30. The quoted TWD 155,000 package is a synthetic negotiated all-inclusive venue amount, not an official published tariff. It allocates 500 usable audience places in the 4F Plenary Hall, including six wheelchair spaces; companions use ordinary places. The V.I.P. Room on the same floor is the quiet space, with occupancy up to 20 people. Room 401 is not selected: the official venue description warns about sound interference during Plenary Hall use."
+          },
+          {
+            "id": "OBS-SRC-BRIEF-B14",
+            "summary": "For this case, venue coordination confirms step-free access between the 4F accessible elevators, audience area, V.I.P. Room and accessible restroom. The public floor plan supplies spatial locators; it does not prove today's elevator oper...",
+            "locator": {
+              "kind": "section",
+              "value": "Venue coordination record ¶4 [block 8f25fe93-a57e-441f-be1b-f1875290301f]"
+            },
+            "block_id": "8f25fe93-a57e-441f-be1b-f1875290301f",
+            "text": "For this case, venue coordination confirms step-free access between the 4F accessible elevators, audience area, V.I.P. Room and accessible restroom. The public floor plan supplies spatial locators; it does not prove today's elevator operation, unobstructed route, seating configuration or acoustic performance. Those case conditions are supplied by this fictional coordination record, and a real deployment must obtain current confirmation rather than treat this exercise note as evidence about TICC."
+          },
+          {
+            "id": "OBS-SRC-BRIEF-B15",
+            "summary": "The package includes setup and teardown access, the quiet space and its separation from the programme. QuietWorks supplies staffing under Q-010; ClearText supplies captions under Q-005. Q-003/Q-004 catering and Q-006/Q-007 AV are fiction...",
+            "locator": {
+              "kind": "section",
+              "value": "Venue coordination record ¶5 [block 2fdefb04-6881-4c55-8302-3822705b5a45]"
+            },
+            "block_id": "2fdefb04-6881-4c55-8302-3822705b5a45",
+            "text": "The package includes setup and teardown access, the quiet space and its separation from the programme. QuietWorks supplies staffing under Q-010; ClearText supplies captions under Q-005. Q-003/Q-004 catering and Q-006/Q-007 AV are fictional TICC-coordinated service offers, not permission to bring external food or equipment. StreamNorth Q-008 still requires its stated network test and venue confirmation before use. The exercise record confirms adequate captioning, hearing-loop and allergy coordination for the base plan using Q-004/Q-005/Q-006/Q-010; both catering options include an Operations-coordinated dietary response for the 28 vegetarian meals, 12 halal meals and four severe-allergy requests. Named contacts are held by Operations; the learner records the response state without inventing or publishing personal medical details. The two menus differ in capacity and cost, not in whether safety may be ignored."
+          },
+          {
+            "id": "OBS-SRC-BRIEF-B16",
+            "summary": "No booking or spend has been approved. Operations receives the versioned plan, selected date/room, headcount policy, per-option hard-constraint results and unresolved issues. Budget owners receive their category cost, remaining ceiling a...",
+            "locator": {
+              "kind": "section",
+              "value": "Venue coordination record ¶6 [block f58c12b1-089e-42b8-974c-4dd2305d3f26]"
+            },
+            "block_id": "f58c12b1-089e-42b8-974c-4dd2305d3f26",
+            "text": "No booking or spend has been approved. Operations receives the versioned plan, selected date/room, headcount policy, per-option hard-constraint results and unresolved issues. Budget owners receive their category cost, remaining ceiling and cited quote validity. They may approve, reject, request changes or defer with reasons and affected scope. In this exercise the completed output is a review-ready draft, not obtaining those decisions. If a later actual response is provided, retain actor, subject, plan revision, timestamp, outcome and reasons; stale or unrelated replies confer no authority."
+          },
+          {
+            "id": "OBS-SRC-BRIEF-B17",
+            "summary": "Exercise readiness confirmation — authored 12 September 2026",
+            "locator": {
+              "kind": "section",
+              "value": "Exercise readiness confirmation — authored 12 September 2026 (heading) [block 4a86cac9-38e6-44f5-9d04-0eb3bac6c92b]"
+            },
+            "block_id": "4a86cac9-38e6-44f5-9d04-0eb3bac6c92b",
+            "text": "Exercise readiness confirmation — authored 12 September 2026"
+          },
+          {
+            "id": "OBS-SRC-BRIEF-B18",
+            "summary": "Coordination clarification: VEN-2026-08-26-R2; the simulated business clock remains 26 August 2026.",
+            "locator": {
+              "kind": "section",
+              "value": "Exercise readiness confirmation — authored 12 September 2026 ¶1 [block cad780df-377c-4b3f-a1ae-64f3b0b4b02d]"
+            },
+            "block_id": "cad780df-377c-4b3f-a1ae-64f3b0b4b02d",
+            "text": "Coordination clarification: VEN-2026-08-26-R2; the simulated business clock remains 26 August 2026."
+          },
+          {
+            "id": "OBS-SRC-BRIEF-B19",
+            "summary": "For the 17 October 2026 exercise plan, Operations' fictional supplier-coordination record confirms that the venue arrangement and the base service bundles using either Q-003 or Q-004 together with Q-005, Q-006, Q-009 and Q-010 can comple...",
+            "locator": {
+              "kind": "section",
+              "value": "Exercise readiness confirmation — authored 12 September 2026 ¶2 [block 5adfbcd1-1ab9-4161-a22a-5d200888f65c]"
+            },
+            "block_id": "5adfbcd1-1ab9-4161-a22a-5d200888f65c",
+            "text": "For the 17 October 2026 exercise plan, Operations' fictional supplier-coordination record confirms that the venue arrangement and the base service bundles using either Q-003 or Q-004 together with Q-005, Q-006, Q-009 and Q-010 can complete setup and all pre-opening readiness checks between 07:30 and the 09:30 opening. The required captioning, hearing-loop, staffed quiet space and security services are ready by 09:30; the catering service covers the planned event window. These base bundles can finish teardown and clear the venue between the 17:00 programme finish and 18:30. This confirms schedule feasibility for the exercise only, not a completed real-world test, booking, spending approval or an optional livestream; Q-008's network-test and venue-confirmation conditions remain unresolved until evidenced."
+          },
+          {
+            "id": "OBS-SRC-BRIEF-B20",
+            "summary": "The planner may choose a compatible setup and check sequence within 07:30–09:30 and a compatible teardown sequence within 17:00–18:30. No individual vendor duration or additional mandatory buffer is specified. Q-009 is SafeVenue security...",
+            "locator": {
+              "kind": "section",
+              "value": "Exercise readiness confirmation — authored 12 September 2026 ¶3 [block 41f6349d-bb54-4100-8044-09a06878ec6b]"
+            },
+            "block_id": "41f6349d-bb54-4100-8044-09a06878ec6b",
+            "text": "The planner may choose a compatible setup and check sequence within 07:30–09:30 and a compatible teardown sequence within 17:00–18:30. No individual vendor duration or additional mandatory buffer is specified. Q-009 is SafeVenue security and first-aid staffing; communications and contingency are budget allowances, not additional vendor services covered by this readiness confirmation."
+          },
+          {
+            "id": "OBS-SRC-BRIEF-B21",
+            "summary": "Exercise programme confirmation — authored 12 September 2026",
+            "locator": {
+              "kind": "section",
+              "value": "Exercise programme confirmation — authored 12 September 2026 (heading) [block 413649ad-9782-4a9f-8ade-40adb5f58ccb]"
+            },
+            "block_id": "413649ad-9782-4a9f-8ade-40adb5f58ccb",
+            "text": "Exercise programme confirmation — authored 12 September 2026"
+          },
+          {
+            "id": "OBS-SRC-BRIEF-B22",
+            "summary": "Programme clarification: PROG-2026-08-26-R3; the simulated business clock remains 26 August 2026.",
+            "locator": {
+              "kind": "section",
+              "value": "Exercise programme confirmation — authored 12 September 2026 ¶1 [block 0e9768a0-7cc6-4096-8bc9-77b1956b9be4]"
+            },
+            "block_id": "0e9768a0-7cc6-4096-8bc9-77b1956b9be4",
+            "text": "Programme clarification: PROG-2026-08-26-R3; the simulated business clock remains 26 August 2026."
+          },
+          {
+            "id": "OBS-SRC-BRIEF-B23",
+            "summary": "Programme has scheduled twelve team demonstrations for 17 October 2026: DEMO-01, DEMO-02, DEMO-03, DEMO-04, DEMO-05, DEMO-06, DEMO-07, DEMO-08, DEMO-09, DEMO-10, DEMO-11 and DEMO-12. Each demonstration needs 10 minutes of presentation pl...",
+            "locator": {
+              "kind": "section",
+              "value": "Exercise programme confirmation — authored 12 September 2026 ¶2 [block 99807928-2434-4e30-9f24-d3d878803331]"
+            },
+            "block_id": "99807928-2434-4e30-9f24-d3d878803331",
+            "text": "Programme has scheduled twelve team demonstrations for 17 October 2026: DEMO-01, DEMO-02, DEMO-03, DEMO-04, DEMO-05, DEMO-06, DEMO-07, DEMO-08, DEMO-09, DEMO-10, DEMO-11 and DEMO-12. Each demonstration needs 10 minutes of presentation plus a separate 3-minute changeover allowance. Include each demonstration once. These are team slots, not counts inferred from the 148 fellow attendees or 12 speakers; they add no people to the declared attendance."
+          },
+          {
+            "id": "OBS-SRC-BRIEF-B24",
+            "summary": "Keep the existing 10:00–11:00 keynote and 09:30–17:00 event window. The planner chooses the demonstration order, grouping and compatible meal and break schedule. Programme owns roster or duration changes. This is newly authored fictional...",
+            "locator": {
+              "kind": "section",
+              "value": "Exercise programme confirmation — authored 12 September 2026 ¶3 [block 3af34366-805b-42d8-a40a-e1a7d56ee103]"
+            },
+            "block_id": "3af34366-805b-42d8-a40a-e1a7d56ee103",
+            "text": "Keep the existing 10:00–11:00 keynote and 09:30–17:00 event window. The planner chooses the demonstration order, grouping and compatible meal and break schedule. Programme owns roster or duration changes. This is newly authored fictional planning knowledge, not confirmation that a demonstration has run or that a plan has been approved."
+          }
+        ],
+        "disclosed_in": {
+          "interview": "interviews/project-c-event-coordination-20261007-1818.md",
+          "line": 201
+        },
+        "retrieval_route": "notion-page-chunk",
+        "attempts": [
+          {
+            "id": "ATT-SRC-BRIEF-1",
+            "summary": "plain POST attempt 1: retrieved (Notion page data with 32 blocks)",
+            "evidence_ids": [],
+            "source_id": "SRC-BRIEF",
+            "sequence": 1,
+            "profile": "plain",
+            "method": "POST",
+            "request_url": "https://www.notion.so/api/v3/loadPageChunk",
+            "request_headers": {
+              "Content-Type": "application/json"
+            },
+            "started_at": "2026-10-07T21:20:22.263Z",
+            "completed_at": "2026-10-07T21:20:22.451Z",
+            "http_status": 200,
+            "response_content_type": "application/json; charset=utf-8",
+            "response_last_modified": null,
+            "response_etag": "W/\"bc8f-VsdaTdYpg61djyyLq6gIh89Ltuo\"",
+            "final_url": "https://www.notion.so/api/v3/loadPageChunk",
+            "byte_length": 48271,
+            "sha256": "sha256:299b49d1e40aed95b23b293565a8592ea7e028c656b5c9ae69dc9bceba937ec4",
+            "local_reference": "snapshots/evidence/SRC-BRIEF/ATT-SRC-BRIEF-1.json",
+            "outcome": "retrieved",
+            "reason": "Notion page data with 32 blocks"
+          }
+        ],
+        "parse_issues": []
+      },
+      {
+        "id": "SRC-CALENDAR",
+        "summary": "Project C — Calendar Constraints (Google Sheet)",
+        "evidence_ids": [
+          "ATT-SRC-CALENDAR-1",
+          "STK-I1-L235",
+          "STK-I1-L249"
+        ],
+        "owner": null,
+        "rationale": "Hard calendar constraints: the 17 October event window, keynote time, setup and teardown windows.",
+        "source_role": "calendar",
+        "locator": "https://docs.google.com/spreadsheets/d/1f_i6tUCHbJV-Ug_j6U3T4LEZ3yAr2ucdBnID-4C_-8s",
+        "retrieved_at": "2026-10-07T21:20:22.884Z",
+        "retrieval_status": "retrieved",
+        "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "version_metadata": {
+          "version_basis": "retrieval_timestamp",
+          "version_basis_evidence": "STK-I3-L181",
+          "retrieved_at": "2026-10-07T21:20:22.884Z",
+          "native_version": {
+            "record_version": [
+              "calendar-2026-08-26"
+            ]
+          },
+          "http_last_modified": null
+        },
+        "content_hash": "sha256:c86b0d3c7e6c0de2b9d60313adae090b01478ff80f629527201390481a96c348",
+        "local_reference": "snapshots/evidence/SRC-CALENDAR/ATT-SRC-CALENDAR-1.xlsx",
+        "observations": [
+          {
+            "id": "OBS-SRC-CALENDAR-CAL-001",
+            "summary": "constraint_id=CAL-001; owner=Operations; constraint_type=preferred_event_window; start_at=2026-10-17T09:30:00+08:00; end_at=2026-10-17T17:00:00+08:00; priority=hard; notes=Preferred event date; record_version=calendar-2026-08-26",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Calendar Constraints'!A2:H2"
+            },
+            "record_key": "CAL-001",
+            "values": {
+              "constraint_id": "CAL-001",
+              "owner": "Operations",
+              "constraint_type": "preferred_event_window",
+              "start_at": "2026-10-17T09:30:00+08:00",
+              "end_at": "2026-10-17T17:00:00+08:00",
+              "priority": "hard",
+              "notes": "Preferred event date",
+              "record_version": "calendar-2026-08-26"
+            }
+          },
+          {
+            "id": "OBS-SRC-CALENDAR-CAL-002",
+            "summary": "constraint_id=CAL-002; owner=Operations; constraint_type=fallback_event_window; start_at=2026-10-24T09:30:00+08:00; end_at=2026-10-24T17:00:00+08:00; priority=soft; notes=Fallback date; record_version=calendar-2026-08-26",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Calendar Constraints'!A3:H3"
+            },
+            "record_key": "CAL-002",
+            "values": {
+              "constraint_id": "CAL-002",
+              "owner": "Operations",
+              "constraint_type": "fallback_event_window",
+              "start_at": "2026-10-24T09:30:00+08:00",
+              "end_at": "2026-10-24T17:00:00+08:00",
+              "priority": "soft",
+              "notes": "Fallback date",
+              "record_version": "calendar-2026-08-26"
+            }
+          },
+          {
+            "id": "OBS-SRC-CALENDAR-CAL-003",
+            "summary": "constraint_id=CAL-003; owner=TICC; constraint_type=venue_hold; start_at=2026-10-17T07:30:00+08:00; end_at=2026-10-17T18:30:00+08:00; priority=hard; notes=Hold expires 2026-09-05; record_version=calendar-2026-08-26",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Calendar Constraints'!A4:H4"
+            },
+            "record_key": "CAL-003",
+            "values": {
+              "constraint_id": "CAL-003",
+              "owner": "TICC",
+              "constraint_type": "venue_hold",
+              "start_at": "2026-10-17T07:30:00+08:00",
+              "end_at": "2026-10-17T18:30:00+08:00",
+              "priority": "hard",
+              "notes": "Hold expires 2026-09-05",
+              "record_version": "calendar-2026-08-26"
+            }
+          },
+          {
+            "id": "OBS-SRC-CALENDAR-CAL-004",
+            "summary": "constraint_id=CAL-004; owner=Programme; constraint_type=keynote_availability; start_at=2026-10-17T10:00:00+08:00; end_at=2026-10-17T11:00:00+08:00; priority=hard; notes=Keynote unavailable on fallback date; record_version=calendar-2026-08-26",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Calendar Constraints'!A5:H5"
+            },
+            "record_key": "CAL-004",
+            "values": {
+              "constraint_id": "CAL-004",
+              "owner": "Programme",
+              "constraint_type": "keynote_availability",
+              "start_at": "2026-10-17T10:00:00+08:00",
+              "end_at": "2026-10-17T11:00:00+08:00",
+              "priority": "hard",
+              "notes": "Keynote unavailable on fallback date",
+              "record_version": "calendar-2026-08-26"
+            }
+          },
+          {
+            "id": "OBS-SRC-CALENDAR-CAL-005",
+            "summary": "constraint_id=CAL-005; owner=Operations; constraint_type=decision_deadline; start_at=2026-09-04T17:00:00+08:00; end_at=2026-09-04T17:00:00+08:00; priority=hard; notes=Plan and budget decision; record_version=calendar-2026-08-26",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Calendar Constraints'!A6:H6"
+            },
+            "record_key": "CAL-005",
+            "values": {
+              "constraint_id": "CAL-005",
+              "owner": "Operations",
+              "constraint_type": "decision_deadline",
+              "start_at": "2026-09-04T17:00:00+08:00",
+              "end_at": "2026-09-04T17:00:00+08:00",
+              "priority": "hard",
+              "notes": "Plan and budget decision",
+              "record_version": "calendar-2026-08-26"
+            }
+          },
+          {
+            "id": "OBS-SRC-CALENDAR-CAL-006",
+            "summary": "constraint_id=CAL-006; owner=Learner Experience; constraint_type=accessibility_walkthrough; start_at=2026-09-25T14:00:00+08:00; end_at=2026-09-25T16:00:00+08:00; priority=hard; notes=Venue confirmation required first; record_version=calendar-2026-08-26",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Calendar Constraints'!A7:H7"
+            },
+            "record_key": "CAL-006",
+            "values": {
+              "constraint_id": "CAL-006",
+              "owner": "Learner Experience",
+              "constraint_type": "accessibility_walkthrough",
+              "start_at": "2026-09-25T14:00:00+08:00",
+              "end_at": "2026-09-25T16:00:00+08:00",
+              "priority": "hard",
+              "notes": "Venue confirmation required first",
+              "record_version": "calendar-2026-08-26"
+            }
+          },
+          {
+            "id": "OBS-SRC-CALENDAR-CAL-007",
+            "summary": "constraint_id=CAL-007; owner=Programme; constraint_type=rehearsal_window; start_at=2026-10-16T15:00:00+08:00; end_at=2026-10-16T18:00:00+08:00; priority=soft; notes=Remote backup acceptable; record_version=calendar-2026-08-26",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Calendar Constraints'!A8:H8"
+            },
+            "record_key": "CAL-007",
+            "values": {
+              "constraint_id": "CAL-007",
+              "owner": "Programme",
+              "constraint_type": "rehearsal_window",
+              "start_at": "2026-10-16T15:00:00+08:00",
+              "end_at": "2026-10-16T18:00:00+08:00",
+              "priority": "soft",
+              "notes": "Remote backup acceptable",
+              "record_version": "calendar-2026-08-26"
+            }
+          },
+          {
+            "id": "OBS-SRC-CALENDAR-CAL-008",
+            "summary": "constraint_id=CAL-008; owner=TICC; constraint_type=teardown_deadline; start_at=2026-10-17T17:00:00+08:00; end_at=2026-10-17T18:30:00+08:00; priority=hard; notes=All vendors clear by 18:30; record_version=calendar-2026-08-26",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Calendar Constraints'!A9:H9"
+            },
+            "record_key": "CAL-008",
+            "values": {
+              "constraint_id": "CAL-008",
+              "owner": "TICC",
+              "constraint_type": "teardown_deadline",
+              "start_at": "2026-10-17T17:00:00+08:00",
+              "end_at": "2026-10-17T18:30:00+08:00",
+              "priority": "hard",
+              "notes": "All vendors clear by 18:30",
+              "record_version": "calendar-2026-08-26"
+            }
+          }
+        ],
+        "disclosed_in": {
+          "interview": "interviews/project-c-event-coordination-20261007-1818.md",
+          "line": 237
+        },
+        "retrieval_route": "google-sheet-export",
+        "attempts": [
+          {
+            "id": "ATT-SRC-CALENDAR-1",
+            "summary": "plain GET attempt 1: retrieved (xlsx workbook)",
+            "evidence_ids": [],
+            "source_id": "SRC-CALENDAR",
+            "sequence": 1,
+            "profile": "plain",
+            "method": "GET",
+            "request_url": "https://docs.google.com/spreadsheets/d/1f_i6tUCHbJV-Ug_j6U3T4LEZ3yAr2ucdBnID-4C_-8s/export?format=xlsx",
+            "request_headers": {},
+            "started_at": "2026-10-07T21:20:22.455Z",
+            "completed_at": "2026-10-07T21:20:22.884Z",
+            "http_status": 200,
+            "response_content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "response_last_modified": null,
+            "response_etag": null,
+            "final_url": "https://doc-04-48-sheets.googleusercontent.com/export/f3kk9gtum31ktuqh54kn7i1e14/8bgk0etm7kl3sgf77c590qnrok/1791408020000/116538737177717635516/*/1f_i6tUCHbJV-Ug_j6U3T4LEZ3yAr2ucdBnID-4C_-8s?format=xlsx",
+            "byte_length": 6145,
+            "sha256": "sha256:c86b0d3c7e6c0de2b9d60313adae090b01478ff80f629527201390481a96c348",
+            "local_reference": "snapshots/evidence/SRC-CALENDAR/ATT-SRC-CALENDAR-1.xlsx",
+            "outcome": "retrieved",
+            "reason": "xlsx workbook"
+          }
+        ],
+        "parse_issues": []
+      },
+      {
+        "id": "SRC-BUDGET",
+        "summary": "Project C — Budget (Google Sheet)",
+        "evidence_ids": [
+          "ATT-SRC-BUDGET-1",
+          "STK-I1-L213",
+          "STK-I2-L41",
+          "STK-I3-L73"
+        ],
+        "owner": null,
+        "rationale": "Planned category allocations, approval thresholds and existing commitments. Contains no supplier quotes or catering capacities.",
+        "source_role": "budget",
+        "locator": "https://docs.google.com/spreadsheets/d/1Cxo7CvcgImz9HbT8PThZyvaTuyd44ug7w5rBA1z5qlM",
+        "retrieved_at": "2026-10-07T21:20:23.370Z",
+        "retrieval_status": "retrieved",
+        "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "version_metadata": {
+          "version_basis": "retrieval_timestamp",
+          "version_basis_evidence": "STK-I3-L181",
+          "retrieved_at": "2026-10-07T21:20:23.370Z",
+          "native_version": {
+            "record_version": [
+              "budget-2026-08-26"
+            ]
+          },
+          "http_last_modified": null
+        },
+        "content_hash": "sha256:28222544c3ebf12f0aca89a30a6e1d67aa1c72062650e3379ac7a431baf9f4ce",
+        "local_reference": "snapshots/evidence/SRC-BUDGET/ATT-SRC-BUDGET-1.xlsx",
+        "observations": [
+          {
+            "id": "OBS-SRC-BUDGET-venue",
+            "summary": "category=venue; planned_amount_twd=155000; approval_limit_twd=180000; committed_amount_twd=0; owner=Operations; record_version=budget-2026-08-26",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Budget'!A2:F2"
+            },
+            "record_key": "venue",
+            "values": {
+              "category": "venue",
+              "planned_amount_twd": 155000,
+              "approval_limit_twd": 180000,
+              "committed_amount_twd": 0,
+              "owner": "Operations",
+              "record_version": "budget-2026-08-26"
+            }
+          },
+          {
+            "id": "OBS-SRC-BUDGET-catering",
+            "summary": "category=catering; planned_amount_twd=115000; approval_limit_twd=135000; committed_amount_twd=0; owner=Operations; record_version=budget-2026-08-26",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Budget'!A3:F3"
+            },
+            "record_key": "catering",
+            "values": {
+              "category": "catering",
+              "planned_amount_twd": 115000,
+              "approval_limit_twd": 135000,
+              "committed_amount_twd": 0,
+              "owner": "Operations",
+              "record_version": "budget-2026-08-26"
+            }
+          },
+          {
+            "id": "OBS-SRC-BUDGET-accessibility",
+            "summary": "category=accessibility; planned_amount_twd=65000; approval_limit_twd=80000; committed_amount_twd=0; owner=Learner Experience; record_version=budget-2026-08-26",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Budget'!A4:F4"
+            },
+            "record_key": "accessibility",
+            "values": {
+              "category": "accessibility",
+              "planned_amount_twd": 65000,
+              "approval_limit_twd": 80000,
+              "committed_amount_twd": 0,
+              "owner": "Learner Experience",
+              "record_version": "budget-2026-08-26"
+            }
+          },
+          {
+            "id": "OBS-SRC-BUDGET-production",
+            "summary": "category=production; planned_amount_twd=85000; approval_limit_twd=100000; committed_amount_twd=0; owner=Programme; record_version=budget-2026-08-26",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Budget'!A5:F5"
+            },
+            "record_key": "production",
+            "values": {
+              "category": "production",
+              "planned_amount_twd": 85000,
+              "approval_limit_twd": 100000,
+              "committed_amount_twd": 0,
+              "owner": "Programme",
+              "record_version": "budget-2026-08-26"
+            }
+          },
+          {
+            "id": "OBS-SRC-BUDGET-communications",
+            "summary": "category=communications; planned_amount_twd=25000; approval_limit_twd=30000; committed_amount_twd=0; owner=Communications; record_version=budget-2026-08-26",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Budget'!A6:F6"
+            },
+            "record_key": "communications",
+            "values": {
+              "category": "communications",
+              "planned_amount_twd": 25000,
+              "approval_limit_twd": 30000,
+              "committed_amount_twd": 0,
+              "owner": "Communications",
+              "record_version": "budget-2026-08-26"
+            }
+          },
+          {
+            "id": "OBS-SRC-BUDGET-security",
+            "summary": "category=security; planned_amount_twd=25000; approval_limit_twd=35000; committed_amount_twd=0; owner=Operations; record_version=budget-2026-08-26",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Budget'!A7:F7"
+            },
+            "record_key": "security",
+            "values": {
+              "category": "security",
+              "planned_amount_twd": 25000,
+              "approval_limit_twd": 35000,
+              "committed_amount_twd": 0,
+              "owner": "Operations",
+              "record_version": "budget-2026-08-26"
+            }
+          },
+          {
+            "id": "OBS-SRC-BUDGET-contingency",
+            "summary": "category=contingency; planned_amount_twd=40000; approval_limit_twd=50000; committed_amount_twd=0; owner=Operations; record_version=budget-2026-08-26",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Budget'!A8:F8"
+            },
+            "record_key": "contingency",
+            "values": {
+              "category": "contingency",
+              "planned_amount_twd": 40000,
+              "approval_limit_twd": 50000,
+              "committed_amount_twd": 0,
+              "owner": "Operations",
+              "record_version": "budget-2026-08-26"
+            }
+          }
+        ],
+        "disclosed_in": {
+          "interview": "interviews/project-c-event-coordination-20261007-1818.md",
+          "line": 223
+        },
+        "retrieval_route": "google-sheet-export",
+        "attempts": [
+          {
+            "id": "ATT-SRC-BUDGET-1",
+            "summary": "plain GET attempt 1: retrieved (xlsx workbook)",
+            "evidence_ids": [],
+            "source_id": "SRC-BUDGET",
+            "sequence": 1,
+            "profile": "plain",
+            "method": "GET",
+            "request_url": "https://docs.google.com/spreadsheets/d/1Cxo7CvcgImz9HbT8PThZyvaTuyd44ug7w5rBA1z5qlM/export?format=xlsx",
+            "request_headers": {},
+            "started_at": "2026-10-07T21:20:22.889Z",
+            "completed_at": "2026-10-07T21:20:23.370Z",
+            "http_status": 200,
+            "response_content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "response_last_modified": null,
+            "response_etag": null,
+            "final_url": "https://doc-00-48-sheets.googleusercontent.com/export/f3kk9gtum31ktuqh54kn7i1e14/pvl2csmlutpp1i4mjted47abuo/1791408020000/116538737177717635516/*/1Cxo7CvcgImz9HbT8PThZyvaTuyd44ug7w5rBA1z5qlM?format=xlsx",
+            "byte_length": 5721,
+            "sha256": "sha256:28222544c3ebf12f0aca89a30a6e1d67aa1c72062650e3379ac7a431baf9f4ce",
+            "local_reference": "snapshots/evidence/SRC-BUDGET/ATT-SRC-BUDGET-1.xlsx",
+            "outcome": "retrieved",
+            "reason": "xlsx workbook"
+          }
+        ],
+        "parse_issues": []
+      },
+      {
+        "id": "SRC-ATTENDEE",
+        "summary": "Project C — Attendee Signals (Google Sheet)",
+        "evidence_ids": [
+          "ATT-SRC-ATTENDEE-1",
+          "STK-I1-L41",
+          "STK-I1-L87"
+        ],
+        "owner": null,
+        "rationale": "Visible registration counts and on-site groups for the headcount basis; accessibility and dietary requests are overlapping needs, not additional people.",
+        "source_role": "attendee-signals",
+        "locator": "https://docs.google.com/spreadsheets/d/1IXAEAFsZM6Q9IZZ_9pGqbFQ7l2ikr-oThqrEKudHwIU",
+        "retrieved_at": "2026-10-07T21:20:23.806Z",
+        "retrieval_status": "retrieved",
+        "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "version_metadata": {
+          "version_basis": "retrieval_timestamp",
+          "version_basis_evidence": "STK-I3-L181",
+          "retrieved_at": "2026-10-07T21:20:23.806Z",
+          "native_version": null,
+          "http_last_modified": null
+        },
+        "content_hash": "sha256:829acfaa325300ae70f3ebb37db4fda7eacdeb79d9ee49e324fa5248492fbca3",
+        "local_reference": "snapshots/evidence/SRC-ATTENDEE/ATT-SRC-ATTENDEE-1.xlsx",
+        "observations": [
+          {
+            "id": "OBS-SRC-ATTENDEE-SIG-001",
+            "summary": "signal_id=SIG-001; source=registration_form; segment=fellows; signal=registered_attendees; value=148; unit=people; observed_at=2026-08-24; confidence=high",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Attendee Signals'!A2:H2"
+            },
+            "record_key": "SIG-001",
+            "values": {
+              "signal_id": "SIG-001",
+              "source": "registration_form",
+              "segment": "fellows",
+              "signal": "registered_attendees",
+              "value": 148,
+              "unit": "people",
+              "observed_at": "2026-08-24",
+              "confidence": "high"
+            }
+          },
+          {
+            "id": "OBS-SRC-ATTENDEE-SIG-002",
+            "summary": "signal_id=SIG-002; source=partner_form; segment=partners; signal=registered_attendees; value=32; unit=people; observed_at=2026-08-24; confidence=high",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Attendee Signals'!A3:H3"
+            },
+            "record_key": "SIG-002",
+            "values": {
+              "signal_id": "SIG-002",
+              "source": "partner_form",
+              "segment": "partners",
+              "signal": "registered_attendees",
+              "value": 32,
+              "unit": "people",
+              "observed_at": "2026-08-24",
+              "confidence": "high"
+            }
+          },
+          {
+            "id": "OBS-SRC-ATTENDEE-SIG-003",
+            "summary": "signal_id=SIG-003; source=operations_plan; segment=staff; signal=required_on_site; value=18; unit=people; observed_at=2026-08-25; confidence=high",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Attendee Signals'!A4:H4"
+            },
+            "record_key": "SIG-003",
+            "values": {
+              "signal_id": "SIG-003",
+              "source": "operations_plan",
+              "segment": "staff",
+              "signal": "required_on_site",
+              "value": 18,
+              "unit": "people",
+              "observed_at": "2026-08-25",
+              "confidence": "high"
+            }
+          },
+          {
+            "id": "OBS-SRC-ATTENDEE-SIG-004",
+            "summary": "signal_id=SIG-004; source=programme_plan; segment=speakers; signal=required_on_site; value=12; unit=people; observed_at=2026-08-25; confidence=high",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Attendee Signals'!A5:H5"
+            },
+            "record_key": "SIG-004",
+            "values": {
+              "signal_id": "SIG-004",
+              "source": "programme_plan",
+              "segment": "speakers",
+              "signal": "required_on_site",
+              "value": 12,
+              "unit": "people",
+              "observed_at": "2026-08-25",
+              "confidence": "high"
+            }
+          },
+          {
+            "id": "OBS-SRC-ATTENDEE-SIG-005",
+            "summary": "signal_id=SIG-005; source=forecast; segment=walk_ins; signal=expected_attendees; value=35; unit=people; observed_at=2026-08-26; confidence=medium",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Attendee Signals'!A6:H6"
+            },
+            "record_key": "SIG-005",
+            "values": {
+              "signal_id": "SIG-005",
+              "source": "forecast",
+              "segment": "walk_ins",
+              "signal": "expected_attendees",
+              "value": 35,
+              "unit": "people",
+              "observed_at": "2026-08-26",
+              "confidence": "medium"
+            }
+          },
+          {
+            "id": "OBS-SRC-ATTENDEE-SIG-006",
+            "summary": "signal_id=SIG-006; source=registration_form; segment=all; signal=wheelchair_spaces; value=6; unit=people; observed_at=2026-08-24; confidence=high",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Attendee Signals'!A7:H7"
+            },
+            "record_key": "SIG-006",
+            "values": {
+              "signal_id": "SIG-006",
+              "source": "registration_form",
+              "segment": "all",
+              "signal": "wheelchair_spaces",
+              "value": 6,
+              "unit": "people",
+              "observed_at": "2026-08-24",
+              "confidence": "high"
+            }
+          },
+          {
+            "id": "OBS-SRC-ATTENDEE-SIG-007",
+            "summary": "signal_id=SIG-007; source=registration_form; segment=all; signal=mobility_companions; value=4; unit=people; observed_at=2026-08-24; confidence=high",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Attendee Signals'!A8:H8"
+            },
+            "record_key": "SIG-007",
+            "values": {
+              "signal_id": "SIG-007",
+              "source": "registration_form",
+              "segment": "all",
+              "signal": "mobility_companions",
+              "value": 4,
+              "unit": "people",
+              "observed_at": "2026-08-24",
+              "confidence": "high"
+            }
+          },
+          {
+            "id": "OBS-SRC-ATTENDEE-SIG-008",
+            "summary": "signal_id=SIG-008; source=registration_form; segment=all; signal=live_caption_requests; value=23; unit=people; observed_at=2026-08-24; confidence=high",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Attendee Signals'!A9:H9"
+            },
+            "record_key": "SIG-008",
+            "values": {
+              "signal_id": "SIG-008",
+              "source": "registration_form",
+              "segment": "all",
+              "signal": "live_caption_requests",
+              "value": 23,
+              "unit": "people",
+              "observed_at": "2026-08-24",
+              "confidence": "high"
+            }
+          },
+          {
+            "id": "OBS-SRC-ATTENDEE-SIG-009",
+            "summary": "signal_id=SIG-009; source=registration_form; segment=all; signal=hearing_loop_requests; value=7; unit=people; observed_at=2026-08-24; confidence=medium",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Attendee Signals'!A10:H10"
+            },
+            "record_key": "SIG-009",
+            "values": {
+              "signal_id": "SIG-009",
+              "source": "registration_form",
+              "segment": "all",
+              "signal": "hearing_loop_requests",
+              "value": 7,
+              "unit": "people",
+              "observed_at": "2026-08-24",
+              "confidence": "medium"
+            }
+          },
+          {
+            "id": "OBS-SRC-ATTENDEE-SIG-010",
+            "summary": "signal_id=SIG-010; source=registration_form; segment=all; signal=quiet_room_requests; value=9; unit=people; observed_at=2026-08-24; confidence=high",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Attendee Signals'!A11:H11"
+            },
+            "record_key": "SIG-010",
+            "values": {
+              "signal_id": "SIG-010",
+              "source": "registration_form",
+              "segment": "all",
+              "signal": "quiet_room_requests",
+              "value": 9,
+              "unit": "people",
+              "observed_at": "2026-08-24",
+              "confidence": "high"
+            }
+          },
+          {
+            "id": "OBS-SRC-ATTENDEE-SIG-011",
+            "summary": "signal_id=SIG-011; source=registration_form; segment=all; signal=vegetarian_meals; value=28; unit=meals; observed_at=2026-08-24; confidence=high",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Attendee Signals'!A12:H12"
+            },
+            "record_key": "SIG-011",
+            "values": {
+              "signal_id": "SIG-011",
+              "source": "registration_form",
+              "segment": "all",
+              "signal": "vegetarian_meals",
+              "value": 28,
+              "unit": "meals",
+              "observed_at": "2026-08-24",
+              "confidence": "high"
+            }
+          },
+          {
+            "id": "OBS-SRC-ATTENDEE-SIG-012",
+            "summary": "signal_id=SIG-012; source=registration_form; segment=all; signal=halal_meals; value=12; unit=meals; observed_at=2026-08-24; confidence=high",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Attendee Signals'!A13:H13"
+            },
+            "record_key": "SIG-012",
+            "values": {
+              "signal_id": "SIG-012",
+              "source": "registration_form",
+              "segment": "all",
+              "signal": "halal_meals",
+              "value": 12,
+              "unit": "meals",
+              "observed_at": "2026-08-24",
+              "confidence": "high"
+            }
+          },
+          {
+            "id": "OBS-SRC-ATTENDEE-SIG-013",
+            "summary": "signal_id=SIG-013; source=registration_form; segment=all; signal=severe_allergy_follow_up; value=4; unit=people; observed_at=2026-08-24; confidence=high",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Attendee Signals'!A14:H14"
+            },
+            "record_key": "SIG-013",
+            "values": {
+              "signal_id": "SIG-013",
+              "source": "registration_form",
+              "segment": "all",
+              "signal": "severe_allergy_follow_up",
+              "value": 4,
+              "unit": "people",
+              "observed_at": "2026-08-24",
+              "confidence": "high"
+            }
+          }
+        ],
+        "disclosed_in": {
+          "interview": "interviews/project-c-event-coordination-20261007-1818.md",
+          "line": 83
+        },
+        "retrieval_route": "google-sheet-export",
+        "attempts": [
+          {
+            "id": "ATT-SRC-ATTENDEE-1",
+            "summary": "plain GET attempt 1: retrieved (xlsx workbook)",
+            "evidence_ids": [],
+            "source_id": "SRC-ATTENDEE",
+            "sequence": 1,
+            "profile": "plain",
+            "method": "GET",
+            "request_url": "https://docs.google.com/spreadsheets/d/1IXAEAFsZM6Q9IZZ_9pGqbFQ7l2ikr-oThqrEKudHwIU/export?format=xlsx",
+            "request_headers": {},
+            "started_at": "2026-10-07T21:20:23.379Z",
+            "completed_at": "2026-10-07T21:20:23.806Z",
+            "http_status": 200,
+            "response_content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "response_last_modified": null,
+            "response_etag": null,
+            "final_url": "https://doc-10-48-sheets.googleusercontent.com/export/f3kk9gtum31ktuqh54kn7i1e14/bj51tv90uneheamvn69imcmd7g/1791408020000/116538737177717635516/*/1IXAEAFsZM6Q9IZZ_9pGqbFQ7l2ikr-oThqrEKudHwIU?format=xlsx",
+            "byte_length": 6303,
+            "sha256": "sha256:829acfaa325300ae70f3ebb37db4fda7eacdeb79d9ee49e324fa5248492fbca3",
+            "local_reference": "snapshots/evidence/SRC-ATTENDEE/ATT-SRC-ATTENDEE-1.xlsx",
+            "outcome": "retrieved",
+            "reason": "xlsx workbook"
+          }
+        ],
+        "parse_issues": []
+      },
+      {
+        "id": "SRC-VENDOR",
+        "summary": "Project C — Vendor Quotes (Google Sheet)",
+        "evidence_ids": [
+          "ATT-SRC-VENDOR-1",
+          "STK-I1-L257",
+          "STK-I2-L101",
+          "STK-I2-L113",
+          "STK-I3-L25"
+        ],
+        "owner": null,
+        "rationale": "Quotes, packages, prices, capacities, available dates and expiry dates. Held and available are planning states, not bookings; conditional means an outstanding required condition.",
+        "source_role": "vendor-record",
+        "locator": "https://docs.google.com/spreadsheets/d/1cULbGrOQS-vuj862nV2EWND4oe0H5kf-smJ85VZegko",
+        "retrieved_at": "2026-10-07T21:20:24.281Z",
+        "retrieval_status": "retrieved",
+        "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "version_metadata": {
+          "version_basis": "retrieval_timestamp",
+          "version_basis_evidence": "STK-I3-L181",
+          "retrieved_at": "2026-10-07T21:20:24.281Z",
+          "native_version": null,
+          "http_last_modified": null
+        },
+        "content_hash": "sha256:9413299a8da52e41a21cd943fc313beb99d53fa76df50bea6be40d256e857499",
+        "local_reference": "snapshots/evidence/SRC-VENDOR/ATT-SRC-VENDOR-1.xlsx",
+        "observations": [
+          {
+            "id": "OBS-SRC-VENDOR-Q-001",
+            "summary": "quote_id=Q-001; vendor=TICC; category=venue; option=4F Plenary Hall front-500 allocation plus V.I.P. Room; quote_amount_twd=155000; capacity=500; available_date=2026-10-17; valid_until=2026-09-05; status=held; notes=Synthetic full-day package; see venue coordination note; no real reservation",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Vendor Quotes'!A2:J2"
+            },
+            "record_key": "Q-001",
+            "values": {
+              "quote_id": "Q-001",
+              "vendor": "TICC",
+              "category": "venue",
+              "option": "4F Plenary Hall front-500 allocation plus V.I.P. Room",
+              "quote_amount_twd": 155000,
+              "capacity": 500,
+              "available_date": "2026-10-17",
+              "valid_until": "2026-09-05",
+              "status": "held",
+              "notes": "Synthetic full-day package; see venue coordination note; no real reservation"
+            }
+          },
+          {
+            "id": "OBS-SRC-VENDOR-Q-002",
+            "summary": "quote_id=Q-002; vendor=TICC; category=venue; option=4F Plenary Hall front-500 allocation plus V.I.P. Room; quote_amount_twd=155000; capacity=500; available_date=2026-10-24; valid_until=2026-09-05; status=available; notes=Keynote is unavailable on this date; Synthetic full-day package; see venue coordination note; no real reservation",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Vendor Quotes'!A3:J3"
+            },
+            "record_key": "Q-002",
+            "values": {
+              "quote_id": "Q-002",
+              "vendor": "TICC",
+              "category": "venue",
+              "option": "4F Plenary Hall front-500 allocation plus V.I.P. Room",
+              "quote_amount_twd": 155000,
+              "capacity": 500,
+              "available_date": "2026-10-24",
+              "valid_until": "2026-09-05",
+              "status": "available",
+              "notes": "Keynote is unavailable on this date; Synthetic full-day package; see venue coordination note; no real reservation"
+            }
+          },
+          {
+            "id": "OBS-SRC-VENDOR-Q-003",
+            "summary": "quote_id=Q-003; vendor=Green Table; category=catering; option=lunch and two breaks; quote_amount_twd=108000; capacity=260; available_date=2026-10-17; valid_until=2026-09-07; status=available; notes=Supports listed vegetarian and halal meals; supplied through TICC coordination in this synthetic case",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Vendor Quotes'!A4:J4"
+            },
+            "record_key": "Q-003",
+            "values": {
+              "quote_id": "Q-003",
+              "vendor": "Green Table",
+              "category": "catering",
+              "option": "lunch and two breaks",
+              "quote_amount_twd": 108000,
+              "capacity": 260,
+              "available_date": "2026-10-17",
+              "valid_until": "2026-09-07",
+              "status": "available",
+              "notes": "Supports listed vegetarian and halal meals; supplied through TICC coordination in this synthetic case"
+            }
+          },
+          {
+            "id": "OBS-SRC-VENDOR-Q-004",
+            "summary": "quote_id=Q-004; vendor=City Pantry; category=catering; option=lunch and two breaks; quote_amount_twd=126000; capacity=300; available_date=2026-10-17; valid_until=2026-09-12; status=available; notes=Allergy process requires named contacts; supplied through TICC coordination in this synthetic case",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Vendor Quotes'!A5:J5"
+            },
+            "record_key": "Q-004",
+            "values": {
+              "quote_id": "Q-004",
+              "vendor": "City Pantry",
+              "category": "catering",
+              "option": "lunch and two breaks",
+              "quote_amount_twd": 126000,
+              "capacity": 300,
+              "available_date": "2026-10-17",
+              "valid_until": "2026-09-12",
+              "status": "available",
+              "notes": "Allergy process requires named contacts; supplied through TICC coordination in this synthetic case"
+            }
+          },
+          {
+            "id": "OBS-SRC-VENDOR-Q-005",
+            "summary": "quote_id=Q-005; vendor=ClearText; category=accessibility; option=live captions and transcript; quote_amount_twd=42000; capacity=500; available_date=2026-10-17; valid_until=2026-09-10; status=available; notes=Two captioners included",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Vendor Quotes'!A6:J6"
+            },
+            "record_key": "Q-005",
+            "values": {
+              "quote_id": "Q-005",
+              "vendor": "ClearText",
+              "category": "accessibility",
+              "option": "live captions and transcript",
+              "quote_amount_twd": 42000,
+              "capacity": 500,
+              "available_date": "2026-10-17",
+              "valid_until": "2026-09-10",
+              "status": "available",
+              "notes": "Two captioners included"
+            }
+          },
+          {
+            "id": "OBS-SRC-VENDOR-Q-006",
+            "summary": "quote_id=Q-006; vendor=SoundArc; category=production; option=AV package with hearing loop; quote_amount_twd=78000; capacity=500; available_date=2026-10-17; valid_until=2026-09-08; status=available; notes=Setup starts at 07:30; supplied through TICC coordination in this synthetic case",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Vendor Quotes'!A7:J7"
+            },
+            "record_key": "Q-006",
+            "values": {
+              "quote_id": "Q-006",
+              "vendor": "SoundArc",
+              "category": "production",
+              "option": "AV package with hearing loop",
+              "quote_amount_twd": 78000,
+              "capacity": 500,
+              "available_date": "2026-10-17",
+              "valid_until": "2026-09-08",
+              "status": "available",
+              "notes": "Setup starts at 07:30; supplied through TICC coordination in this synthetic case"
+            }
+          },
+          {
+            "id": "OBS-SRC-VENDOR-Q-007",
+            "summary": "quote_id=Q-007; vendor=LiteStage; category=production; option=basic AV package; quote_amount_twd=52000; capacity=500; available_date=2026-10-17; valid_until=2026-09-08; status=available; notes=No hearing loop included; supplied through TICC coordination in this synthetic case",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Vendor Quotes'!A8:J8"
+            },
+            "record_key": "Q-007",
+            "values": {
+              "quote_id": "Q-007",
+              "vendor": "LiteStage",
+              "category": "production",
+              "option": "basic AV package",
+              "quote_amount_twd": 52000,
+              "capacity": 500,
+              "available_date": "2026-10-17",
+              "valid_until": "2026-09-08",
+              "status": "available",
+              "notes": "No hearing loop included; supplied through TICC coordination in this synthetic case"
+            }
+          },
+          {
+            "id": "OBS-SRC-VENDOR-Q-008",
+            "summary": "quote_id=Q-008; vendor=StreamNorth; category=production; option=livestream add-on; quote_amount_twd=55000; capacity=1000; available_date=2026-10-17; valid_until=2026-09-11; status=conditional; notes=Network test required; supplied through TICC coordination in this synthetic case",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Vendor Quotes'!A9:J9"
+            },
+            "record_key": "Q-008",
+            "values": {
+              "quote_id": "Q-008",
+              "vendor": "StreamNorth",
+              "category": "production",
+              "option": "livestream add-on",
+              "quote_amount_twd": 55000,
+              "capacity": 1000,
+              "available_date": "2026-10-17",
+              "valid_until": "2026-09-11",
+              "status": "conditional",
+              "notes": "Network test required; supplied through TICC coordination in this synthetic case"
+            }
+          },
+          {
+            "id": "OBS-SRC-VENDOR-Q-009",
+            "summary": "quote_id=Q-009; vendor=SafeVenue; category=security; option=four staff; quote_amount_twd=28000; capacity=500; available_date=2026-10-17; valid_until=2026-09-15; status=available; notes=Includes first aid lead",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Vendor Quotes'!A10:J10"
+            },
+            "record_key": "Q-009",
+            "values": {
+              "quote_id": "Q-009",
+              "vendor": "SafeVenue",
+              "category": "security",
+              "option": "four staff",
+              "quote_amount_twd": 28000,
+              "capacity": 500,
+              "available_date": "2026-10-17",
+              "valid_until": "2026-09-15",
+              "status": "available",
+              "notes": "Includes first aid lead"
+            }
+          },
+          {
+            "id": "OBS-SRC-VENDOR-Q-010",
+            "summary": "quote_id=Q-010; vendor=QuietWorks; category=accessibility; option=quiet room staffing; quote_amount_twd=18000; capacity=20; available_date=2026-10-17; valid_until=2026-09-10; status=available; notes=Room itself supplied by venue",
+            "locator": {
+              "kind": "cell-range",
+              "value": "'Vendor Quotes'!A11:J11"
+            },
+            "record_key": "Q-010",
+            "values": {
+              "quote_id": "Q-010",
+              "vendor": "QuietWorks",
+              "category": "accessibility",
+              "option": "quiet room staffing",
+              "quote_amount_twd": 18000,
+              "capacity": 20,
+              "available_date": "2026-10-17",
+              "valid_until": "2026-09-10",
+              "status": "available",
+              "notes": "Room itself supplied by venue"
+            }
+          }
+        ],
+        "disclosed_in": {
+          "interview": "interviews/project-c-event-coordination-20261007-1818.md",
+          "line": 259
+        },
+        "retrieval_route": "google-sheet-export",
+        "attempts": [
+          {
+            "id": "ATT-SRC-VENDOR-1",
+            "summary": "plain GET attempt 1: retrieved (xlsx workbook)",
+            "evidence_ids": [],
+            "source_id": "SRC-VENDOR",
+            "sequence": 1,
+            "profile": "plain",
+            "method": "GET",
+            "request_url": "https://docs.google.com/spreadsheets/d/1cULbGrOQS-vuj862nV2EWND4oe0H5kf-smJ85VZegko/export?format=xlsx",
+            "request_headers": {},
+            "started_at": "2026-10-07T21:20:23.816Z",
+            "completed_at": "2026-10-07T21:20:24.281Z",
+            "http_status": 200,
+            "response_content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "response_last_modified": null,
+            "response_etag": null,
+            "final_url": "https://doc-0s-48-sheets.googleusercontent.com/export/f3kk9gtum31ktuqh54kn7i1e14/mdru4undjeas979t5lst97hnas/1791408020000/116538737177717635516/*/1cULbGrOQS-vuj862nV2EWND4oe0H5kf-smJ85VZegko?format=xlsx",
+            "byte_length": 6628,
+            "sha256": "sha256:9413299a8da52e41a21cd943fc313beb99d53fa76df50bea6be40d256e857499",
+            "local_reference": "snapshots/evidence/SRC-VENDOR/ATT-SRC-VENDOR-1.xlsx",
+            "outcome": "retrieved",
+            "reason": "xlsx workbook"
+          }
+        ],
+        "parse_issues": []
+      },
+      {
+        "id": "SRC-TICC-HALL",
+        "summary": "TICC official Plenary Hall venue page",
+        "evidence_ids": [
+          "ATT-SRC-TICC-HALL-1",
+          "STK-I2-L25",
+          "STK-I3-L205"
+        ],
+        "owner": null,
+        "rationale": "Official venue source used to verify venue layout and access. Its published tariff is documented but does not replace the negotiated case amount.",
+        "source_role": "venue-page",
+        "locator": "https://www.ticc.com.tw/wSite/sp?BaseDSD=7&CtUnit=99&ctNode=322&mp=2&roomId=PH&xdUrl=%2FwSite%2Fap%2Fcp_VenueSearch.jsp",
+        "retrieved_at": "2026-10-07T21:20:25.437Z",
+        "retrieval_status": "retrieved",
+        "content_type": "text/html",
+        "version_metadata": {
+          "version_basis": "retrieval_timestamp",
+          "version_basis_evidence": "STK-I3-L181",
+          "retrieved_at": "2026-10-07T21:20:25.437Z",
+          "native_version": null,
+          "http_last_modified": null
+        },
+        "content_hash": "sha256:59fe5e559b50ddcce2caf5907157ba055c753c3e081b5ca981faefb30a921922",
+        "local_reference": "snapshots/evidence/SRC-TICC-HALL/ATT-SRC-TICC-HALL-1.html",
+        "observations": [
+          {
+            "id": "OBS-SRC-TICC-HALL-title",
+            "summary": "Page title: TAITRA-Taipei International Convention Center(TICC) - 場地查詢",
+            "locator": {
+              "kind": "section",
+              "value": "<title>"
+            }
+          },
+          {
+            "id": "OBS-SRC-TICC-HALL-fixed-seats",
+            "summary": "Plenary Hall has 3,122 fixed seats (official page).",
+            "locator": {
+              "kind": "section",
+              "value": "空間簡介 (venue introduction)"
+            },
+            "value": 3122
+          },
+          {
+            "id": "OBS-SRC-TICC-HALL-rate-slots",
+            "summary": "Published rental is per time slot: 08:30-12:30  /  13:30-17:30  /  18:30-22:30.",
+            "locator": {
+              "kind": "section",
+              "value": "每時段租金 (rental per time slot)"
+            },
+            "value": "08:30-12:30  /  13:30-17:30  /  18:30-22:30"
+          },
+          {
+            "id": "OBS-SRC-TICC-HALL-rate-weekday",
+            "summary": "Official published Monday–Friday rate: TWD 159000 per time slot.",
+            "locator": {
+              "kind": "section",
+              "value": "每時段租金 › 週一～週五"
+            },
+            "value": 159000,
+            "currency": "TWD",
+            "unit": "per time slot"
+          },
+          {
+            "id": "OBS-SRC-TICC-HALL-rate-weekend",
+            "summary": "Official published Saturday–Sunday rate: TWD 170000 per time slot.",
+            "locator": {
+              "kind": "section",
+              "value": "每時段租金 › 週六～週日"
+            },
+            "value": 170000,
+            "currency": "TWD",
+            "unit": "per time slot"
+          },
+          {
+            "id": "OBS-SRC-TICC-HALL-rule-livestream",
+            "summary": "Venue rule 9 (livestream): 9.本中心自111年起活動若有直播需求，請主動告知承辦人，恕不開放非本中心合約廠商提供服務。",
+            "locator": {
+              "kind": "section",
+              "value": "注意事項 (notes) › item 9"
+            },
+            "text": "9.本中心自111年起活動若有直播需求，請主動告知承辦人，恕不開放非本中心合約廠商提供服務。"
+          },
+          {
+            "id": "OBS-SRC-TICC-HALL-rule-briefing",
+            "summary": "Venue rule 10 (technical coordination and safety briefing): 10.凡租用大會堂之客戶需於活動前出席技術協調會及安全逃生講習，詳情請洽承辦人。",
+            "locator": {
+              "kind": "section",
+              "value": "注意事項 (notes) › item 10"
+            },
+            "text": "10.凡租用大會堂之客戶需於活動前出席技術協調會及安全逃生講習，詳情請洽承辦人。"
+          }
+        ],
+        "disclosed_in": {
+          "interview": "interviews/project-c-event-coordination-20261007-1855.md",
+          "line": 27
+        },
+        "retrieval_route": "http-get",
+        "attempts": [
+          {
+            "id": "ATT-SRC-TICC-HALL-1",
+            "summary": "plain GET attempt 1: retrieved (HTML page with expected content)",
+            "evidence_ids": [],
+            "source_id": "SRC-TICC-HALL",
+            "sequence": 1,
+            "profile": "plain",
+            "method": "GET",
+            "request_url": "https://www.ticc.com.tw/wSite/sp?BaseDSD=7&CtUnit=99&ctNode=322&mp=2&roomId=PH&xdUrl=%2FwSite%2Fap%2Fcp_VenueSearch.jsp",
+            "request_headers": {},
+            "started_at": "2026-10-07T21:20:24.293Z",
+            "completed_at": "2026-10-07T21:20:25.437Z",
+            "http_status": 200,
+            "response_content_type": "text/html;charset=utf-8",
+            "response_last_modified": null,
+            "response_etag": null,
+            "final_url": "https://www.ticc.com.tw/wSite/sp?BaseDSD=7&CtUnit=99&ctNode=322&mp=2&roomId=PH&xdUrl=%2FwSite%2Fap%2Fcp_VenueSearch.jsp",
+            "byte_length": 46528,
+            "sha256": "sha256:59fe5e559b50ddcce2caf5907157ba055c753c3e081b5ca981faefb30a921922",
+            "local_reference": "snapshots/evidence/SRC-TICC-HALL/ATT-SRC-TICC-HALL-1.html",
+            "outcome": "retrieved",
+            "reason": "HTML page with expected content"
+          }
+        ],
+        "parse_issues": []
+      },
+      {
+        "id": "SRC-TICC-ACCESS",
+        "summary": "TICC official accessibility index (accessible facilities floor plans)",
+        "evidence_ids": [
+          "ATT-SRC-TICC-ACCESS-1",
+          "STK-I2-L25"
+        ],
+        "owner": null,
+        "rationale": "Official index of accessible-facilities floor plans used to verify access.",
+        "source_role": "venue-page",
+        "locator": "https://www.ticc.com.tw/wSite/lp?ctNode=398&mp=2&xq_xCat=6",
+        "retrieved_at": "2026-10-07T21:20:26.510Z",
+        "retrieval_status": "retrieved",
+        "content_type": "text/html",
+        "version_metadata": {
+          "version_basis": "retrieval_timestamp",
+          "version_basis_evidence": "STK-I3-L181",
+          "retrieved_at": "2026-10-07T21:20:26.510Z",
+          "native_version": null,
+          "http_last_modified": null
+        },
+        "content_hash": "sha256:6cecfbdccf8e2f02a874c1a73991cb0d06bcf5b8142d64f9117231e1959f0700",
+        "local_reference": "snapshots/evidence/SRC-TICC-ACCESS/ATT-SRC-TICC-ACCESS-1.html",
+        "observations": [
+          {
+            "id": "OBS-SRC-TICC-ACCESS-plans",
+            "summary": "Official index lists 8 accessible-facilities floor plans.",
+            "locator": {
+              "kind": "section",
+              "value": "Accessible Facilities Floor Plan list"
+            },
+            "entries": [
+              {
+                "label": "1 TICC 6F Accessible Facilities Floor Plan",
+                "url": "https://www.ticc.com.tw/wSite/public/Attachment/f1710485862571.pdf"
+              },
+              {
+                "label": "2 TICC 5F Accessible Facilities Floor Plan",
+                "url": "https://www.ticc.com.tw/wSite/public/Attachment/f1710485844992.pdf"
+              },
+              {
+                "label": "3 TICC 4F Accessible Facilities Floor Plan",
+                "url": "https://www.ticc.com.tw/wSite/public/Attachment/f1710485827023.pdf"
+              },
+              {
+                "label": "4 TICC 3F Accessible Facilities Floor Plan",
+                "url": "https://www.ticc.com.tw/wSite/public/Attachment/f1710485806133.pdf"
+              },
+              {
+                "label": "5 TICC 2F Accessible Facilities Floor Plan",
+                "url": "https://www.ticc.com.tw/wSite/public/Attachment/f1710485781414.pdf"
+              },
+              {
+                "label": "6 TICC 1M+2M Accessible Facilities Floor Plan",
+                "url": "https://www.ticc.com.tw/wSite/public/Attachment/f1710485747273.pdf"
+              },
+              {
+                "label": "7 TICC 1F Accessible Facilities Floor Plan",
+                "url": "https://www.ticc.com.tw/wSite/public/Attachment/f1710485710179.pdf"
+              },
+              {
+                "label": "8 TICC B1 Accessible Facilities Floor Plan",
+                "url": "https://www.ticc.com.tw/wSite/public/Attachment/f1710485651725.pdf"
+              }
+            ]
+          },
+          {
+            "id": "OBS-SRC-TICC-ACCESS-4f",
+            "summary": "The disclosed 4F PDF is listed as '3 TICC 4F Accessible Facilities Floor Plan'.",
+            "locator": {
+              "kind": "section",
+              "value": "Accessible Facilities Floor Plan list › 3 TICC 4F Accessible Facilities Floor Plan"
+            },
+            "url": "https://www.ticc.com.tw/wSite/public/Attachment/f1710485827023.pdf"
+          }
+        ],
+        "disclosed_in": {
+          "interview": "interviews/project-c-event-coordination-20261007-1855.md",
+          "line": 28
+        },
+        "retrieval_route": "http-get",
+        "attempts": [
+          {
+            "id": "ATT-SRC-TICC-ACCESS-1",
+            "summary": "plain GET attempt 1: retrieved (HTML page with expected content)",
+            "evidence_ids": [],
+            "source_id": "SRC-TICC-ACCESS",
+            "sequence": 1,
+            "profile": "plain",
+            "method": "GET",
+            "request_url": "https://www.ticc.com.tw/wSite/lp?ctNode=398&mp=2&xq_xCat=6",
+            "request_headers": {},
+            "started_at": "2026-10-07T21:20:25.440Z",
+            "completed_at": "2026-10-07T21:20:26.510Z",
+            "http_status": 200,
+            "response_content_type": "text/html;charset=utf-8",
+            "response_last_modified": null,
+            "response_etag": null,
+            "final_url": "https://www.ticc.com.tw/wSite/lp?ctNode=398&mp=2&xq_xCat=6",
+            "byte_length": 19148,
+            "sha256": "sha256:6cecfbdccf8e2f02a874c1a73991cb0d06bcf5b8142d64f9117231e1959f0700",
+            "local_reference": "snapshots/evidence/SRC-TICC-ACCESS/ATT-SRC-TICC-ACCESS-1.html",
+            "outcome": "retrieved",
+            "reason": "HTML page with expected content"
+          }
+        ],
+        "parse_issues": []
+      },
+      {
+        "id": "SRC-TICC-4F",
+        "summary": "TICC official 4F accessible facilities floor plan (PDF)",
+        "evidence_ids": [
+          "ATT-SRC-TICC-4F-1",
+          "STK-I2-L25",
+          "STK-I3-L193"
+        ],
+        "owner": null,
+        "rationale": "Required official floor plan. Spatial evidence only; counts and hearing-loop availability come from the coordination record.",
+        "source_role": "floor-plan-or-image",
+        "locator": "https://www.ticc.com.tw/wSite/public/Attachment/f1710485827023.pdf",
+        "retrieved_at": "2026-10-07T21:20:30.017Z",
+        "retrieval_status": "retrieved",
+        "content_type": "application/pdf",
+        "version_metadata": {
+          "version_basis": "retrieval_timestamp",
+          "version_basis_evidence": "STK-I3-L181",
+          "retrieved_at": "2026-10-07T21:20:30.017Z",
+          "native_version": {
+            "page_count": 1,
+            "pdf_mod_date": "2024-03-15T05:38:57Z"
+          },
+          "http_last_modified": "Fri, 15 Mar 2024 06:57:07 GMT"
+        },
+        "content_hash": "sha256:8805ab527b7bb202a70534120ed4037dbde633301f1935e80bd04f12a7c70367",
+        "local_reference": "snapshots/evidence/SRC-TICC-4F/ATT-SRC-TICC-4F-1.pdf",
+        "observations": [
+          {
+            "id": "OBS-SRC-TICC-4F-document",
+            "summary": "Official floor-plan PDF retained as evidence bytes; spatial observations are recorded separately against this file's hash.",
+            "locator": {
+              "kind": "page-region",
+              "value": "page 1, whole page"
+            }
+          },
+          {
+            "id": "OBS-SRC-TICC-4F-FP-legend",
+            "summary": "Legend defines separate symbols for Disabled Wheelchair Area (blue), Restroom for the Disabled (magenta), Accessible Elevator (magenta wheelchair over an elevator cross), Drinking Fountain for the Disabled, Charging Socket, AED, and two kinds of emergency exit.",
+            "locator": {
+              "kind": "page-region",
+              "value": "page 1, x 0.06–0.20, y 0.12–0.71 (fractions of page from top-left)"
+            },
+            "confidence": "clear",
+            "evidence_file": "snapshots/evidence/SRC-TICC-4F/ATT-SRC-TICC-4F-1.pdf",
+            "read_by": "agent visual reading (Claude), 2026-10-07; rendered at 4800 px width and inspected in crops. EV13 re-inspected at full zoom after learner review: the elevator cross behind the wheelchair is visible."
+          },
+          {
+            "id": "OBS-SRC-TICC-4F-FP-plenary-hall",
+            "summary": "The Plenary Hall seating and the Plenary Hall Stage are on 4F, with the stage on the east side of the seating.",
+            "locator": {
+              "kind": "page-region",
+              "value": "page 1, x 0.58–0.88, y 0.23–0.64 (fractions of page from top-left)"
+            },
+            "confidence": "clear",
+            "evidence_file": "snapshots/evidence/SRC-TICC-4F/ATT-SRC-TICC-4F-1.pdf",
+            "read_by": "agent visual reading (Claude), 2026-10-07; rendered at 4800 px width and inspected in crops. EV13 re-inspected at full zoom after learner review: the elevator cross behind the wheelchair is visible."
+          },
+          {
+            "id": "OBS-SRC-TICC-4F-FP-hall-wheelchair-areas",
+            "summary": "Four Disabled Wheelchair Area symbols are drawn inside the Plenary Hall seating: two in the north seating section and two in the south seating section. The symbols mark locations only; they do not state how many wheelchair spaces exist.",
+            "locator": {
+              "kind": "page-region",
+              "value": "page 1, x 0.70–0.79, y 0.29–0.59 (fractions of page from top-left)"
+            },
+            "confidence": "clear",
+            "evidence_file": "snapshots/evidence/SRC-TICC-4F/ATT-SRC-TICC-4F-1.pdf",
+            "read_by": "agent visual reading (Claude), 2026-10-07; rendered at 4800 px width and inspected in crops. EV13 re-inspected at full zoom after learner review: the elevator cross behind the wheelchair is visible."
+          },
+          {
+            "id": "OBS-SRC-TICC-4F-FP-vip-room",
+            "summary": "The V.I.P. Room (貴賓廳) is on the same floor, in the west wing, separated from the Plenary Hall by the central core (Room 401, corridors, restrooms and service rooms).",
+            "locator": {
+              "kind": "page-region",
+              "value": "page 1, x 0.29–0.42, y 0.40–0.68 (fractions of page from top-left)"
+            },
+            "confidence": "clear",
+            "evidence_file": "snapshots/evidence/SRC-TICC-4F/ATT-SRC-TICC-4F-1.pdf",
+            "read_by": "agent visual reading (Claude), 2026-10-07; rendered at 4800 px width and inspected in crops. EV13 re-inspected at full zoom after learner review: the elevator cross behind the wheelchair is visible."
+          },
+          {
+            "id": "OBS-SRC-TICC-4F-FP-room-401",
+            "summary": "Room 401 Meeting Room lies west of the Plenary Hall seating, separated from it by restrooms 410–415, VIP lounges, an office, a control room and a storage room.",
+            "locator": {
+              "kind": "page-region",
+              "value": "page 1, x 0.44–0.53, y 0.32–0.54 (fractions of page from top-left)"
+            },
+            "confidence": "clear",
+            "evidence_file": "snapshots/evidence/SRC-TICC-4F/ATT-SRC-TICC-4F-1.pdf",
+            "read_by": "agent visual reading (Claude), 2026-10-07; rendered at 4800 px width and inspected in crops. EV13 re-inspected at full zoom after learner review: the elevator cross behind the wheelchair is visible."
+          },
+          {
+            "id": "OBS-SRC-TICC-4F-FP-accessible-elevators-south",
+            "summary": "Accessible Elevator symbols mark elevators EV1/EV2 and EV3/EV4 in the south lobby, labelled 'Accessible Elevator' and 'Elevator'.",
+            "locator": {
+              "kind": "page-region",
+              "value": "page 1, x 0.58–0.71, y 0.69–0.74 (fractions of page from top-left)"
+            },
+            "confidence": "clear",
+            "evidence_file": "snapshots/evidence/SRC-TICC-4F/ATT-SRC-TICC-4F-1.pdf",
+            "read_by": "agent visual reading (Claude), 2026-10-07; rendered at 4800 px width and inspected in crops. EV13 re-inspected at full zoom after learner review: the elevator cross behind the wheelchair is visible."
+          },
+          {
+            "id": "OBS-SRC-TICC-4F-FP-accessible-elevator-ev9",
+            "summary": "An Accessible Elevator symbol marks EV9 at the south-east corner of the Plenary Hall; the label 'Accessible Elevator' appears between EV9 and EV11.",
+            "locator": {
+              "kind": "page-region",
+              "value": "page 1, x 0.79–0.83, y 0.59–0.66 (fractions of page from top-left)"
+            },
+            "confidence": "clear",
+            "evidence_file": "snapshots/evidence/SRC-TICC-4F/ATT-SRC-TICC-4F-1.pdf",
+            "read_by": "agent visual reading (Claude), 2026-10-07; rendered at 4800 px width and inspected in crops. EV13 re-inspected at full zoom after learner review: the elevator cross behind the wheelchair is visible."
+          },
+          {
+            "id": "OBS-SRC-TICC-4F-FP-accessible-restroom-south",
+            "summary": "A Restroom for the Disabled symbol is drawn between restrooms 407 and 408 in the south-west, next to a Drinking Fountain for the Disabled, a Baby Changing symbol and an AED.",
+            "locator": {
+              "kind": "page-region",
+              "value": "page 1, x 0.48–0.52, y 0.74–0.80 (fractions of page from top-left)"
+            },
+            "confidence": "clear",
+            "evidence_file": "snapshots/evidence/SRC-TICC-4F/ATT-SRC-TICC-4F-1.pdf",
+            "read_by": "agent visual reading (Claude), 2026-10-07; rendered at 4800 px width and inspected in crops. EV13 re-inspected at full zoom after learner review: the elevator cross behind the wheelchair is visible."
+          },
+          {
+            "id": "OBS-SRC-TICC-4F-FP-accessible-elevator-ev13",
+            "summary": "An Accessible Elevator symbol (magenta wheelchair over an elevator cross, as in the legend) marks EV13 in the north-west EV13/EV14 elevator bank; the adjacent EV14 shows the plain Elevator symbol.",
+            "locator": {
+              "kind": "page-region",
+              "value": "page 1, x 0.35–0.38, y 0.32–0.36 (fractions of page from top-left)"
+            },
+            "confidence": "clear",
+            "evidence_file": "snapshots/evidence/SRC-TICC-4F/ATT-SRC-TICC-4F-1.pdf",
+            "read_by": "agent visual reading (Claude), 2026-10-07; rendered at 4800 px width and inspected in crops. EV13 re-inspected at full zoom after learner review: the elevator cross behind the wheelchair is visible."
+          },
+          {
+            "id": "OBS-SRC-TICC-4F-FP-emergency-exits",
+            "summary": "Emergency exit symbols mark stairs A, B, C, D, F, G and H around the floor; red symbols mean exit to 1F outdoors and rooftop, blue symbols mean exit to the 1F lobby and rooftop.",
+            "locator": {
+              "kind": "page-region",
+              "value": "page 1, x 0.40–0.88, y 0.08–0.80 (fractions of page from top-left)"
+            },
+            "confidence": "clear",
+            "evidence_file": "snapshots/evidence/SRC-TICC-4F/ATT-SRC-TICC-4F-1.pdf",
+            "read_by": "agent visual reading (Claude), 2026-10-07; rendered at 4800 px width and inspected in crops. EV13 re-inspected at full zoom after learner review: the elevator cross behind the wheelchair is visible."
+          },
+          {
+            "id": "OBS-SRC-TICC-4F-FP-title-block",
+            "summary": "Title block: TICC '4F Floor Plan', dated 105年11月8日 (ROC calendar, 8 November 2016). Note 1 says dimensions and layout are drawn from the original architectural drawings and are for reference only; note 2 says vendors must measure on site.",
+            "locator": {
+              "kind": "page-region",
+              "value": "page 1, x 0.92–0.99, y 0.55–0.99 (fractions of page from top-left)"
+            },
+            "confidence": "clear",
+            "evidence_file": "snapshots/evidence/SRC-TICC-4F/ATT-SRC-TICC-4F-1.pdf",
+            "read_by": "agent visual reading (Claude), 2026-10-07; rendered at 4800 px width and inspected in crops. EV13 re-inspected at full zoom after learner review: the elevator cross behind the wheelchair is visible."
+          }
+        ],
+        "disclosed_in": {
+          "interview": "interviews/project-c-event-coordination-20261007-1855.md",
+          "line": 29
+        },
+        "retrieval_route": "http-get",
+        "attempts": [
+          {
+            "id": "ATT-SRC-TICC-4F-1",
+            "summary": "plain GET attempt 1: retrieved (PDF document)",
+            "evidence_ids": [],
+            "source_id": "SRC-TICC-4F",
+            "sequence": 1,
+            "profile": "plain",
+            "method": "GET",
+            "request_url": "https://www.ticc.com.tw/wSite/public/Attachment/f1710485827023.pdf",
+            "request_headers": {},
+            "started_at": "2026-10-07T21:20:26.514Z",
+            "completed_at": "2026-10-07T21:20:30.017Z",
+            "http_status": 200,
+            "response_content_type": "application/pdf",
+            "response_last_modified": "Fri, 15 Mar 2024 06:57:07 GMT",
+            "response_etag": "W/\"522512-1710485827039\"",
+            "final_url": "https://www.ticc.com.tw/wSite/public/Attachment/f1710485827023.pdf",
+            "byte_length": 522512,
+            "sha256": "sha256:8805ab527b7bb202a70534120ed4037dbde633301f1935e80bd04f12a7c70367",
+            "local_reference": "snapshots/evidence/SRC-TICC-4F/ATT-SRC-TICC-4F-1.pdf",
+            "outcome": "retrieved",
+            "reason": "PDF document"
+          }
+        ],
+        "parse_issues": []
+      }
+    ]
+  },
+  "unresolved": [],
+  "decisions": []
+}

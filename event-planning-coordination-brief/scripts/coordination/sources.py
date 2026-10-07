@@ -27,10 +27,12 @@ def _floor_plan_url(sources: list[dict]) -> str | None:
 
 
 def capture_all(sources: list[dict], profiles: dict, transport: Transport,
-                deliverables_root: Path) -> dict[str, CapturedSource]:
+                deliverables_root: Path, clock=None) -> dict[str, CapturedSource]:
+    """`clock` overrides the retrieval-time source (tests only); live runs use the wall clock."""
     out: dict[str, CapturedSource] = {}
     for src in sources:
-        cap = capture_source(src, profiles, transport, deliverables_root)
+        cap = (capture_source(src, profiles, transport, deliverables_root) if clock is None
+               else capture_source(src, profiles, transport, deliverables_root, clock=clock))
         body = cap.body(deliverables_root)
         observations, issues, native, parsed = [], [], None, None
         if body is not None:

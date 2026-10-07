@@ -1,0 +1,728 @@
+{
+  "run_id": "run-20261007T212022Z-a4b5ed",
+  "rendered_at": "2026-10-07T21:20:30.043Z",
+  "business_clock": "2026-08-26T12:00:00+08:00",
+  "run_status": {
+    "status": "partial",
+    "reasons": [
+      "recommendation outcome 'deferred-to-operations' requires Operations judgment"
+    ],
+    "decision_status": "deferred-to-operations"
+  },
+  "recommendation_status": "deferred-to-operations",
+  "recommendation": null,
+  "input_sha256": {
+    "sources": "sha256:eaad46c49d6d369e32820af6137c114e7d44f239ded72f180cbded6584708fbe",
+    "claims": "sha256:f58adcf2256cbae6f7108c1321f87c5425e0d88182561431f8e138dd5e719503",
+    "decision": "sha256:819ac6e1ac87f002484f39547f2fb2c19979c73f9d1ed074431e05929fcff13d",
+    "recommendation": "sha256:d1990ebdae5ceafb694cd8e8e63c24ed70514f49f41bfe4ecfcb248e0bc582d2",
+    "run_status": "sha256:cc81f0eefaab22c8280f2a44f96f874ba94c87e0fe327cc676e91a6b811a4813",
+    "programme": "sha256:fc40ca0ccdb7e6b342ee817cb68e5dd146669a7c759e40cbb2dc172969068738"
+  },
+  "artifacts": [
+    {
+      "id": "ART-vendor-comparison",
+      "path": "vendor-comparison.csv",
+      "sha256": "sha256:bc73b5780467180de95b7512b20b945db35bf34344dd4261ffb669a3a117e6b5",
+      "validation_status": "valid",
+      "failed_checks": []
+    },
+    {
+      "id": "ART-event-plan",
+      "path": "event-plan.md",
+      "sha256": "sha256:484c3125ae165c025cab450ab09bf38589083c9664c8c930071ff844437dfbf3",
+      "validation_status": "valid",
+      "failed_checks": []
+    },
+    {
+      "id": "ART-event-calendar",
+      "path": "event-calendar.ics",
+      "sha256": "sha256:702e860a0f3f99ac6270d8c8f2d861d4858284962581c6f17bec97632bddc8e1",
+      "validation_status": "valid",
+      "failed_checks": []
+    },
+    {
+      "id": "ART-draft-communications",
+      "path": "draft-communications.md",
+      "sha256": "sha256:c400484cc6eeabab45d21508234c0b19ed37fb0567060b374e1720fdd0d07003",
+      "validation_status": "valid",
+      "failed_checks": []
+    }
+  ],
+  "validation_checks": [
+    {
+      "id": "V-csv-columns",
+      "summary": "CSV has the 11 required columns in order, then the documented extra columns",
+      "evidence_ids": [
+        "DEC-recommendation"
+      ],
+      "owner": null,
+      "rationale": null,
+      "outcome": "pass",
+      "artifact": "vendor-comparison.csv",
+      "details": [
+        "option_id",
+        "quote_ids",
+        "planning_people",
+        "cost_twd",
+        "currency",
+        "feasibility",
+        "availability_status",
+        "evidence_ids",
+        "tradeoffs",
+        "unresolved",
+        "approval_status",
+        "option_label",
+        "feasibility_reason",
+        "quote_details",
+        "vendor_total_twd",
+        "allowances_twd",
+        "remaining_under_ceiling_twd",
+        "recommendation_outcome"
+      ]
+    },
+    {
+      "id": "V-csv-rows",
+      "summary": "Every CSV row matches its Phase 3 option (status, cost, approvals) and the Phase 4 outcome",
+      "evidence_ids": [
+        "DEC-recommendation"
+      ],
+      "owner": null,
+      "rationale": null,
+      "outcome": "pass",
+      "artifact": "vendor-comparison.csv",
+      "details": []
+    },
+    {
+      "id": "V-plan-sections",
+      "summary": "Event plan contains every required section in order",
+      "evidence_ids": [
+        "DEC-recommendation"
+      ],
+      "owner": null,
+      "rationale": null,
+      "outcome": "pass",
+      "artifact": "event-plan.md",
+      "details": []
+    },
+    {
+      "id": "V-plan-banner",
+      "summary": "Plan banner states the run status and recommendation outcome",
+      "evidence_ids": [
+        "DEC-recommendation"
+      ],
+      "owner": null,
+      "rationale": null,
+      "outcome": "pass",
+      "artifact": "event-plan.md",
+      "details": null
+    },
+    {
+      "id": "V-recommendation-match",
+      "summary": "Deliverables state exactly the Phase 4 recommendation",
+      "evidence_ids": [
+        "DEC-recommendation"
+      ],
+      "owner": null,
+      "rationale": null,
+      "outcome": "pass",
+      "artifact": "event-plan.md",
+      "details": null
+    },
+    {
+      "id": "V-ics",
+      "summary": "Calendar is a draft (PUBLISH), events tentative and transparent with stable UIDs, explicit timezone, no attendees, times equal to the model",
+      "evidence_ids": [
+        "DEC-recommendation"
+      ],
+      "owner": null,
+      "rationale": null,
+      "outcome": "pass",
+      "artifact": "event-calendar.ics",
+      "details": []
+    },
+    {
+      "id": "V-programme",
+      "summary": "Run of show has no overlaps; every time is a source fact or a recorded Programme planner decision",
+      "evidence_ids": [
+        "DEC-recommendation"
+      ],
+      "owner": null,
+      "rationale": null,
+      "outcome": "pass",
+      "artifact": "event-plan.md",
+      "details": []
+    },
+    {
+      "id": "V-evidence",
+      "summary": "Every cited evidence id resolves",
+      "evidence_ids": [
+        "DEC-recommendation"
+      ],
+      "owner": null,
+      "rationale": null,
+      "outcome": "pass",
+      "artifact": "event-plan.md",
+      "details": {
+        "event-plan.md": [],
+        "draft-communications.md": []
+      }
+    },
+    {
+      "id": "V-amounts",
+      "summary": "Every amount shown exists in the model",
+      "evidence_ids": [
+        "DEC-recommendation"
+      ],
+      "owner": null,
+      "rationale": null,
+      "outcome": "pass",
+      "artifact": "vendor-comparison.csv",
+      "details": []
+    },
+    {
+      "id": "V-wording",
+      "summary": "No affirmative claim of booking, confirmation, approval, selection, reservation or commitment",
+      "evidence_ids": [
+        "DEC-recommendation"
+      ],
+      "owner": null,
+      "rationale": null,
+      "outcome": "pass",
+      "artifact": "draft-communications.md",
+      "details": {}
+    },
+    {
+      "id": "V-privacy",
+      "summary": "No email addresses or phone numbers",
+      "evidence_ids": [
+        "DEC-recommendation"
+      ],
+      "owner": null,
+      "rationale": null,
+      "outcome": "pass",
+      "artifact": "draft-communications.md",
+      "details": {}
+    },
+    {
+      "id": "V-comms-drafts",
+      "summary": "Every message is labelled UNSENT DRAFT",
+      "evidence_ids": [
+        "DEC-recommendation"
+      ],
+      "owner": null,
+      "rationale": null,
+      "outcome": "pass",
+      "artifact": "draft-communications.md",
+      "details": 14
+    },
+    {
+      "id": "V-no-mutation",
+      "summary": "Rendering did not change the Phase 3/4 model, claims, recommendation, run status or programme",
+      "evidence_ids": [
+        "DEC-recommendation"
+      ],
+      "owner": null,
+      "rationale": null,
+      "outcome": "pass",
+      "artifact": null,
+      "details": null
+    },
+    {
+      "id": "V-file-vendor-comparison.csv",
+      "summary": "vendor-comparison.csv written and identical to the rendered text",
+      "evidence_ids": [
+        "DEC-recommendation"
+      ],
+      "owner": null,
+      "rationale": null,
+      "outcome": "pass",
+      "artifact": "vendor-comparison.csv",
+      "details": null
+    },
+    {
+      "id": "V-file-event-plan.md",
+      "summary": "event-plan.md written and identical to the rendered text",
+      "evidence_ids": [
+        "DEC-recommendation"
+      ],
+      "owner": null,
+      "rationale": null,
+      "outcome": "pass",
+      "artifact": "event-plan.md",
+      "details": null
+    },
+    {
+      "id": "V-file-event-calendar.ics",
+      "summary": "event-calendar.ics written and identical to the rendered text",
+      "evidence_ids": [
+        "DEC-recommendation"
+      ],
+      "owner": null,
+      "rationale": null,
+      "outcome": "pass",
+      "artifact": "event-calendar.ics",
+      "details": null
+    },
+    {
+      "id": "V-file-draft-communications.md",
+      "summary": "draft-communications.md written and identical to the rendered text",
+      "evidence_ids": [
+        "DEC-recommendation"
+      ],
+      "owner": null,
+      "rationale": null,
+      "outcome": "pass",
+      "artifact": "draft-communications.md",
+      "details": null
+    }
+  ],
+  "all_valid": true,
+  "cited_evidence_ids": {
+    "event-plan.md": [
+      "N-BRIEF-event_name",
+      "N-BRIEF-venue_name",
+      "B-event-window",
+      "N-BRIEF-checkin_target_percent",
+      "N-BRIEF-success_all_demos_run",
+      "N-BRIEF-success_accessibility_response_before_event",
+      "ASG-CLOCK",
+      "STK-I3-L181",
+      "SRC-BRIEF",
+      "SRC-CALENDAR",
+      "SRC-BUDGET",
+      "SRC-ATTENDEE",
+      "SRC-VENDOR",
+      "SRC-TICC-HALL",
+      "SRC-TICC-ACCESS",
+      "SRC-TICC-4F",
+      "B-headcount",
+      "STK-I1-L41",
+      "STK-I1-L87",
+      "B-need-wheelchair_seating",
+      "B-need-mobility_companion",
+      "B-need-live_captions",
+      "B-need-hearing_loop",
+      "B-need-quiet_room",
+      "B-need-vegetarian_meal",
+      "B-need-halal_meal",
+      "B-need-severe_allergy_follow_up",
+      "N-ATT-group-walk_ins",
+      "ASG-CHANGED-INPUTS",
+      "STK-I3-L25",
+      "STK-I3-L49",
+      "N-BRIEF-conditional_not_feasible_rule",
+      "B-fallback-window",
+      "B-keynote",
+      "B-venue-hold",
+      "B-teardown",
+      "B-decision-deadline",
+      "N-CAL-CAL-006",
+      "N-CAL-CAL-007",
+      "X-hold-vs-deadline",
+      "N-BRIEF-planner_schedule_choices",
+      "B-programme",
+      "PRG-01-setup",
+      "PRG-02-opening",
+      "PRG-03-buffer",
+      "PRG-04-keynote",
+      "PRG-05-break",
+      "PRG-06-demo",
+      "PRG-07-changeover",
+      "PRG-08-demo",
+      "PRG-09-changeover",
+      "PRG-10-demo",
+      "PRG-11-changeover",
+      "PRG-12-demo",
+      "PRG-13-changeover",
+      "PRG-14-demo",
+      "PRG-15-changeover",
+      "PRG-16-demo",
+      "PRG-17-changeover",
+      "PRG-18-lunch",
+      "PRG-19-demo",
+      "PRG-20-changeover",
+      "PRG-21-demo",
+      "PRG-22-changeover",
+      "PRG-23-demo",
+      "PRG-24-changeover",
+      "PRG-25-demo",
+      "PRG-26-changeover",
+      "PRG-27-demo",
+      "PRG-28-changeover",
+      "PRG-29-demo",
+      "PRG-30-changeover",
+      "PRG-31-break",
+      "PRG-32-buffer",
+      "PRG-33-closing",
+      "PRG-34-teardown",
+      "PD-opening-minutes",
+      "N-BRIEF-roster_change_owner",
+      "PD-lunch-minutes",
+      "PD-break-minutes",
+      "PD-break-count",
+      "PD-closing-minutes",
+      "PD-order",
+      "PD-demo-grouping",
+      "DEP-Q-003-confirmation",
+      "DEP-Q-005-confirmation",
+      "DEP-Q-006-confirmation",
+      "DEP-Q-009-confirmation",
+      "DEP-Q-010-confirmation",
+      "DEP-P-venue-confirmation",
+      "DEP-P-accessibility-walkthrough",
+      "DEP-P-ticc-technical-safety-briefing",
+      "DEP-P-severe-allergy-contacts",
+      "DEP-Q-004-confirmation",
+      "DEP-readiness",
+      "DEP-Q-007-confirmation",
+      "DEP-Q-008-confirmation",
+      "DEP-P-livestream-network-test-Q-008",
+      "DEP-P-livestream-venue-confirmation-Q-008",
+      "DEP-budget-production",
+      "DEP-service-accessibility",
+      "DEP-service-catering",
+      "DEP-service-production",
+      "DEP-service-security",
+      "DEP-access-hearing_loop",
+      "DEP-access-live_captions",
+      "DEP-access-staffed_quiet_room",
+      "DEP-budget-ceiling",
+      "B-ceiling",
+      "B-allowances",
+      "STK-I2-L53",
+      "NOTE-venue-tariff",
+      "STK-I3-L205",
+      "B-budget-venue",
+      "B-budget-catering",
+      "B-budget-accessibility",
+      "B-budget-production",
+      "B-budget-communications",
+      "B-budget-security",
+      "B-budget-contingency",
+      "CHK-OPT-2026-10-17-Q-003-budget-accessibility",
+      "CHK-OPT-2026-10-17-Q-003-budget-catering",
+      "CHK-OPT-2026-10-17-Q-003-budget-production",
+      "CHK-OPT-2026-10-17-Q-003-budget-security",
+      "CHK-OPT-2026-10-17-Q-003-budget-venue",
+      "CHK-OPT-2026-10-17-Q-003-budget-ceiling",
+      "CHK-OPT-2026-10-17-Q-004-budget-accessibility",
+      "CHK-OPT-2026-10-17-Q-004-budget-catering",
+      "CHK-OPT-2026-10-17-Q-004-budget-production",
+      "CHK-OPT-2026-10-17-Q-004-budget-security",
+      "CHK-OPT-2026-10-17-Q-004-budget-venue",
+      "CHK-OPT-2026-10-17-Q-004-budget-ceiling",
+      "OPT-2026-10-17-Q-003",
+      "OPT-2026-10-17-Q-004",
+      "OPT-2026-10-17-Q-003-sub-Q-007",
+      "OPT-2026-10-17-Q-003-add-Q-008",
+      "OPT-2026-10-17-Q-004-sub-Q-007",
+      "OPT-2026-10-17-Q-004-add-Q-008",
+      "OPT-2026-10-24-fallback",
+      "N-QUOTE-Q-001",
+      "N-QUOTE-Q-003",
+      "N-QUOTE-Q-005",
+      "N-QUOTE-Q-006",
+      "N-QUOTE-Q-009",
+      "N-QUOTE-Q-010",
+      "N-QUOTE-Q-004",
+      "CHK-OPT-2026-10-17-Q-003-access-hearing_loop",
+      "CHK-OPT-2026-10-17-Q-004-access-hearing_loop",
+      "CHK-OPT-2026-10-17-Q-003-access-step_free_access",
+      "CHK-OPT-2026-10-17-Q-004-access-step_free_access",
+      "CHK-OPT-2026-10-17-Q-003-access-wheelchair_seating",
+      "CHK-OPT-2026-10-17-Q-004-access-wheelchair_seating",
+      "CHK-OPT-2026-10-17-Q-003-access-live_captions",
+      "CHK-OPT-2026-10-17-Q-004-access-live_captions",
+      "CHK-OPT-2026-10-17-Q-003-access-staffed_quiet_room",
+      "CHK-OPT-2026-10-17-Q-004-access-staffed_quiet_room",
+      "B-accessibility-requirements",
+      "STK-I2-L77",
+      "N-FP-FP-legend",
+      "N-FP-FP-plenary-hall",
+      "N-FP-FP-hall-wheelchair-areas",
+      "N-FP-FP-vip-room",
+      "N-FP-FP-room-401",
+      "N-FP-FP-accessible-elevators-south",
+      "N-FP-FP-accessible-elevator-ev9",
+      "N-FP-FP-accessible-restroom-south",
+      "N-FP-FP-accessible-elevator-ev13",
+      "N-FP-FP-emergency-exits",
+      "N-FP-FP-title-block",
+      "N-BRIEF-floor_plan_does_not_prove",
+      "STK-I3-L193",
+      "N-VENUE-official_rule_livestream_contract_vendors_only",
+      "N-VENUE-official_rule_technical_and_safety_briefing",
+      "CHK-OPT-2026-10-17-Q-003-dietary",
+      "CHK-OPT-2026-10-17-Q-004-dietary",
+      "N-BRIEF-named_contacts_holder",
+      "ASG-PRIVACY",
+      "DEC-recommendation",
+      "TO-cost",
+      "TO-catering_buffer",
+      "TO-open_conditions",
+      "TO-unverified_checks",
+      "TO-quote_validity",
+      "CTX-STK-I2-L65",
+      "CTX-STK-I1-L111",
+      "CTX-STK-I3-L85",
+      "CTX-STK-I3-L97",
+      "CTX-STK-I3-L121",
+      "CTX-walk-in-forecast",
+      "NOTE-vendor-experience",
+      "UNR-feasible-option-shortfall",
+      "N-BRIEF-requested_feasible_options",
+      "N-BRIEF-no_fabricated_second_option",
+      "ASG-NO-INVENT",
+      "STK-I2-L65",
+      "CHK-OPT-2026-10-17-Q-003-capacity-venue",
+      "CHK-OPT-2026-10-17-Q-003-capacity-catering-Q-003",
+      "CHK-OPT-2026-10-17-Q-003-capacity-quiet-room",
+      "CHK-OPT-2026-10-17-Q-003-capacity-wheelchair",
+      "CHK-OPT-2026-10-17-Q-003-capacity-live_captions",
+      "CHK-OPT-2026-10-17-Q-003-capacity-hearing_loop",
+      "CHK-OPT-2026-10-17-Q-003-capacity-security",
+      "CHK-OPT-2026-10-17-Q-004-capacity-venue",
+      "CHK-OPT-2026-10-17-Q-004-capacity-catering-Q-004",
+      "CHK-OPT-2026-10-17-Q-004-capacity-quiet-room",
+      "CHK-OPT-2026-10-17-Q-004-capacity-wheelchair",
+      "CHK-OPT-2026-10-17-Q-004-capacity-live_captions",
+      "CHK-OPT-2026-10-17-Q-004-capacity-hearing_loop",
+      "CHK-OPT-2026-10-17-Q-004-capacity-security",
+      "APR-OPT-2026-10-17-Q-003-operations-plan",
+      "APR-OPT-2026-10-17-Q-003-budget-accessibility",
+      "APR-OPT-2026-10-17-Q-003-budget-catering",
+      "APR-OPT-2026-10-17-Q-003-budget-communications",
+      "APR-OPT-2026-10-17-Q-003-budget-contingency",
+      "APR-OPT-2026-10-17-Q-003-budget-production",
+      "APR-OPT-2026-10-17-Q-003-budget-security",
+      "APR-OPT-2026-10-17-Q-003-budget-venue",
+      "APR-OPT-2026-10-17-Q-004-operations-plan",
+      "APR-OPT-2026-10-17-Q-004-budget-accessibility",
+      "APR-OPT-2026-10-17-Q-004-budget-catering",
+      "APR-OPT-2026-10-17-Q-004-budget-communications",
+      "APR-OPT-2026-10-17-Q-004-budget-contingency",
+      "APR-OPT-2026-10-17-Q-004-budget-production",
+      "APR-OPT-2026-10-17-Q-004-budget-security",
+      "APR-OPT-2026-10-17-Q-004-budget-venue"
+    ],
+    "draft-communications.md": [
+      "DEC-recommendation",
+      "OPT-2026-10-17-Q-003",
+      "OPT-2026-10-17-Q-004",
+      "STK-I1-L73",
+      "STK-I3-L157",
+      "STK-I3-L169",
+      "UNR-feasible-option-shortfall",
+      "X-hold-vs-deadline",
+      "B-budget-venue",
+      "B-budget-catering",
+      "B-budget-security",
+      "B-budget-contingency",
+      "CHK-OPT-2026-10-17-Q-003-budget-venue",
+      "CHK-OPT-2026-10-17-Q-003-budget-catering",
+      "CHK-OPT-2026-10-17-Q-003-budget-security",
+      "X-quote-validity-Q-001",
+      "X-quote-validity-Q-003",
+      "X-quote-validity-Q-009",
+      "CHK-OPT-2026-10-17-Q-003-budget-ceiling",
+      "CHK-OPT-2026-10-17-Q-004-budget-venue",
+      "CHK-OPT-2026-10-17-Q-004-budget-catering",
+      "CHK-OPT-2026-10-17-Q-004-budget-security",
+      "X-quote-validity-Q-004",
+      "CHK-OPT-2026-10-17-Q-004-budget-ceiling",
+      "N-BRIEF-budget_owner_review_package",
+      "B-budget-accessibility",
+      "CHK-OPT-2026-10-17-Q-003-budget-accessibility",
+      "X-quote-validity-Q-005",
+      "X-quote-validity-Q-010",
+      "CHK-OPT-2026-10-17-Q-004-budget-accessibility",
+      "B-budget-production",
+      "CHK-OPT-2026-10-17-Q-003-budget-production",
+      "X-quote-validity-Q-006",
+      "CHK-OPT-2026-10-17-Q-004-budget-production",
+      "PD-opening-minutes",
+      "PD-lunch-minutes",
+      "PD-break-minutes",
+      "PD-break-count",
+      "PD-closing-minutes",
+      "PD-order",
+      "PD-demo-grouping",
+      "B-budget-communications",
+      "N-CAL-CAL-006",
+      "P-accessibility-walkthrough",
+      "P-venue-confirmation",
+      "N-QUOTE-Q-001",
+      "ASG-DRAFT-ONLY",
+      "N-QUOTE-Q-003",
+      "N-QUOTE-Q-004",
+      "N-QUOTE-Q-005",
+      "N-QUOTE-Q-006",
+      "N-QUOTE-Q-009",
+      "N-QUOTE-Q-010",
+      "B-need-wheelchair_seating",
+      "B-need-mobility_companion",
+      "B-need-live_captions",
+      "B-need-hearing_loop",
+      "B-need-quiet_room",
+      "B-need-vegetarian_meal",
+      "B-need-halal_meal",
+      "B-need-severe_allergy_follow_up",
+      "B-accessibility-requirements",
+      "N-BRIEF-success_accessibility_response_before_event",
+      "ASG-PRIVACY"
+    ]
+  },
+  "impact": {
+    "SRC-BRIEF": {
+      "claims": 89,
+      "options": [
+        "OPT-2026-10-17-Q-003",
+        "OPT-2026-10-17-Q-003-add-Q-008",
+        "OPT-2026-10-17-Q-003-sub-Q-007",
+        "OPT-2026-10-17-Q-004",
+        "OPT-2026-10-17-Q-004-add-Q-008",
+        "OPT-2026-10-17-Q-004-sub-Q-007",
+        "OPT-2026-10-24-fallback"
+      ],
+      "sections": [
+        "event-plan §3 headcount",
+        "event-plan §4 timing and run of show",
+        "event-calendar.ics",
+        "event-plan §5 budget",
+        "event-plan §7 accessibility",
+        "vendor-comparison.csv",
+        "event-plan §6 options",
+        "draft-communications.md",
+        "event-plan §8 recommendation",
+        "event-plan §13 approvals"
+      ]
+    },
+    "SRC-CALENDAR": {
+      "claims": 37,
+      "options": [
+        "OPT-2026-10-17-Q-003",
+        "OPT-2026-10-17-Q-003-add-Q-008",
+        "OPT-2026-10-17-Q-003-sub-Q-007",
+        "OPT-2026-10-17-Q-004",
+        "OPT-2026-10-17-Q-004-add-Q-008",
+        "OPT-2026-10-17-Q-004-sub-Q-007",
+        "OPT-2026-10-24-fallback"
+      ],
+      "sections": [
+        "event-plan §4 timing and run of show",
+        "event-calendar.ics",
+        "vendor-comparison.csv",
+        "event-plan §6 options",
+        "draft-communications.md",
+        "event-plan §8 recommendation"
+      ]
+    },
+    "SRC-BUDGET": {
+      "claims": 8,
+      "options": [
+        "OPT-2026-10-17-Q-003",
+        "OPT-2026-10-17-Q-003-add-Q-008",
+        "OPT-2026-10-17-Q-003-sub-Q-007",
+        "OPT-2026-10-17-Q-004",
+        "OPT-2026-10-17-Q-004-add-Q-008",
+        "OPT-2026-10-17-Q-004-sub-Q-007",
+        "OPT-2026-10-24-fallback"
+      ],
+      "sections": [
+        "event-plan §5 budget",
+        "vendor-comparison.csv",
+        "event-plan §6 options",
+        "draft-communications.md",
+        "event-plan §8 recommendation",
+        "event-plan §13 approvals"
+      ]
+    },
+    "SRC-ATTENDEE": {
+      "claims": 16,
+      "options": [
+        "OPT-2026-10-17-Q-003",
+        "OPT-2026-10-17-Q-003-add-Q-008",
+        "OPT-2026-10-17-Q-003-sub-Q-007",
+        "OPT-2026-10-17-Q-004",
+        "OPT-2026-10-17-Q-004-add-Q-008",
+        "OPT-2026-10-17-Q-004-sub-Q-007",
+        "OPT-2026-10-24-fallback"
+      ],
+      "sections": [
+        "event-plan §3 headcount",
+        "vendor-comparison.csv",
+        "event-plan §6 options",
+        "draft-communications.md",
+        "event-plan §8 recommendation"
+      ]
+    },
+    "SRC-VENDOR": {
+      "claims": 34,
+      "options": [
+        "OPT-2026-10-17-Q-003",
+        "OPT-2026-10-17-Q-003-add-Q-008",
+        "OPT-2026-10-17-Q-003-sub-Q-007",
+        "OPT-2026-10-17-Q-004",
+        "OPT-2026-10-17-Q-004-add-Q-008",
+        "OPT-2026-10-17-Q-004-sub-Q-007",
+        "OPT-2026-10-24-fallback"
+      ],
+      "sections": [
+        "vendor-comparison.csv",
+        "event-plan §6 options",
+        "draft-communications.md",
+        "event-plan §8 recommendation",
+        "event-plan §13 approvals",
+        "event-plan §5 budget",
+        "event-plan §7 accessibility"
+      ]
+    },
+    "SRC-TICC-HALL": {
+      "claims": 9,
+      "options": [
+        "OPT-2026-10-17-Q-003",
+        "OPT-2026-10-17-Q-003-add-Q-008",
+        "OPT-2026-10-17-Q-003-sub-Q-007",
+        "OPT-2026-10-17-Q-004",
+        "OPT-2026-10-17-Q-004-add-Q-008",
+        "OPT-2026-10-17-Q-004-sub-Q-007",
+        "OPT-2026-10-24-fallback"
+      ],
+      "sections": [
+        "vendor-comparison.csv",
+        "event-plan §6 options",
+        "draft-communications.md",
+        "event-plan §8 recommendation"
+      ]
+    },
+    "SRC-TICC-ACCESS": {
+      "claims": 1,
+      "options": [],
+      "sections": []
+    },
+    "SRC-TICC-4F": {
+      "claims": 11,
+      "options": [
+        "OPT-2026-10-17-Q-003",
+        "OPT-2026-10-17-Q-003-add-Q-008",
+        "OPT-2026-10-17-Q-003-sub-Q-007",
+        "OPT-2026-10-17-Q-004",
+        "OPT-2026-10-17-Q-004-add-Q-008",
+        "OPT-2026-10-17-Q-004-sub-Q-007",
+        "OPT-2026-10-24-fallback"
+      ],
+      "sections": [
+        "event-plan §7 accessibility",
+        "vendor-comparison.csv",
+        "event-plan §6 options",
+        "draft-communications.md"
+      ]
+    }
+  },
+  "programme": {
+    "status": "planned",
+    "reason": null,
+    "unallocated_minutes": 114
+  }
+}

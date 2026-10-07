@@ -1,0 +1,75 @@
+{
+  "schema_version": "event-coordination-stage-snapshot/2",
+  "snapshot_id": "run-20261007T211753Z-f66ab1-s01",
+  "run_id": "run-20261007T211753Z-f66ab1",
+  "stage": "scope-and-approval-gates",
+  "sequence": 1,
+  "created_at": "2026-10-07T21:18:03.997Z",
+  "status": "complete",
+  "predecessor": null,
+  "consumed_record_ids": [],
+  "produced_record_ids": [
+    "S01-objective",
+    "S01-gates",
+    "S01-supersede"
+  ],
+  "state": {
+    "objective": "Review-ready, draft-only plan for Quillhaven AI Fellowship Demo Day: compare supported options, keep unconfirmed items conditional, return approvals to their owners.",
+    "owners": [
+      "Communications",
+      "Learner Experience",
+      "Operations",
+      "Programme"
+    ],
+    "approval_gates": [
+      "Operations: plan, date and venue approval (pending)",
+      "Learner Experience: accessibility spending approval (pending)",
+      "Operations: catering spending approval (pending)",
+      "Communications: communications spending approval (pending)",
+      "Operations: contingency spending approval (pending)",
+      "Programme: production spending approval (pending)",
+      "Operations: security spending approval (pending)",
+      "Operations: venue spending approval (pending)"
+    ],
+    "records": [
+      {
+        "id": "S01-objective",
+        "summary": "Review-ready, draft-only plan for Quillhaven AI Fellowship Demo Day: compare supported options, keep unconfirmed items conditional, return approvals to their owners.",
+        "evidence_ids": [
+          "STK-I1-L13",
+          "STK-I1-L159",
+          "ASG-DRAFT-ONLY"
+        ]
+      },
+      {
+        "id": "S01-gates",
+        "summary": "Operations: plan, date and venue approval (pending); Learner Experience: accessibility spending approval (pending); Operations: catering spending approval (pending); Communications: communications spending approval (pending); Operations: contingency spending approval (pending); Programme: production spending approval (pending); Operations: security spending approval (pending); Operations: venue spending approval (pending)",
+        "evidence_ids": [
+          "STK-I1-L73"
+        ]
+      },
+      {
+        "id": "S01-supersede",
+        "summary": "first run; nothing superseded",
+        "evidence_ids": [
+          "ASG-HISTORY"
+        ],
+        "supersedes_run_id": null,
+        "changed_ids": []
+      }
+    ],
+    "supersedes_run_id": null,
+    "changed_ids": [],
+    "supersede_reason": "first run; nothing superseded",
+    "recovery": {
+      "attempted": false,
+      "prior_state": "empty",
+      "actions": [],
+      "outcome": "not needed"
+    },
+    "decision_deadline_basis": "calendar decision_deadline row, captured in snapshot 02",
+    "decision_deadline": "2026-09-04T17:00:00+08:00"
+  },
+  "unresolved": [],
+  "decisions": []
+}

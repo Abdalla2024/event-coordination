@@ -1,0 +1,497 @@
+{
+  "schema_version": "event-coordination-stage-snapshot/2",
+  "snapshot_id": "run-20261007T212022Z-a4b5ed-s05",
+  "run_id": "run-20261007T212022Z-a4b5ed",
+  "stage": "option-generation",
+  "sequence": 5,
+  "created_at": "2026-10-07T21:20:30.128Z",
+  "status": "complete",
+  "predecessor": {
+    "snapshot_id": "run-20261007T212022Z-a4b5ed-s04",
+    "path": "snapshots/04-planning-baseline.json",
+    "sha256": "sha256:1f9458dc90f7ce58a0376f8f1a2184ed51e500ee9fa99147e5b8b56fe698c9e5"
+  },
+  "consumed_record_ids": [
+    "B-readiness",
+    "B-event-window",
+    "N-QUOTE-Q-001",
+    "N-QUOTE-Q-007",
+    "N-QUOTE-Q-008",
+    "B-fallback-window",
+    "N-QUOTE-Q-002"
+  ],
+  "produced_record_ids": [
+    "OPT-2026-10-17-Q-003",
+    "OPT-2026-10-17-Q-004",
+    "OPT-2026-10-17-Q-003-sub-Q-007",
+    "OPT-2026-10-17-Q-003-add-Q-008",
+    "OPT-2026-10-17-Q-004-sub-Q-007",
+    "OPT-2026-10-17-Q-004-add-Q-008",
+    "OPT-2026-10-24-fallback"
+  ],
+  "state": {
+    "options": [
+      {
+        "id": "OPT-2026-10-17-Q-003",
+        "summary": "2026-10-17 base bundle with catering Q-003",
+        "variant": "base",
+        "date": "2026-10-17",
+        "quote_ids": [
+          "Q-001",
+          "Q-003",
+          "Q-005",
+          "Q-006",
+          "Q-009",
+          "Q-010"
+        ],
+        "service_gaps": [],
+        "costs": {
+          "currency": "TWD",
+          "categories": {
+            "venue": {
+              "quote_ids": [
+                "Q-001"
+              ],
+              "amount_twd": 155000
+            },
+            "catering": {
+              "quote_ids": [
+                "Q-003"
+              ],
+              "amount_twd": 108000
+            },
+            "accessibility": {
+              "quote_ids": [
+                "Q-005",
+                "Q-010"
+              ],
+              "amount_twd": 60000
+            },
+            "production": {
+              "quote_ids": [
+                "Q-006"
+              ],
+              "amount_twd": 78000
+            },
+            "security": {
+              "quote_ids": [
+                "Q-009"
+              ],
+              "amount_twd": 28000
+            }
+          },
+          "quoted_amount_twd": 429000,
+          "vendor_total_twd": 429000,
+          "allowances_twd": {
+            "communications": 25000,
+            "contingency": 40000
+          },
+          "total_with_allowances_twd": 494000,
+          "ceiling_twd": 520000,
+          "remaining_under_ceiling_twd": 26000,
+          "committed_amounts_twd": {},
+          "complete": true,
+          "incomplete_reason": null
+        },
+        "evidence_ids": [
+          "B-readiness",
+          "B-event-window",
+          "N-QUOTE-Q-001"
+        ]
+      },
+      {
+        "id": "OPT-2026-10-17-Q-004",
+        "summary": "2026-10-17 base bundle with catering Q-004",
+        "variant": "base",
+        "date": "2026-10-17",
+        "quote_ids": [
+          "Q-001",
+          "Q-004",
+          "Q-005",
+          "Q-006",
+          "Q-009",
+          "Q-010"
+        ],
+        "service_gaps": [],
+        "costs": {
+          "currency": "TWD",
+          "categories": {
+            "venue": {
+              "quote_ids": [
+                "Q-001"
+              ],
+              "amount_twd": 155000
+            },
+            "catering": {
+              "quote_ids": [
+                "Q-004"
+              ],
+              "amount_twd": 126000
+            },
+            "accessibility": {
+              "quote_ids": [
+                "Q-005",
+                "Q-010"
+              ],
+              "amount_twd": 60000
+            },
+            "production": {
+              "quote_ids": [
+                "Q-006"
+              ],
+              "amount_twd": 78000
+            },
+            "security": {
+              "quote_ids": [
+                "Q-009"
+              ],
+              "amount_twd": 28000
+            }
+          },
+          "quoted_amount_twd": 447000,
+          "vendor_total_twd": 447000,
+          "allowances_twd": {
+            "communications": 25000,
+            "contingency": 40000
+          },
+          "total_with_allowances_twd": 512000,
+          "ceiling_twd": 520000,
+          "remaining_under_ceiling_twd": 8000,
+          "committed_amounts_twd": {},
+          "complete": true,
+          "incomplete_reason": null
+        },
+        "evidence_ids": [
+          "B-readiness",
+          "B-event-window",
+          "N-QUOTE-Q-001"
+        ]
+      },
+      {
+        "id": "OPT-2026-10-17-Q-003-sub-Q-007",
+        "summary": "2026-10-17 base bundle with catering Q-003, Q-007 instead of Q-006",
+        "variant": "substitute",
+        "date": "2026-10-17",
+        "quote_ids": [
+          "Q-001",
+          "Q-003",
+          "Q-005",
+          "Q-007",
+          "Q-009",
+          "Q-010"
+        ],
+        "service_gaps": [],
+        "costs": {
+          "currency": "TWD",
+          "categories": {
+            "venue": {
+              "quote_ids": [
+                "Q-001"
+              ],
+              "amount_twd": 155000
+            },
+            "catering": {
+              "quote_ids": [
+                "Q-003"
+              ],
+              "amount_twd": 108000
+            },
+            "accessibility": {
+              "quote_ids": [
+                "Q-005",
+                "Q-010"
+              ],
+              "amount_twd": 60000
+            },
+            "production": {
+              "quote_ids": [
+                "Q-007"
+              ],
+              "amount_twd": 52000
+            },
+            "security": {
+              "quote_ids": [
+                "Q-009"
+              ],
+              "amount_twd": 28000
+            }
+          },
+          "quoted_amount_twd": 403000,
+          "vendor_total_twd": 403000,
+          "allowances_twd": {
+            "communications": 25000,
+            "contingency": 40000
+          },
+          "total_with_allowances_twd": 468000,
+          "ceiling_twd": 520000,
+          "remaining_under_ceiling_twd": 52000,
+          "committed_amounts_twd": {},
+          "complete": true,
+          "incomplete_reason": null
+        },
+        "evidence_ids": [
+          "B-readiness",
+          "B-event-window",
+          "N-QUOTE-Q-001",
+          "N-QUOTE-Q-007"
+        ]
+      },
+      {
+        "id": "OPT-2026-10-17-Q-003-add-Q-008",
+        "summary": "2026-10-17 base bundle with catering Q-003 plus add-on Q-008",
+        "variant": "add-on",
+        "date": "2026-10-17",
+        "quote_ids": [
+          "Q-001",
+          "Q-003",
+          "Q-005",
+          "Q-006",
+          "Q-009",
+          "Q-010",
+          "Q-008"
+        ],
+        "service_gaps": [],
+        "costs": {
+          "currency": "TWD",
+          "categories": {
+            "venue": {
+              "quote_ids": [
+                "Q-001"
+              ],
+              "amount_twd": 155000
+            },
+            "catering": {
+              "quote_ids": [
+                "Q-003"
+              ],
+              "amount_twd": 108000
+            },
+            "accessibility": {
+              "quote_ids": [
+                "Q-005",
+                "Q-010"
+              ],
+              "amount_twd": 60000
+            },
+            "production": {
+              "quote_ids": [
+                "Q-006",
+                "Q-008"
+              ],
+              "amount_twd": 133000
+            },
+            "security": {
+              "quote_ids": [
+                "Q-009"
+              ],
+              "amount_twd": 28000
+            }
+          },
+          "quoted_amount_twd": 484000,
+          "vendor_total_twd": 484000,
+          "allowances_twd": {
+            "communications": 25000,
+            "contingency": 40000
+          },
+          "total_with_allowances_twd": 549000,
+          "ceiling_twd": 520000,
+          "remaining_under_ceiling_twd": -29000,
+          "committed_amounts_twd": {},
+          "complete": true,
+          "incomplete_reason": null
+        },
+        "evidence_ids": [
+          "B-readiness",
+          "B-event-window",
+          "N-QUOTE-Q-001",
+          "N-QUOTE-Q-008"
+        ]
+      },
+      {
+        "id": "OPT-2026-10-17-Q-004-sub-Q-007",
+        "summary": "2026-10-17 base bundle with catering Q-004, Q-007 instead of Q-006",
+        "variant": "substitute",
+        "date": "2026-10-17",
+        "quote_ids": [
+          "Q-001",
+          "Q-004",
+          "Q-005",
+          "Q-007",
+          "Q-009",
+          "Q-010"
+        ],
+        "service_gaps": [],
+        "costs": {
+          "currency": "TWD",
+          "categories": {
+            "venue": {
+              "quote_ids": [
+                "Q-001"
+              ],
+              "amount_twd": 155000
+            },
+            "catering": {
+              "quote_ids": [
+                "Q-004"
+              ],
+              "amount_twd": 126000
+            },
+            "accessibility": {
+              "quote_ids": [
+                "Q-005",
+                "Q-010"
+              ],
+              "amount_twd": 60000
+            },
+            "production": {
+              "quote_ids": [
+                "Q-007"
+              ],
+              "amount_twd": 52000
+            },
+            "security": {
+              "quote_ids": [
+                "Q-009"
+              ],
+              "amount_twd": 28000
+            }
+          },
+          "quoted_amount_twd": 421000,
+          "vendor_total_twd": 421000,
+          "allowances_twd": {
+            "communications": 25000,
+            "contingency": 40000
+          },
+          "total_with_allowances_twd": 486000,
+          "ceiling_twd": 520000,
+          "remaining_under_ceiling_twd": 34000,
+          "committed_amounts_twd": {},
+          "complete": true,
+          "incomplete_reason": null
+        },
+        "evidence_ids": [
+          "B-readiness",
+          "B-event-window",
+          "N-QUOTE-Q-001",
+          "N-QUOTE-Q-007"
+        ]
+      },
+      {
+        "id": "OPT-2026-10-17-Q-004-add-Q-008",
+        "summary": "2026-10-17 base bundle with catering Q-004 plus add-on Q-008",
+        "variant": "add-on",
+        "date": "2026-10-17",
+        "quote_ids": [
+          "Q-001",
+          "Q-004",
+          "Q-005",
+          "Q-006",
+          "Q-009",
+          "Q-010",
+          "Q-008"
+        ],
+        "service_gaps": [],
+        "costs": {
+          "currency": "TWD",
+          "categories": {
+            "venue": {
+              "quote_ids": [
+                "Q-001"
+              ],
+              "amount_twd": 155000
+            },
+            "catering": {
+              "quote_ids": [
+                "Q-004"
+              ],
+              "amount_twd": 126000
+            },
+            "accessibility": {
+              "quote_ids": [
+                "Q-005",
+                "Q-010"
+              ],
+              "amount_twd": 60000
+            },
+            "production": {
+              "quote_ids": [
+                "Q-006",
+                "Q-008"
+              ],
+              "amount_twd": 133000
+            },
+            "security": {
+              "quote_ids": [
+                "Q-009"
+              ],
+              "amount_twd": 28000
+            }
+          },
+          "quoted_amount_twd": 502000,
+          "vendor_total_twd": 502000,
+          "allowances_twd": {
+            "communications": 25000,
+            "contingency": 40000
+          },
+          "total_with_allowances_twd": 567000,
+          "ceiling_twd": 520000,
+          "remaining_under_ceiling_twd": -47000,
+          "committed_amounts_twd": {},
+          "complete": true,
+          "incomplete_reason": null
+        },
+        "evidence_ids": [
+          "B-readiness",
+          "B-event-window",
+          "N-QUOTE-Q-001",
+          "N-QUOTE-Q-008"
+        ]
+      },
+      {
+        "id": "OPT-2026-10-24-fallback",
+        "summary": "2026-10-24 fallback date",
+        "variant": "fallback-date",
+        "date": "2026-10-24",
+        "quote_ids": [
+          "Q-002"
+        ],
+        "service_gaps": [
+          "accessibility",
+          "catering",
+          "production",
+          "security"
+        ],
+        "costs": {
+          "currency": "TWD",
+          "categories": {
+            "venue": {
+              "quote_ids": [
+                "Q-002"
+              ],
+              "amount_twd": 155000
+            }
+          },
+          "quoted_amount_twd": 155000,
+          "vendor_total_twd": null,
+          "allowances_twd": {
+            "communications": 25000,
+            "contingency": 40000
+          },
+          "total_with_allowances_twd": null,
+          "ceiling_twd": 520000,
+          "remaining_under_ceiling_twd": null,
+          "committed_amounts_twd": {},
+          "complete": false,
+          "incomplete_reason": "no quotes for ['accessibility', 'catering', 'production', 'security'] on 2026-10-24"
+        },
+        "evidence_ids": [
+          "B-fallback-window",
+          "N-QUOTE-Q-002"
+        ]
+      }
+    ],
+    "rejected_early": []
+  },
+  "unresolved": [],
+  "decisions": []
+}
