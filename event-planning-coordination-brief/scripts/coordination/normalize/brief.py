@@ -163,6 +163,7 @@ SPECS = {
                               lambda m: _list(m.group(1)), "Venue coordination record"),
     # Readiness confirmation (fictional case record)
     "readiness_record_id": (r"Coordination clarification: (VEN-[\w-]+?);", lambda m: m.group(1), None),
+    "readiness_date": (r"For the (\d{1,2} \w+ \d{4}) exercise plan", lambda m: day_month_year(m.group(1)), None),
     "readiness_base_bundles": (
         r"using either (Q-\d{3}) or (Q-\d{3}) together with ((?:Q-\d{3}, )*Q-\d{3} and Q-\d{3})",
         lambda m: {"catering_alternatives": [m.group(1), m.group(2)], "common": _quotes(m.group(3))}, None),

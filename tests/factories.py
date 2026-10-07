@@ -77,7 +77,7 @@ BRIEF = [
     ("text", "No booking or spend has been approved. Operations receives the versioned plan, selected date/room and unresolved issues. Budget owners receive their category cost, remaining ceiling and cited quote validity. If a later actual response is provided, retain actor, subject, plan revision, timestamp, outcome and reasons."),
     ("sub_header", "Exercise readiness confirmation"),
     ("text", "Coordination clarification: VEN-TEST-1-R2; the simulated business clock remains 26 August 2026."),
-    ("text", "The base service bundles using either Q-003 or Q-004 together with Q-005, Q-006, Q-009 and Q-010 can complete setup between 07:30 and the 09:30 opening. These can finish teardown between the 17:00 programme finish and 18:30. This confirms schedule feasibility for the exercise only, not a completed real-world test, booking or spending approval; Q-008's network-test and venue-confirmation conditions remain unresolved until evidenced."),
+    ("text", "For the 17 October 2026 exercise plan, the base service bundles using either Q-003 or Q-004 together with Q-005, Q-006, Q-009 and Q-010 can complete setup between 07:30 and the 09:30 opening. These can finish teardown between the 17:00 programme finish and 18:30. This confirms schedule feasibility for the exercise only, not a completed real-world test, booking or spending approval; Q-008's network-test and venue-confirmation conditions remain unresolved until evidenced."),
     ("text", "No individual vendor duration or additional mandatory buffer is specified. Q-009 is SafeVenue security and first-aid staffing; communications and contingency are budget allowances, not additional vendor services."),
     ("sub_header", "Exercise programme confirmation"),
     ("text", "Programme clarification: PROG-TEST-1; the simulated business clock remains 26 August 2026."),
@@ -133,6 +133,27 @@ def capture(tmp_path, **overrides):
 
 def normalized(tmp_path, floorplan_file=None, **overrides):
     return normalize_sources(capture(tmp_path, **overrides), load_config().business_clock, floorplan_file)
+
+
+def bound_floorplan(tmp_path):
+    """The real floor-plan observations, re-bound to the synthetic PDF bytes used in tests."""
+    from coordination.normalize.venue import load_floorplan_observations
+    from coordination.util import sha256_bytes
+    f = tmp_path / "floorplan-bound.json"
+    f.write_text(json.dumps({**load_floorplan_observations(), "pdf_sha256": sha256_bytes(PDF)}))
+    return f
+
+
+def decided(tmp_path, bind_floorplan=True, mutate=None, **overrides):
+    """Capture -> normalize -> decide on synthetic sources. `mutate(normalized)` may edit claims first."""
+    from coordination.decide import decide
+    cfg = load_config()
+    tmp_path.mkdir(parents=True, exist_ok=True)
+    n = normalize_sources(capture(tmp_path, **overrides), cfg.business_clock,
+                          bound_floorplan(tmp_path) if bind_floorplan else None)
+    if mutate:
+        mutate(n)
+    return decide(n, cfg.business_clock), n
 
 
 def http_404():

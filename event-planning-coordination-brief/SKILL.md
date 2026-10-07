@@ -9,9 +9,10 @@ Use this skill to produce or refresh the Fellowship Demo Day planning package. I
 different times; the skill re-reads every disclosed source on each run and re-derives every
 dependent draft, so the drafts stay consistent with each other and with the evidence.
 
-> **Build status: Phase 2 (normalized sources).** Source capture, parsing, normalization into
-> evidence-linked claims, decision-rule primitives and the snapshot chain exist and are tested. Option
-> evaluation, the nine-stage run and the four drafts are added in later phases.
+> **Build status: Phase 4 (recommendation layer).** Source capture, parsing, normalization into
+> evidence-linked claims, the planning baseline, option generation, feasibility checks and
+> classification, the dominance-based recommendation with run status, and the snapshot chain exist
+> and are tested. The nine-stage run and the four drafts are added in later phases.
 
 ## Setup
 
@@ -33,6 +34,12 @@ No credentials are needed: every disclosed source is publicly readable. Do not a
 # Capture, then normalize every source into evidence-linked claims
 .venv/bin/python event-planning-coordination-brief/scripts/run.py normalize --out <dir>
 
+# Capture, normalize, then build the feasibility model (no deliverables)
+.venv/bin/python event-planning-coordination-brief/scripts/run.py decide --out <dir>
+
+# Decide, then compare the non-infeasible options and report the run status (no deliverables)
+.venv/bin/python event-planning-coordination-brief/scripts/run.py recommend --out <dir>
+
 # Tests
 .venv/bin/python -m pytest
 ```
@@ -41,6 +48,12 @@ No credentials are needed: every disclosed source is publicly readable. Do not a
 `capture-report.json` with one schema `sourceRecord` per source. It exits non-zero if any source is not `retrieved`.
 `normalize` also writes `normalized-report.json` with every claim and prints the claims that are not
 `supported`. The claim model is described in `references/normalization.md`.
+`decide` also writes `decision-report.json`: the baseline, every option with its checks, costs and
+classification, approvals, dependencies, unresolved items and comparison facts
+(`references/decision-model.md`).
+`recommend` also writes `recommendation-report.json`: the recommendation outcome, factor comparisons,
+the question for Operations when the choice is deferred, and the run status
+(`references/recommendation-policy.md`).
 
 ## Workflow (nine stages)
 
@@ -52,7 +65,7 @@ No credentials are needed: every disclosed source is publicly readable. Do not a
 | 04 | planning-baseline | Headcount by group, schedule dependencies, budget, accessibility | deterministic |
 | 05 | option-generation | Option bundles from the quotes; early rejections with reasons | deterministic |
 | 06 | feasibility-testing | Checks and classification (`references/decision-policy.md`) | deterministic |
-| 07 | decision-and-approval | Recommendation or deferral with tradeoffs; approvals `pending` | **agent reasoning**, validated |
+| 07 | decision-and-approval | Recommendation by dominance only, or deferral to Operations with the tradeoff stated; approvals `pending` | deterministic (no weights) |
 | 08 | draft-propagation | CSV, plan, calendar, communications from one model | deterministic rendering, agent prose |
 | 09 | publication-validation | Schema, hash chain, cross-file consistency, privacy and claim scans | deterministic |
 
@@ -80,8 +93,7 @@ Read `references/decision-policy.md` before changing any rule. In short:
 These steps need judgment. Their output is recorded as evidence-cited records and validated by code:
 
 1. **Floor-plan observations** (`references/floorplan-observations.json`). Read the captured 4F PDF and record spatial observations with page and region locators, bound to the PDF's sha256. Mark anything not clearly legible as `ambiguous`. If the captured PDF's hash no longer matches, every observation is held as unverified: render the new PDF, read it again, and update the file and its hash.
-2. **Recommendation.** Weigh cost, capacity buffer and other current risks with no fixed weights. Vendor experience is never scored without records.
-3. **Prose** for the plan and the unsent draft messages.
+2. **Prose** for the plan and the unsent draft messages. Prose may explain the recommendation outcome but never changes it: when the outcome is `deferred-to-operations`, the drafts present the tradeoff and ask Operations to decide.
 
 ## Files
 
@@ -94,3 +106,7 @@ These steps need judgment. Their output is recorded as evidence-cited records an
 - `scripts/run.py`: entry point
 - `scripts/coordination/`: capture, sheets, brief, ticc, policy, snapshots
 - `scripts/coordination/normalize/`: per-source normalizers, cross-source checks, prerequisites
+- `references/decision-model.md`: baseline, option generation, check catalogue, costs, outputs
+- `scripts/coordination/decide/`: baseline, options and costs, checks, decision model
+- `references/recommendation-policy.md`: candidates, factors, dominance, outcomes, run status
+- `scripts/coordination/recommend.py`: recommendation layer and run status
