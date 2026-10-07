@@ -1,0 +1,88 @@
+{
+  "cli_version": "0.11.3",
+  "checkpoint_id": "01M4BZ5N54V8BZZYWSZ1GTVTDF",
+  "session_id": "052abf21-b8d5-4518-920b-19dff0aa1cfe",
+  "strategy": "manual-commit",
+  "created_at": "2026-10-07T19:59:13.656591Z",
+  "branch": "main",
+  "checkpoints_count": 6,
+  "save_step_count": 1,
+  "files_touched": [
+    ".gitignore",
+    "event-planning-coordination-brief/SKILL.md",
+    "event-planning-coordination-brief/references/decision-policy.md",
+    "event-planning-coordination-brief/references/requirements-evidence.json",
+    "event-planning-coordination-brief/references/run-config.json",
+    "event-planning-coordination-brief/references/sources.json",
+    "event-planning-coordination-brief/requirements.txt",
+    "event-planning-coordination-brief/scripts/coordination/__init__.py",
+    "event-planning-coordination-brief/scripts/coordination/brief.py",
+    "event-planning-coordination-brief/scripts/coordination/capture.py",
+    "event-planning-coordination-brief/scripts/coordination/config.py",
+    "event-planning-coordination-brief/scripts/coordination/policy.py",
+    "event-planning-coordination-brief/scripts/coordination/sheets.py",
+    "event-planning-coordination-brief/scripts/coordination/snapshots.py",
+    "event-planning-coordination-brief/scripts/coordination/sources.py",
+    "event-planning-coordination-brief/scripts/coordination/ticc.py",
+    "event-planning-coordination-brief/scripts/coordination/transport.py",
+    "event-planning-coordination-brief/scripts/coordination/util.py",
+    "event-planning-coordination-brief/scripts/run.py",
+    "pytest.ini",
+    "tests/conftest.py",
+    "tests/fixtures/README.md",
+    "tests/fixtures/notion-brief.json",
+    "tests/fixtures/rejected.html",
+    "tests/fixtures/ticc-access.html",
+    "tests/fixtures/ticc-hall.html",
+    "tests/test_brief_ticc.py",
+    "tests/test_capture.py",
+    "tests/test_policy.py",
+    "tests/test_references.py",
+    "tests/test_sheets.py",
+    "tests/test_snapshots.py"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-sonnet-5-5",
+  "turn_id": "a4fbafb144c0",
+  "checkpoint_transcript_start": 42,
+  "transcript_lines_at_start": 42,
+  "compact_transcript_start": 7,
+  "token_usage": {
+    "input_tokens": 122,
+    "cache_creation_tokens": 241926,
+    "cache_read_tokens": 10183352,
+    "output_tokens": 155041,
+    "api_call_count": 61
+  },
+  "session_metrics": {
+    "turn_count": 7
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-10-07T19:59:13.547237Z",
+    "agent_lines": 2498,
+    "agent_removed": 1,
+    "human_added": 0,
+    "human_modified": 0,
+    "human_removed": 0,
+    "total_committed": 2498,
+    "total_lines_changed": 2499,
+    "agent_percentage": 100,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0
+    },
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 2498,
+      "agent_lines_removed": 1
+    }
+  ]
+}

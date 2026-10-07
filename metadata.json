@@ -1,0 +1,57 @@
+{
+  "cli_version": "0.11.3",
+  "checkpoint_id": "01M4BZ5N54V8BZZYWSZ1GTVTDF",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 6,
+  "files_touched": [
+    ".gitignore",
+    "event-planning-coordination-brief/SKILL.md",
+    "event-planning-coordination-brief/references/decision-policy.md",
+    "event-planning-coordination-brief/references/requirements-evidence.json",
+    "event-planning-coordination-brief/references/run-config.json",
+    "event-planning-coordination-brief/references/sources.json",
+    "event-planning-coordination-brief/requirements.txt",
+    "event-planning-coordination-brief/scripts/coordination/__init__.py",
+    "event-planning-coordination-brief/scripts/coordination/brief.py",
+    "event-planning-coordination-brief/scripts/coordination/capture.py",
+    "event-planning-coordination-brief/scripts/coordination/config.py",
+    "event-planning-coordination-brief/scripts/coordination/policy.py",
+    "event-planning-coordination-brief/scripts/coordination/sheets.py",
+    "event-planning-coordination-brief/scripts/coordination/snapshots.py",
+    "event-planning-coordination-brief/scripts/coordination/sources.py",
+    "event-planning-coordination-brief/scripts/coordination/ticc.py",
+    "event-planning-coordination-brief/scripts/coordination/transport.py",
+    "event-planning-coordination-brief/scripts/coordination/util.py",
+    "event-planning-coordination-brief/scripts/run.py",
+    "pytest.ini",
+    "tests/conftest.py",
+    "tests/fixtures/README.md",
+    "tests/fixtures/notion-brief.json",
+    "tests/fixtures/rejected.html",
+    "tests/fixtures/ticc-access.html",
+    "tests/fixtures/ticc-hall.html",
+    "tests/test_brief_ticc.py",
+    "tests/test_capture.py",
+    "tests/test_policy.py",
+    "tests/test_references.py",
+    "tests/test_sheets.py",
+    "tests/test_snapshots.py"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 122,
+    "cache_creation_tokens": 241926,
+    "cache_read_tokens": 10183352,
+    "output_tokens": 155041,
+    "api_call_count": 61
+  }
+}

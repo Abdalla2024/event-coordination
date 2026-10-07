@@ -1,0 +1,579 @@
+We have completed the first stakeholder interview for Project C.
+
+Before making ANY code changes, I want you to perform a requirements and framing pass only. Do not create the skill, write implementation code, fetch external sources, or modify project files yet.
+
+First, inspect the repository and locate:
+1. The Project C assignment/materials.
+2. The supplied snapshot.schema.json.
+3. The original stakeholder interview transcript under interviews/.
+4. The starter README and any other supplied project documentation.
+
+Read the actual interview transcript carefully. Treat the stakeholder's statements as the source of truth for business requirements, constraints, workflow, approval boundaries, and source meanings. Do not invent or fill gaps with assumptions.
+
+Then produce a detailed "Project C Framing Analysis" in your response with these sections:
+
+1. BUSINESS OBJECTIVE
+- What Demo Day is trying to accomplish.
+- Who the stakeholders/users are.
+- What success appears to mean.
+- Any success criteria or KPIs explicitly stated.
+
+2. CURRENT WORKFLOW
+- Reconstruct the stakeholder's current Demo Day planning workflow step by step.
+- Identify inputs, activities, decisions, outputs, and owners.
+- Identify where changes or human decisions enter the workflow.
+
+3. REQUIREMENTS
+Separate requirements into:
+- Explicit requirements stated by the stakeholder.
+- Requirements imposed by the assignment.
+- Requirements that still need evidence from project sources.
+Do not mix these categories.
+
+4. SOURCE MODEL
+For every source mentioned by the stakeholder:
+- source name
+- what the stakeholder said it represents
+- what information we expect it to contain
+- how it affects planning
+- whether its authority/meaning is fully understood
+- anything we still need to verify from the actual source
+
+5. PLANNING DECISION MODEL
+Identify the factors that determine whether an event/vendor/venue/schedule option is:
+- feasible
+- infeasible
+- conditional
+- unverified
+
+Explicitly identify cost, capacity, availability, timing, accessibility, safety, dependencies, headcount, and any other criteria actually supported by the interview or assignment.
+
+6. CHANGE AND UNCERTAINTY MODEL
+Identify:
+- inputs that can change
+- what changes should trigger reconsideration
+- what downstream artifacts would be affected
+- how conflicting information should be handled
+- how missing information should be handled
+- how stale information should be handled
+- what must remain unresolved rather than guessed
+
+7. APPROVAL BOUNDARIES
+Clearly separate:
+- things automation may calculate/analyze
+- things automation may recommend
+- things that require human review
+- things that require explicit approval
+- actions automation is prohibited from taking
+
+8. REQUIRED DELIVERABLES
+Map the assignment's required outputs:
+- nine snapshots
+- vendor-comparison.csv
+- event-plan.md
+- event-calendar.ics
+- draft-communications.md
+- interview export
+to the business requirements they need to satisfy.
+
+9. ACCEPTANCE CRITERIA
+Based on the assignment and stakeholder interview, define what must be true for us to call the resulting package review-ready.
+
+10. RISKS AND AMBIGUITIES
+List every important ambiguity, missing fact, conflicting requirement, or decision that could cause us to build the wrong thing.
+For each one, explain:
+- why it matters
+- what evidence could resolve it
+- whether it requires another stakeholder question or can be resolved by inspecting a disclosed source
+
+11. MISSING INFORMATION
+Create a short prioritized list of more information that we need only if the actual disclosed sources cannot resolve the ambiguity.
+Do not ask questions that can reasonably be answered by inspecting the supplied sources.
+
+12. IMPLEMENTATION READINESS
+At the end, give me:
+- What we already know well enough to implement.
+- What we should inspect next.
+- What must be resolved before implementation.
+- What can safely remain unresolved and be represented as uncertainty in the final package.
+
+Important constraints:
+- Do not modify any files.
+- Do not fetch external sources yet.
+- Do not write implementation code.
+- Do not invent business rules.
+- Do not silently reconcile conflicts.
+- Distinguish stakeholder statements, assignment requirements, source facts, assumptions, and open questions.
+- If the interview did not answer something, explicitly say it is unknown rather than guessing.
+- Quote or reference the relevant interview evidence when useful so we can trace each important requirement back to what the stakeholder actually said.
+
+Also, while doing this analysis, pay particular attention to whether the interview gives us enough information to demonstrate strong problem framing, requirements gathering, stakeholder management, workflow mapping, scoping/sequencing, risk management, and planning-before-building.
+
+The goal of this step is to understand the problem completely enough that we can design the implementation intentionally rather than immediately asking the agent to build something.
+
+---
+
+Now move from the framing analysis into source and assignment discovery.
+
+Do not implement the skill yet and do not modify project files.
+
+First, read the full Project C formal assignment below:
+
+# Project C — Event Planning & Coordination Brief — Learner assignment
+
+## Scenario
+
+You are an automation specialist at Quillhaven Academy. Its Event and Operations Manager needs a review-ready event plan that stays consistent when attendance, quotes and venue information change. The exercise's business clock is **26 August 2026, 12:00, Asia/Taipei**; record actual source retrieval times separately. Company planning records are authored exercise data; official venue sources remain real and mutable.
+
+## Your task
+
+Interview the stakeholder, then build and execute an Agent Skills-compliant skill named `event-planning-coordination-brief`. It must retrieve the current disclosed sources, compare supported options and produce consistent planning drafts. Discover the workflow, source meanings, business constraints and approval requirements through the interview and supplied sources. Explain your automation choices, uncertainty policy and trade-offs.
+
+Document one end-to-end command, its runtime, dependencies and setup. Use any suitable implementation language or maintained libraries. Keep calendars and communications as drafts: do not book, pay, invite, commit to vendors, write to production calendars, expose secrets or bypass human approval. Do not copy private attendee medical/contact details into general artifacts.
+
+## Deliverables
+
+**Interview records — `interviews/*.md`.** Include the original Work Sim Markdown export for every interview session, with its session metadata and complete participant-visible messages. Keep one final complete export per session without rewriting or summarizing it. Commit and push these files in the submitted code revision and ensure the facilitator can read them. Coding-session capture remains a separate requirement. If the export is unavailable, contact the facilitator; do not manufacture a replacement.
+
+The starter supplies its entry README and unchanged `snapshot.schema.json`. Create the Skill and these outputs; the tree describes your completed repository, not supplied implementation:
+
+```
+interviews/
+└── <original-export-filename>.md
+event-planning-coordination-brief/
+├── SKILL.md
+├── scripts/
+└── references/
+deliverables/
+├── snapshots/
+│   ├── 01-scope-and-approval-gates.json
+│   ├── 02-source-capture.json
+│   ├── 03-constraint-model.json
+│   ├── 04-planning-baseline.json
+│   ├── 05-option-generation.json
+│   ├── 06-feasibility-testing.json
+│   ├── 07-decision-and-approval.json
+│   ├── 08-draft-propagation.json
+│   ├── 09-publication-validation.json
+│   └── evidence/
+├── vendor-comparison.csv
+├── event-plan.md
+├── event-calendar.ics
+└── draft-communications.md
+```
+
+**Snapshots and captured sources.** Write each snapshot at its corresponding boundary, conforming to the supplied schema. All nine share a `run_id`; from stage 02, `predecessor` identifies and hashes the immediately preceding snapshot. Each transition identifies the records it consumed and produced. Stage 08 records draft propagation; stage 09 records exact final artifact paths/hashes and validation after writing the drafts. Keep evidence and decision references resolvable throughout the chain.
+
+Capture every attempted structured, web, image, video and calendar source with its actual retrieval state. Preserve the source content or permitted extracts needed to inspect every claim, with ID, URL, version, retrieval time, locator and hash. Use at least one required official floor-plan or image source disclosed by the stakeholder. Preserve successfully retrieved image/PDF bytes used for spatial or accessibility claims in `deliverables/snapshots/evidence/`; stage 02 records their path and page/region locator, and later stages reference their evidence ID. Optional video evidence needs timestamps if used. Read the actual disclosed remote sources; do not substitute undisclosed local copies.
+
+Use the schema's states: run `complete/partial/blocked/failed`; retrieval `retrieved/unavailable/invalid/unverified/stale`; option `feasible/infeasible/conditional/unverified`; approval `pending/approved/rejected/not-required`. Keep missing, conflicting, stale or unresolved facts traceable until an evidence-backed resolution or actual human decision changes them. Record assumptions separately from source facts, and planned actions separately from observed completion.
+
+**Final drafts.** Keep amounts, dates, options, decisions and evidence consistent across all files:
+
+| File | Required content and format |
+| --- | --- |
+| `vendor-comparison.csv` | Compare materially different options and retain rejected options with reasons. Columns: `option_id`, `quote_ids`, `planning_people`, `cost_twd`, `currency`, `feasibility`, `availability_status`, `evidence_ids`, `tradeoffs`, `unresolved`, `approval_status`. Use integer TWD amounts; leave unknown costs blank with the reason. CSV lists may be JSON arrays or a documented unambiguous delimiter. Preserve quote identity, category, capacity, date, conditions and evidence. |
+| `event-plan.md` | Objective, source/run basis, headcount and uncertainty policy, timing/dependencies, category/total amounts, option comparison, feasibility, accessibility/safety evidence and limits, recommendation or deferral, risks, unknowns, change impacts, remaining owners and draft review requests. Explain choices through source-grounded consequences; no predetermined recommendation is required. |
+| `event-calendar.ics` | Valid VCALENDAR with `VERSION:2.0`, draft `METHOD:PUBLISH`, stable event `UID`, `DTSTAMP` and supported `DTSTART`/`DTEND`. Proposed events use `STATUS:TENTATIVE`; timestamps carry an explicit timezone. Keep the calendar consistent with the plan and include no attendees or delivery actions. If no event time is supportable, submit an empty valid calendar and explain the deferral. |
+| `draft-communications.md` | Label every message `UNSENT DRAFT` with intended audience, purpose, conditions and approval owner. Preserve uncertainty and dependencies; never claim a booking, payment or invitation was sent. |
+
+Use the interview-supplied source definitions and business criteria when interpreting headcounts, service capacities, prices, budgets and calendar records. Show a non-overlapping programme that accounts for supplied activities and their dependencies; do not replace it with only a total-minute calculation. Keep all relevant calendar records and their meaning. Do not infer a missing value, confirmation or approval from a convenient label or number.
+
+**Incomplete results.** Supported independent work may continue when one source or vendor cannot be verified. Preserve its actual failed attempt, the affected claims and the owner or evidence needed to resolve them. If image evidence is unavailable, withhold dependent spatial/accessibility claims. Do not invent options, facts or approvals to obtain a normal result.
+
+| Run state | Required result |
+| --- | --- |
+| `complete` | Nine valid linked snapshots and four consistent review drafts, supported comparisons and a justified recommendation. Human approval may remain pending because the result is a draft. |
+| `partial` | Nine linked snapshots and four drafts preserving supported work, unavailable sources, conditional claims and resolution owners. |
+| `blocked` | Nine snapshots when valid evidence can be retained, comparison/plan explaining the blockage, an empty draft calendar and unsent clarification drafts. |
+| `failed` | `deliverables/failure.json` with `run_id`, `observed_at`, `error`, `affected_stage`, `available_evidence`, `affected_artifacts`, `next_owner` and recovery action. Preserve only evidence actually obtained; do not claim completed snapshots or reuse old successful outputs as the current result. |
+
+**Changed inputs and recovery.** Read structured sources by disclosed meanings and stable identities. Accept reordered headers/records and unrelated extra columns, including combinations of those changes, when required fields and values remain valid. Preserve the representation actually captured and its observation metadata. Hold missing fields, ambiguous/duplicate identities, incompatible meanings or invalid required values before dependent interpretation; do not guess renamed fields or silently choose a conflicting record.
+
+Before processing a material change, retain the previous current run under `deliverables/history/<run_id>/`. Write a coherent new set at the same nine current filenames with a new run ID and unique snapshot IDs. Stage 01 records `supersedes_run_id`, changed source/decision IDs and the reason. Keep predecessor links within the new run. Inspect historical identities/hashes before reuse; do not reconstruct missing observations. Identical retained media may be referenced by hash without copying its bytes again.
+
+Reconsider every affected planning basis, comparison, decision, approval request and draft, explaining which evidence remains unchanged. Even when inputs are unchanged, inspect actual output content and run/hash bindings before reporting success. Repair missing, corrupt or stale outputs and revalidate, or return an explicit incomplete/failure result. Preserve failed source/output attempts and earlier evidence as history. After recovery, record the actual new attempt and revalidate affected work; old or partial outputs cannot masquerade as current success. Recovery does not establish a completed prerequisite, granted approval or sent message.
+
+Inspect them in this order:
+
+1. Formal Project C assignment
+2. Event brief
+3. Calendar constraints
+4. Budget
+5. Attendee signals
+6. Vendor register
+
+Also follow any source links discovered inside the event brief, especially anything related to:
+- venue
+- floor plan
+- accessibility
+- safety
+- demo roster
+- prior runs / past schedules
+- other required planning evidence
+
+For every source, determine:
+- whether it is actually accessible
+- the intended access route
+- source title/identity
+- version/date if available
+- what information it actually contains
+- what business meaning the stakeholder assigned to it
+- whether it resolves any of the [UNK]/[SRC] items from the framing analysis
+- whether it introduces new constraints or ambiguities
+
+Do not infer missing facts.
+
+Then produce a revised requirements/framing analysis with these sections:
+
+1. FORMAL ASSIGNMENT REQUIREMENTS
+2. SOURCE INVENTORY
+3. SOURCE AUTHORITY AND MEANING
+4. RESOLVED QUESTIONS
+5. STILL-UNRESOLVED QUESTIONS
+6. FINAL BUSINESS WORKFLOW
+7. FINAL PLANNING DECISION MODEL
+8. CHANGE PROPAGATION MODEL
+9. APPROVAL BOUNDARIES
+10. DELIVERABLE REQUIREMENTS
+11. ACCEPTANCE CRITERIA
+12. RISKS AND AMBIGUITIES
+13. IMPLEMENTATION PLAN
+14. QUESTIONS THAT STILL REQUIRE THE STAKEHOLDER
+
+For every requirement, clearly label whether it comes from:
+[S] stakeholder interview
+[A] formal assignment
+[SRC] source evidence
+[INT] our interpretation
+[UNK] unresolved
+
+Pay particular attention to these issues from the first framing pass:
+
+- decision deadline
+- venue/floor-plan source
+- prior runs/past schedules
+- budget threshold vs allocation semantics
+- stale quote definition
+- vendor ranking/recommendation logic
+- capacity shortfall severity
+- year/time zone for October 17
+- change propagation vs confirmed revisions
+- communications recipients
+- exact deliverable schemas and grading requirements
+
+Do not write implementation code yet.
+Do not create or modify deliverables yet.
+Do not invent answers to unresolved questions.
+
+The goal is to finish requirements discovery and produce a reliable implementation plan before we build.
+
+---
+
+<pasted_content id="db7b">
+We have completed the second stakeholder interview for Project C, and the original transcript has been placed in the interviews/ folder.
+
+Before beginning implementation, do a final requirements and planning review based on the project materials and both stakeholder interviews.
+
+Please inspect:
+- the Project C assignment/instructions available to you
+- README.md
+- snapshot.schema.json
+- all original interview transcripts in interviews/
+- the existing Project C source-discovery and framing work
+- the starter files and current repository structure
+
+The goal of this pass is to make sure we have a clear understanding of the business workflow, requirements, decision rules, source dependencies, and approval boundaries before implementation begins.
+
+Please produce a structured analysis with these sections:
+
+1. Business objective
+Explain the problem the Event and Operations Manager is trying to solve, what the planning workflow currently looks like, and what the finished automation is expected to accomplish.
+
+2. Stakeholders and responsibilities
+Identify the relevant stakeholders and owners, what they are responsible for, and what decisions require their involvement.
+
+3. Current planning workflow
+Describe the workflow from the initial planning inputs through the final reviewable Demo Day plan. Include where information comes from, how decisions are made, and where changes can affect other parts of the plan.
+
+4. Requirements
+Separate the requirements into:
+- stakeholder requirements
+- assignment requirements
+- source-dependent requirements
+
+Keep these grounded in the project materials and interview transcripts.
+
+5. Information clarified by the second interview
+Compare the current understanding with the earlier framing work.
+
+For the major information gaps identified previously, explain whether the second interview:
+- resolved the information
+- partially clarified it
+- left it dependent on source evidence
+- left it unspecified
+
+Pay particular attention to the venue/floor-plan source, budget handling, catering, accessibility requirements, option selection, and vendor status terminology.
+
+6. Planning decision model
+Describe how the available event options should be evaluated using the information we actually have.
+
+Include the relevant factors such as:
+- date and calendar constraints
+- attendee count and capacity
+- budget and approval limits
+- vendor availability
+- accessibility
+- catering requirements
+- programme dependencies
+- other hard or conditional constraints identified by the project
+
+Clearly distinguish source-supported rules from interpretations.
+
+7. Automation workflow
+Describe the proposed end-to-end workflow for the eventual Agent Skill, from retrieving the sources through producing and validating the final drafts.
+
+For each major stage, describe:
+- its inputs
+- its outputs
+- the relevant evidence
+- important validation or decision logic
+- where human review is required
+
+Also distinguish deterministic processing from areas where agent reasoning is useful.
+
+8. Approval boundaries
+Document what the automation can calculate, analyze, compare, recommend, and draft, along with decisions that remain with the appropriate human owner.
+
+Make sure the workflow does not imply that a draft, recommendation, or proposed action has already been approved or completed.
+
+9. Change propagation
+Explain what should be reconsidered when important inputs change, including:
+- attendee information
+- vendor quotes or status
+- calendar constraints
+- budget information
+- venue information
+- stakeholder decisions
+
+Show which downstream outputs depend on each input.
+
+10. Acceptance criteria
+Define concrete checks that can be used to determine whether the eventual implementation is working correctly.
+
+Cover the required sources, snapshots, evidence, calculations, option comparison, feasibility, programme timing, calendar, communications, unresolved information, approval state, reruns, and failure handling.
+
+11. Missing information
+Make a concise list of information that is still unavailable or dependent on source evidence and explain why each item matters to the planning process.
+
+Do not invent values or assumptions to fill these gaps.
+
+12. Implementation plan
+Assuming the requirements are sufficiently understood, outline a sensible implementation sequence.
+
+Include the Skill structure, source retrieval/parsing, snapshots, decision logic, programme generation, rendering, validation, testing, history/recovery, and the final end-to-end command.
+
+Keep this as a planning document for now rather than beginning implementation.
+
+13. Implementation readiness
+Conclude with one of:
+- ready to implement
+- ready with documented open information
+- not ready to implement
+
+Explain the reasoning behind the conclusion and identify the most important remaining dependency, if any.
+
+Throughout the analysis:
+- Use the original interview transcripts as the record of stakeholder statements.
+- Distinguish stakeholder statements, assignment requirements, source-derived facts, interpretations, and unknown information.
+- Preserve contradictions or ambiguities rather than silently resolving them.
+- Do not invent business rules, approvals, evidence, or source information.
+- Keep the analysis focused on the actual Project C requirements and implementation.
+- Do not modify implementation files during this review.
+
+After completing the analysis, stop so I can review the plan before implementation begins.
+</pasted_content id="db7b">
+
+---
+
+<pasted_content id="db7b">
+We have now completed the third and final stakeholder interview for Project C. The transcript has been placed in the interviews/ directory.
+
+Before making any implementation changes, perform one final requirements and planning review using the latest interview as the newest source of stakeholder requirements.
+
+Read:
+- the Project C assignment/instructions
+- README and starter documentation
+- snapshot.schema.json
+- all original stakeholder interview transcripts in interviews/
+- the previous requirements/framing work already present in the repository
+- any other existing Project C planning artifacts that are relevant
+
+Do not implement the skill yet. Do not create or modify implementation code. Do not fetch external sources yet. This pass should establish the final business and technical requirements that implementation will follow.
+
+Use the stakeholder interviews as the source of truth for business decisions. Distinguish clearly between:
+- [S] stakeholder statements
+- [A] assignment/starter requirements
+- [SRC] source-derived facts
+- [INT] implementation interpretations
+- [UNK] information that remains unresolved
+
+Produce a concise final review with these sections:
+
+1. BUSINESS OBJECTIVE
+State the actual planning problem the stakeholder wants solved and what makes the resulting Demo Day plan useful/review-ready.
+
+2. FINAL WORKFLOW
+Describe the expected workflow from source retrieval through final review, including where human approval remains required.
+
+3. FINAL REQUIREMENTS
+Consolidate the requirements from all three interviews and the assignment. Include:
+- headcount
+- schedule and hard/soft constraints
+- budget and approval limits
+- accessibility requirements
+- catering requirements
+- vendor status meanings
+- venue requirements
+- safety/technical prerequisites
+- option comparison and recommendation rules
+- communication requirements
+- calendar requirements
+- change/rerun behavior
+- privacy and approval boundaries
+
+4. THIRD-INTERVIEW CLARIFICATIONS
+Explicitly identify what the third interview clarified or changed compared with the previous analysis.
+
+5. FINAL PLANNING DECISION MODEL
+Define how the system should classify options as feasible, conditional, unverified, or infeasible.
+
+For each classification, explain the conditions that lead to it.
+
+6. OPTION EVALUATION
+Explain the final rules for comparing viable options. Do not invent numerical weights unless the stakeholder explicitly provided them.
+
+7. SOURCE AND EVIDENCE MODEL
+For each disclosed source, state:
+- what it means
+- what facts it can support
+- how authority/version should be handled
+- what limitations remain
+- how retrieval attempts and failures must be recorded
+
+8. AUTOMATION BOUNDARIES
+Separate:
+- deterministic calculations/validation
+- analysis/recommendation that requires reasoning
+- actions that must remain human-controlled
+
+Make sure the system does not book, pay, invite, commit vendors, modify production calendars, or alter approvals.
+
+9. CHANGE PROPAGATION
+Explain what downstream outputs must be reconsidered when each major input changes, including attendee signals, vendor quotes, budget, calendar constraints, venue information, and stakeholder decisions.
+
+10. FINAL DELIVERABLE REQUIREMENTS
+Map the requirements to:
+- nine snapshots
+- vendor-comparison.csv
+- event-plan.md
+- event-calendar.ics
+- draft-communications.md
+- interview transcripts
+- SKILL.md
+- scripts/references
+- history/recovery artifacts
+
+11. ACCEPTANCE CRITERIA
+Give concrete checks that should pass before the project is considered complete.
+
+12. REMAINING INFORMATION
+Make a short list of anything that is genuinely still unknown after all three interviews.
+
+Do not create questions just for the sake of having questions. Only identify information that could materially affect implementation or the planning result.
+
+13. IMPLEMENTATION PLAN
+Give a phased implementation plan for the skill, including the major components, source retrieval, parsing, snapshot chain, decision model, renderers, validation, tests, and end-to-end execution.
+
+14. IMPLEMENTATION READINESS
+Conclude whether the requirements are now sufficiently defined to begin implementation. If something remains unresolved, explain exactly how it should be represented in the implementation rather than silently assuming an answer.
+
+Important:
+- Do not modify project files during this review.
+- Do not fetch external sources during this review.
+- Do not invent stakeholder decisions.
+- Do not silently resolve conflicts between sources.
+- Preserve uncertainty explicitly where it remains.
+- Treat the three original interview transcripts as authoritative records and do not rewrite them.
+- Keep the analysis focused on what is required to build the Project C skill.
+
+Stop after producing this final review. Do not begin implementation until I give the next instruction.
+</pasted_content id="db7b">
+
+---
+
+<pasted_content id="db7b">
+The final requirements review is complete and implementation-ready.
+
+Before starting, verify that all three original interview exports are committed and pushed to the repository. If the local branch is ahead of origin, push the existing commits. Do not modify or rewrite the interview transcripts.
+
+Then begin implementation of Project C based on the final requirements review.
+
+Build the Agent Skill:
+event-planning-coordination-brief
+
+Start with Phase 1 only. Do not attempt the entire implementation in one pass.
+
+Phase 1 should establish the implementation foundation:
+
+1. Inspect the current repository and existing starter files again.
+2. Create the initial Skill structure:
+   - event-planning-coordination-brief/SKILL.md
+   - event-planning-coordination-brief/scripts/
+   - event-planning-coordination-brief/references/
+   - appropriate test/fixture structure
+3. Create the source registry and decision-policy/reference files.
+4. Implement the source retrieval layer and source-attempt recording required by the assignment.
+5. Implement robust parsing foundations for the disclosed structured sources.
+6. Implement the snapshot infrastructure needed to create the nine linked snapshots, including:
+   - shared run_id
+   - snapshot IDs
+   - predecessor references and hashes
+   - consumed/produced record IDs
+   - evidence IDs
+   - schema validation
+7. Establish the runtime configuration, business clock, disclosed source routes, and retrieval metadata model.
+8. Preserve every required source attempt, including unsuccessful attempts.
+9. Handle the TICC web pages using the documented retrieval behavior from the requirements review. Record both the unsuccessful plain request and the successful browser-like retrieval if applicable. Do not hide or discard the failed attempt.
+10. Keep the 155,000 TWD negotiated/case venue amount as the planning value. Record the difference from the official published TICC tariff rather than replacing the case value.
+11. Keep stakeholder decisions and unresolved conditions explicit. In particular:
+    - held is not confirmed
+    - required prerequisites remain conditions until evidence exists
+    - no option should be classified feasible merely because its other checks pass
+    - do not fabricate a second feasible option
+12. Do not make bookings, payments, invitations, vendor commitments, production-calendar writes, or approval changes.
+13. Do not include private contact information or medical details in generated outputs.
+14. Do not invent deadlines for the TICC technical/safety briefing.
+
+Implementation principles:
+- Use deterministic code for fetching, parsing, validation, calculations, hashing, snapshot chaining, and other mechanical work.
+- Keep reasoning-dependent work clearly separated from deterministic logic.
+- Read structured sources by stable headers/IDs rather than column position.
+- Hold missing, duplicate, conflicting, or invalid required data instead of guessing.
+- Preserve source evidence and locators required by the assignment.
+- Keep the implementation rerunnable and suitable for later history/recovery handling.
+- Use the existing snapshot.schema.json unchanged.
+- Do not rewrite the interview transcripts.
+- Do not fetch sources during the requirements review, but source fetching is appropriate now as part of implementation/testing.
+
+After implementing Phase 1:
+- run the relevant tests
+- validate the new files
+- inspect the implementation for obvious issues
+- report exactly what was created/changed
+- report any implementation decisions that required interpretation
+- report any remaining blockers
+- do not begin Phase 2 yet
+
+Stop after Phase 1 so I can review the result before we continue.
+</pasted_content id="db7b">
