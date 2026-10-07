@@ -1,0 +1,27 @@
+{
+  "skill": "event-planning-coordination-brief",
+  "business_clock": "2026-08-26T12:00:00+08:00",
+  "business_timezone": "Asia/Taipei",
+  "business_clock_basis": "ASG-CLOCK",
+  "schema_path": "snapshot.schema.json",
+  "schema_version": "event-coordination-stage-snapshot/2",
+  "deliverables_dir": "deliverables",
+  "currency": "TWD",
+  "http": {
+    "timeout_seconds": 30,
+    "profiles": {
+      "plain": {
+        "description": "Default Python urllib client with no added headers.",
+        "headers": {}
+      },
+      "browser-like": {
+        "description": "Ordinary desktop-browser request headers. Used only as a recorded fallback after a plain request to the same URL was rejected by the site.",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0 Safari/537.36",
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,application/pdf;q=0.9,*/*;q=0.8",
+          "Accept-Language": "en-US,en;q=0.9,zh-TW;q=0.8"
+        }
+      }
+    }
+  }
+}

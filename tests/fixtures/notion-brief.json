@@ -1,0 +1,13 @@
+{
+  "cursor": {"stack": []},
+  "recordMap": {
+    "block": {
+      "00000000-0000-0000-0000-000000000001": {"value": {"value": {"id": "00000000-0000-0000-0000-000000000001", "type": "page", "version": 7, "last_edited_time": 1767225600000, "properties": {"title": [["Synthetic Brief"]]}, "content": ["b-h1", "b-p1", "b-p2", "b-h2", "b-p3"]}}},
+      "b-h1": {"value": {"value": {"id": "b-h1", "type": "header", "properties": {"title": [["Event brief"]]}}}},
+      "b-p1": {"value": {"value": {"id": "b-p1", "type": "text", "properties": {"title": [["Brief version: TEST-BRIEF-1"]]}}}},
+      "b-p2": {"value": {"value": {"id": "b-p2", "type": "text", "properties": {"title": [["Plan for ", []], ["99", [["b"]]], [" people."]]}}}},
+      "b-h2": {"value": {"value": {"id": "b-h2", "type": "header", "properties": {"title": [["Venue coordination record"]]}}}},
+      "b-p3": {"value": {"value": {"id": "b-p3", "type": "text", "properties": {"title": [["Record: VEN-TEST-1; case clock: synthetic."]]}}}}
+    }
+  }
+}

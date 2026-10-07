@@ -1,0 +1,190 @@
+{
+  "registry_version": "sources-2026-10-07",
+  "note": "Only sources the stakeholder disclosed in the interviews. Each entry cites the transcript line where the link was given. Retrieval reads the disclosed remote source every run; no local copy is ever substituted.",
+  "sources": [
+    {
+      "id": "SRC-BRIEF",
+      "title": "Project C event brief (Notion page)",
+      "source_role": "event-brief",
+      "disclosed_url": "https://app.notion.com/p/3ba0b700541e81d0af55dc1a8f49f5af",
+      "disclosed_in": {"interview": "interviews/project-c-event-coordination-20261007-1818.md", "line": 201},
+      "stakeholder_meaning": "Objectives, hard requirements, approval boundaries, fictional venue and service coordination, base-bundle readiness and the demo roster.",
+      "meaning_evidence": ["STK-I1-L199"],
+      "retrieval": {
+        "kind": "notion-page-chunk",
+        "notion_page_id": "3ba0b700-541e-81d0-af55-dc1a8f49f5af",
+        "request_url": "https://www.notion.so/api/v3/loadPageChunk",
+        "profiles": ["plain"],
+        "content_kind": "notion-json"
+      }
+    },
+    {
+      "id": "SRC-CALENDAR",
+      "title": "Project C — Calendar Constraints (Google Sheet)",
+      "source_role": "calendar",
+      "disclosed_url": "https://docs.google.com/spreadsheets/d/1f_i6tUCHbJV-Ug_j6U3T4LEZ3yAr2ucdBnID-4C_-8s",
+      "disclosed_in": {"interview": "interviews/project-c-event-coordination-20261007-1818.md", "line": 237},
+      "stakeholder_meaning": "Hard calendar constraints: the 17 October event window, keynote time, setup and teardown windows.",
+      "meaning_evidence": ["STK-I1-L235", "STK-I1-L249"],
+      "retrieval": {
+        "kind": "google-sheet-export",
+        "request_url": "https://docs.google.com/spreadsheets/d/1f_i6tUCHbJV-Ug_j6U3T4LEZ3yAr2ucdBnID-4C_-8s/export?format=xlsx",
+        "profiles": ["plain"],
+        "content_kind": "xlsx"
+      },
+      "table": {
+        "sheet": "Calendar Constraints",
+        "id_field": "constraint_id",
+        "fields": {
+          "constraint_id": {"type": "string", "required": true},
+          "owner": {"type": "string", "required": true},
+          "constraint_type": {"type": "string", "required": true},
+          "start_at": {"type": "datetime_tz", "required": true},
+          "end_at": {"type": "datetime_tz", "required": true},
+          "priority": {"type": "enum", "values": ["hard", "soft"], "required": true},
+          "notes": {"type": "string", "required": false},
+          "record_version": {"type": "string", "required": true}
+        },
+        "row_checks": ["end_not_before_start"],
+        "native_version_field": "record_version"
+      }
+    },
+    {
+      "id": "SRC-BUDGET",
+      "title": "Project C — Budget (Google Sheet)",
+      "source_role": "budget",
+      "disclosed_url": "https://docs.google.com/spreadsheets/d/1Cxo7CvcgImz9HbT8PThZyvaTuyd44ug7w5rBA1z5qlM",
+      "disclosed_in": {"interview": "interviews/project-c-event-coordination-20261007-1818.md", "line": 223},
+      "stakeholder_meaning": "Planned category allocations, approval thresholds and existing commitments. Contains no supplier quotes or catering capacities.",
+      "meaning_evidence": ["STK-I1-L213", "STK-I2-L41", "STK-I3-L73"],
+      "retrieval": {
+        "kind": "google-sheet-export",
+        "request_url": "https://docs.google.com/spreadsheets/d/1Cxo7CvcgImz9HbT8PThZyvaTuyd44ug7w5rBA1z5qlM/export?format=xlsx",
+        "profiles": ["plain"],
+        "content_kind": "xlsx"
+      },
+      "table": {
+        "sheet": "Budget",
+        "id_field": "category",
+        "fields": {
+          "category": {"type": "string", "required": true},
+          "planned_amount_twd": {"type": "int", "min": 0, "required": true},
+          "approval_limit_twd": {"type": "int", "min": 0, "required": true},
+          "committed_amount_twd": {"type": "int", "min": 0, "required": true},
+          "owner": {"type": "string", "required": true},
+          "record_version": {"type": "string", "required": true}
+        },
+        "native_version_field": "record_version"
+      }
+    },
+    {
+      "id": "SRC-ATTENDEE",
+      "title": "Project C — Attendee Signals (Google Sheet)",
+      "source_role": "attendee-signals",
+      "disclosed_url": "https://docs.google.com/spreadsheets/d/1IXAEAFsZM6Q9IZZ_9pGqbFQ7l2ikr-oThqrEKudHwIU",
+      "disclosed_in": {"interview": "interviews/project-c-event-coordination-20261007-1818.md", "line": 83},
+      "stakeholder_meaning": "Visible registration counts and on-site groups for the headcount basis; accessibility and dietary requests are overlapping needs, not additional people.",
+      "meaning_evidence": ["STK-I1-L41", "STK-I1-L87"],
+      "retrieval": {
+        "kind": "google-sheet-export",
+        "request_url": "https://docs.google.com/spreadsheets/d/1IXAEAFsZM6Q9IZZ_9pGqbFQ7l2ikr-oThqrEKudHwIU/export?format=xlsx",
+        "profiles": ["plain"],
+        "content_kind": "xlsx"
+      },
+      "table": {
+        "sheet": "Attendee Signals",
+        "id_field": "signal_id",
+        "fields": {
+          "signal_id": {"type": "string", "required": true},
+          "source": {"type": "string", "required": true},
+          "segment": {"type": "string", "required": true},
+          "signal": {"type": "string", "required": true},
+          "value": {"type": "int", "min": 0, "required": true},
+          "unit": {"type": "string", "required": true},
+          "observed_at": {"type": "date", "required": true},
+          "confidence": {"type": "enum", "values": ["high", "medium", "low"], "required": true}
+        },
+        "native_version_field": null
+      }
+    },
+    {
+      "id": "SRC-VENDOR",
+      "title": "Project C — Vendor Quotes (Google Sheet)",
+      "source_role": "vendor-record",
+      "disclosed_url": "https://docs.google.com/spreadsheets/d/1cULbGrOQS-vuj862nV2EWND4oe0H5kf-smJ85VZegko",
+      "disclosed_in": {"interview": "interviews/project-c-event-coordination-20261007-1818.md", "line": 259},
+      "stakeholder_meaning": "Quotes, packages, prices, capacities, available dates and expiry dates. Held and available are planning states, not bookings; conditional means an outstanding required condition.",
+      "meaning_evidence": ["STK-I1-L257", "STK-I2-L101", "STK-I2-L113", "STK-I3-L25"],
+      "retrieval": {
+        "kind": "google-sheet-export",
+        "request_url": "https://docs.google.com/spreadsheets/d/1cULbGrOQS-vuj862nV2EWND4oe0H5kf-smJ85VZegko/export?format=xlsx",
+        "profiles": ["plain"],
+        "content_kind": "xlsx"
+      },
+      "table": {
+        "sheet": "Vendor Quotes",
+        "id_field": "quote_id",
+        "fields": {
+          "quote_id": {"type": "string", "required": true},
+          "vendor": {"type": "string", "required": true},
+          "category": {"type": "string", "required": true},
+          "option": {"type": "string", "required": true},
+          "quote_amount_twd": {"type": "int", "min": 0, "required": true},
+          "capacity": {"type": "int", "min": 0, "required": true},
+          "available_date": {"type": "date", "required": true},
+          "valid_until": {"type": "date", "required": true},
+          "status": {"type": "enum", "values": ["held", "available", "conditional"], "required": true},
+          "notes": {"type": "string", "required": false}
+        },
+        "native_version_field": null
+      }
+    },
+    {
+      "id": "SRC-TICC-HALL",
+      "title": "TICC official Plenary Hall venue page",
+      "source_role": "venue-page",
+      "disclosed_url": "https://www.ticc.com.tw/wSite/sp?BaseDSD=7&CtUnit=99&ctNode=322&mp=2&roomId=PH&xdUrl=%2FwSite%2Fap%2Fcp_VenueSearch.jsp",
+      "disclosed_in": {"interview": "interviews/project-c-event-coordination-20261007-1855.md", "line": 27},
+      "stakeholder_meaning": "Official venue source used to verify venue layout and access. Its published tariff is documented but does not replace the negotiated case amount.",
+      "meaning_evidence": ["STK-I2-L25", "STK-I3-L205"],
+      "retrieval": {
+        "kind": "http-get",
+        "request_url": "https://www.ticc.com.tw/wSite/sp?BaseDSD=7&CtUnit=99&ctNode=322&mp=2&roomId=PH&xdUrl=%2FwSite%2Fap%2Fcp_VenueSearch.jsp",
+        "profiles": ["plain", "browser-like"],
+        "content_kind": "html",
+        "expected_markers": ["大會堂", "3122"]
+      }
+    },
+    {
+      "id": "SRC-TICC-ACCESS",
+      "title": "TICC official accessibility index (accessible facilities floor plans)",
+      "source_role": "venue-page",
+      "disclosed_url": "https://www.ticc.com.tw/wSite/lp?ctNode=398&mp=2&xq_xCat=6",
+      "disclosed_in": {"interview": "interviews/project-c-event-coordination-20261007-1855.md", "line": 28},
+      "stakeholder_meaning": "Official index of accessible-facilities floor plans used to verify access.",
+      "meaning_evidence": ["STK-I2-L25"],
+      "retrieval": {
+        "kind": "http-get",
+        "request_url": "https://www.ticc.com.tw/wSite/lp?ctNode=398&mp=2&xq_xCat=6",
+        "profiles": ["plain", "browser-like"],
+        "content_kind": "html",
+        "expected_markers": ["Accessible Facilities Floor Plan"]
+      }
+    },
+    {
+      "id": "SRC-TICC-4F",
+      "title": "TICC official 4F accessible facilities floor plan (PDF)",
+      "source_role": "floor-plan-or-image",
+      "disclosed_url": "https://www.ticc.com.tw/wSite/public/Attachment/f1710485827023.pdf",
+      "disclosed_in": {"interview": "interviews/project-c-event-coordination-20261007-1855.md", "line": 29},
+      "stakeholder_meaning": "Required official floor plan. Spatial evidence only; counts and hearing-loop availability come from the coordination record.",
+      "meaning_evidence": ["STK-I2-L25", "STK-I3-L193"],
+      "retrieval": {
+        "kind": "http-get",
+        "request_url": "https://www.ticc.com.tw/wSite/public/Attachment/f1710485827023.pdf",
+        "profiles": ["plain", "browser-like"],
+        "content_kind": "pdf"
+      }
+    }
+  ]
+}
