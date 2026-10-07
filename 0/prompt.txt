@@ -1,0 +1,97 @@
+yup go ahead and push
+
+---
+
+<pasted_content id="db7b">
+The Project C implementation is complete and already pushed to origin/main.
+
+Current HEAD:
+e01fb96154d5e78abf5ce354019370e21eacd277
+
+Do NOT change any implementation, tests, deliverables, snapshot logic, decision logic, or generated outputs.
+
+I noticed that README.md is still essentially the starter README. The assignment does not require the documentation to specifically live in README.md, and SKILL.md already contains the detailed runtime documentation, but the repository should have a concise human-facing README so an evaluator can understand and run the project without opening SKILL.md first.
+
+Make a documentation-only improvement to README.md.
+
+Keep the starter assignment context and links where useful, but add a concise "Implementation" / "Run" section describing the completed project.
+
+The README should clearly state:
+
+1. What the Skill does:
+   - reusable event planning and coordination brief
+   - compares event options
+   - evaluates feasibility and approvals
+   - produces planning drafts and traceable evidence
+   - read-only with respect to source systems
+
+2. Runtime:
+   - Python runtime used by the project
+   - virtual environment command already used by the project
+   - dependencies are pinned in requirements.txt
+   - mention that icalendar is test-only if that is how the existing requirements file marks it
+
+3. Setup:
+   Show the actual setup commands already documented/used by the project. Do not invent commands. Inspect SKILL.md, requirements.txt, and run.py first and use the project's existing commands.
+
+4. Running:
+   Document the exact commands:
+   
+   .venv/bin/python event-planning-coordination-brief/scripts/run.py run
+   .venv/bin/python event-planning-coordination-brief/scripts/run.py verify
+
+   Also document the existing render command if it is appropriate based on run.py/SKILL.md.
+
+5. Exit codes:
+   - 0 = complete
+   - 10 = partial
+   - 20 = blocked
+   - 30 = failed
+
+   Explain that the current live scenario intentionally exits 10 because the recommendation is deferred to Operations.
+
+6. Outputs:
+   Explain that the default output is deliverables/ and that --deliverables <dir> can override it.
+
+   Briefly describe:
+   - vendor-comparison.csv
+   - event-plan.md
+   - event-calendar.ics
+   - draft-communications.md
+   - render-manifest.json
+   - snapshots/history/current-run metadata
+
+7. Current validation:
+   State the actual validated state, not an aspirational one:
+   - 215 tests pass
+   - pyflakes clean
+   - verify exits 0
+   - live run exits 10 intentionally
+   - 0 feasible, 2 conditional, 5 infeasible
+   - recommendation is deferred to Operations
+
+8. Interview exports:
+   Mention that the original stakeholder interview exports are stored under interviews/ as required by the assignment.
+
+9. Safety / scope:
+   Briefly state that generated communications are unsent drafts and calendar events are tentative. The Skill does not book, pay, send invitations, contact vendors, or write to production calendars.
+
+Do NOT:
+- rewrite the formal assignment
+- remove the starter links unless necessary
+- add claims not supported by the existing repository
+- add screenshots or badges
+- add new dependencies
+- change SKILL.md
+- change source code
+- change tests
+- regenerate deliverables
+- commit generated changes
+- push anything
+
+First inspect README.md, SKILL.md, requirements.txt, and run.py so the README matches the actual implementation exactly.
+
+After editing, run only the minimum validation needed to confirm the README change did not affect the project. Then show me the README diff and git status.
+
+Do NOT commit or push. I will review the documentation diff first.
+</pasted_content id="db7b">
