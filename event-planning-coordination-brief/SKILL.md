@@ -9,8 +9,9 @@ Use this skill to produce or refresh the Fellowship Demo Day planning package. I
 different times; the skill re-reads every disclosed source on each run and re-derives every
 dependent draft, so the drafts stay consistent with each other and with the evidence.
 
-> **Build status: Phase 1 (foundation).** Source capture, parsing, decision-rule primitives and the
-> snapshot chain exist and are tested. The nine-stage run and the four drafts are added in later phases.
+> **Build status: Phase 2 (normalized sources).** Source capture, parsing, normalization into
+> evidence-linked claims, decision-rule primitives and the snapshot chain exist and are tested. Option
+> evaluation, the nine-stage run and the four drafts are added in later phases.
 
 ## Setup
 
@@ -26,8 +27,11 @@ No credentials are needed: every disclosed source is publicly readable. Do not a
 ## Commands
 
 ```bash
-# Phase 1: retrieve and parse every disclosed source, record every attempt
+# Retrieve and parse every disclosed source, recording every attempt
 .venv/bin/python event-planning-coordination-brief/scripts/run.py capture --out <dir>
+
+# Capture, then normalize every source into evidence-linked claims
+.venv/bin/python event-planning-coordination-brief/scripts/run.py normalize --out <dir>
 
 # Tests
 .venv/bin/python -m pytest
@@ -35,6 +39,8 @@ No credentials are needed: every disclosed source is publicly readable. Do not a
 
 `capture` writes the retrieved bytes to `<dir>/snapshots/evidence/<SOURCE-ID>/<ATTEMPT-ID>.<ext>` and a
 `capture-report.json` with one schema `sourceRecord` per source. It exits non-zero if any source is not `retrieved`.
+`normalize` also writes `normalized-report.json` with every claim and prints the claims that are not
+`supported`. The claim model is described in `references/normalization.md`.
 
 ## Workflow (nine stages)
 
@@ -73,7 +79,7 @@ Read `references/decision-policy.md` before changing any rule. In short:
 
 These steps need judgment. Their output is recorded as evidence-cited records and validated by code:
 
-1. **Floor-plan observations.** Read the captured 4F PDF and record spatial observations with page and region locators, bound to the PDF's sha256. If the hash changes, the observations are held until the plan is read again.
+1. **Floor-plan observations** (`references/floorplan-observations.json`). Read the captured 4F PDF and record spatial observations with page and region locators, bound to the PDF's sha256. Mark anything not clearly legible as `ambiguous`. If the captured PDF's hash no longer matches, every observation is held as unverified: render the new PDF, read it again, and update the file and its hash.
 2. **Recommendation.** Weigh cost, capacity buffer and other current risks with no fixed weights. Vendor experience is never scored without records.
 3. **Prose** for the plan and the unsent draft messages.
 
@@ -83,5 +89,8 @@ These steps need judgment. Their output is recorded as evidence-cited records an
 - `references/requirements-evidence.json`: verbatim stakeholder quotes (STK-*) and assignment requirements (ASG-*)
 - `references/decision-policy.md`: the rules above, each traced to its basis
 - `references/run-config.json`: business clock, schema path, HTTP profiles
+- `references/normalization.md`: claim model, support and evidence statuses, claim kinds
+- `references/floorplan-observations.json`: agent-read spatial observations, bound to the PDF hash
 - `scripts/run.py`: entry point
 - `scripts/coordination/`: capture, sheets, brief, ticc, policy, snapshots
+- `scripts/coordination/normalize/`: per-source normalizers, cross-source checks, prerequisites

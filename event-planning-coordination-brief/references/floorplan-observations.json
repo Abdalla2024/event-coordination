@@ -1,0 +1,31 @@
+{
+  "note": "Agent-authored spatial observations from a visual reading of the official TICC 4F accessible-facilities floor plan (SRC-TICC-4F). They are valid only for the PDF bytes with the hash below; if the captured PDF differs, every observation is held as unverified until the plan is read again. The floor plan is spatial evidence only: it does not establish counts of wheelchair spaces, hearing-loop availability, elevator operation, unobstructed routes, seating configuration or acoustics (STK-I3-L193, SRC-BRIEF venue coordination record).",
+  "source_id": "SRC-TICC-4F",
+  "pdf_sha256": "sha256:8805ab527b7bb202a70534120ed4037dbde633301f1935e80bd04f12a7c70367",
+  "read_by": "agent visual reading (Claude), 2026-10-07; rendered at 4800 px width and inspected in crops. EV13 re-inspected at full zoom after learner review: the elevator cross behind the wheelchair is visible.",
+  "region_convention": "page 1; x and y are fractions of page width and height measured from the top-left corner",
+  "observations": [
+    {"id": "FP-legend", "confidence": "clear", "region": [0.06, 0.12, 0.20, 0.71],
+     "summary": "Legend defines separate symbols for Disabled Wheelchair Area (blue), Restroom for the Disabled (magenta), Accessible Elevator (magenta wheelchair over an elevator cross), Drinking Fountain for the Disabled, Charging Socket, AED, and two kinds of emergency exit."},
+    {"id": "FP-plenary-hall", "confidence": "clear", "region": [0.58, 0.23, 0.88, 0.64],
+     "summary": "The Plenary Hall seating and the Plenary Hall Stage are on 4F, with the stage on the east side of the seating."},
+    {"id": "FP-hall-wheelchair-areas", "confidence": "clear", "region": [0.70, 0.29, 0.79, 0.59],
+     "summary": "Four Disabled Wheelchair Area symbols are drawn inside the Plenary Hall seating: two in the north seating section and two in the south seating section. The symbols mark locations only; they do not state how many wheelchair spaces exist."},
+    {"id": "FP-vip-room", "confidence": "clear", "region": [0.29, 0.40, 0.42, 0.68],
+     "summary": "The V.I.P. Room (貴賓廳) is on the same floor, in the west wing, separated from the Plenary Hall by the central core (Room 401, corridors, restrooms and service rooms)."},
+    {"id": "FP-room-401", "confidence": "clear", "region": [0.44, 0.32, 0.53, 0.54],
+     "summary": "Room 401 Meeting Room lies west of the Plenary Hall seating, separated from it by restrooms 410–415, VIP lounges, an office, a control room and a storage room."},
+    {"id": "FP-accessible-elevators-south", "confidence": "clear", "region": [0.58, 0.69, 0.71, 0.74],
+     "summary": "Accessible Elevator symbols mark elevators EV1/EV2 and EV3/EV4 in the south lobby, labelled 'Accessible Elevator' and 'Elevator'."},
+    {"id": "FP-accessible-elevator-ev9", "confidence": "clear", "region": [0.79, 0.59, 0.83, 0.66],
+     "summary": "An Accessible Elevator symbol marks EV9 at the south-east corner of the Plenary Hall; the label 'Accessible Elevator' appears between EV9 and EV11."},
+    {"id": "FP-accessible-restroom-south", "confidence": "clear", "region": [0.48, 0.74, 0.52, 0.80],
+     "summary": "A Restroom for the Disabled symbol is drawn between restrooms 407 and 408 in the south-west, next to a Drinking Fountain for the Disabled, a Baby Changing symbol and an AED."},
+    {"id": "FP-accessible-elevator-ev13", "confidence": "clear", "region": [0.35, 0.32, 0.38, 0.36],
+     "summary": "An Accessible Elevator symbol (magenta wheelchair over an elevator cross, as in the legend) marks EV13 in the north-west EV13/EV14 elevator bank; the adjacent EV14 shows the plain Elevator symbol."},
+    {"id": "FP-emergency-exits", "confidence": "clear", "region": [0.40, 0.08, 0.88, 0.80],
+     "summary": "Emergency exit symbols mark stairs A, B, C, D, F, G and H around the floor; red symbols mean exit to 1F outdoors and rooftop, blue symbols mean exit to the 1F lobby and rooftop."},
+    {"id": "FP-title-block", "confidence": "clear", "region": [0.92, 0.55, 0.99, 0.99],
+     "summary": "Title block: TICC '4F Floor Plan', dated 105年11月8日 (ROC calendar, 8 November 2016). Note 1 says dimensions and layout are drawn from the original architectural drawings and are for reference only; note 2 says vendors must measure on site."}
+  ]
+}
