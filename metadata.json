@@ -1,0 +1,39 @@
+{
+  "cli_version": "0.11.3",
+  "checkpoint_id": "01M4C1TV4665YPX8VSKKJ5QF2Q",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 4,
+  "files_touched": [
+    "event-planning-coordination-brief/SKILL.md",
+    "event-planning-coordination-brief/references/decision-model.md",
+    "event-planning-coordination-brief/references/recommendation-policy.md",
+    "event-planning-coordination-brief/references/requirements-evidence.json",
+    "event-planning-coordination-brief/scripts/coordination/decide/__init__.py",
+    "event-planning-coordination-brief/scripts/coordination/decide/baseline.py",
+    "event-planning-coordination-brief/scripts/coordination/decide/checks.py",
+    "event-planning-coordination-brief/scripts/coordination/decide/options.py",
+    "event-planning-coordination-brief/scripts/coordination/normalize/brief.py",
+    "event-planning-coordination-brief/scripts/coordination/recommend.py",
+    "event-planning-coordination-brief/scripts/run.py",
+    "tests/factories.py",
+    "tests/test_decide.py",
+    "tests/test_recommend.py"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 60,
+    "cache_creation_tokens": 103901,
+    "cache_read_tokens": 13574252,
+    "output_tokens": 84050,
+    "api_call_count": 30
+  }
+}
